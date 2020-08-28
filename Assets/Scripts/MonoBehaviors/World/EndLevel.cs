@@ -21,8 +21,6 @@ public class EndLevel : MonoBehaviour
         {
            
             GameManager.Instance.LoadLevel(name);
-            Debug.Log(name);
-
         }
         else
         {
