@@ -40,7 +40,7 @@ public class PlayerMove : MonoBehaviour
 
     void Update()
     {
-        if ((Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow)) && (isGrounded || r2d.velocity.x > 0.01f))
+        if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow))
         {
             moveDirection = Input.GetKey(KeyCode.LeftArrow) ? -1 : 1;
         }
@@ -72,11 +72,8 @@ public class PlayerMove : MonoBehaviour
 
     void FixedUpdate()
     {
-
-        //if(isGrounded)
         r2d.velocity = new Vector2((moveDirection) * maxSpeed, r2d.velocity.y);
         animator.SetFloat("Speed", Math.Abs(r2d.velocity.x));
-
     }
 
     private void jumpLogique()
