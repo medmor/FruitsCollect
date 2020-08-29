@@ -40,8 +40,7 @@ public class Player : MonoBehaviour
         UIManager.Instance.playerInventory.SetHeartsText(inventory.Hearts);
         dead = false;
         transform.position = spawnPoint.position;
-        inventory.Health = inventory.maxHealth;
-        UIManager.Instance.playerInventory.SetHealthBar(inventory.Health / inventory.maxHealth);
+        inventory.SetHealth(inventory.maxHealth);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -51,7 +50,6 @@ public class Player : MonoBehaviour
             SoundManager.Instance.playSound("hit");
             Enemy enemy = collision.gameObject.GetComponent<Enemy>();
             inventory.SetHealth(inventory.Health - enemy.enemyDefinition.damagePower);
-            UIManager.Instance.playerInventory.SetHealthBar(inventory.Health / inventory.maxHealth);
             r2d.velocity = new Vector2(r2d.velocity.x, 3);
 
             if (inventory.Health < 0)
@@ -74,6 +72,13 @@ public class Player : MonoBehaviour
             {
                 EventsManager.Instance.allItemsCollected.Invoke();
             }
+        }
+        else if(collision.gameObject.tag == "Heart")
+        {
+            SoundManager.Instance.playSound("coin");
+            InstantiateCollectedPrefab(collision.gameObject.transform.position);
+            Destroy(collision.gameObject);
+            inventory.SetHearts(inventory.Hearts + 1);
         }
     }
 

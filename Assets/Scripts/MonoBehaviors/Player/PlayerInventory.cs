@@ -1,10 +1,10 @@
 ﻿using UnityEngine;
 public class PlayerInventory: MonoBehaviour
 {
-    public float Health = 10;
+    public float Health { get; private set; } = 10;
     public readonly float maxHealth = 10;
 
-    public int Hearts = 3;
+    public int Hearts { get; private set; } = 3;
 
     public int[] items = new int[] { 0, 0, 0, 0, 0, 0, 0, 0 };
 
@@ -13,11 +13,13 @@ public class PlayerInventory: MonoBehaviour
     public void SetHealth(float value)
     {
         Health = value;
+        UIManager.Instance.playerInventory.SetHealthBar(Health/maxHealth);
     }
 
     public void SetHearts(int value)
     {
         Hearts = value;
+        UIManager.Instance.playerInventory.SetHeartsText(Hearts);
     }
 
     public void CollectItem(int itemId)

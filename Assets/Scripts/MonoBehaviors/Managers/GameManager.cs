@@ -42,6 +42,7 @@ public class GameManager : Manager<GameManager>
 
     void OnLoadOperationComplete(AsyncOperation ao)
     {
+        SaveManager.Instance.SetLevel(currentLevelName);
         if (currentLevelName == "Level1")
         {
             SoundManager.Instance.PlayMusic(0);

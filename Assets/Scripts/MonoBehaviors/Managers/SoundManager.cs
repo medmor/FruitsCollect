@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class SoundManager : Manager<SoundManager>
@@ -9,13 +10,13 @@ public class SoundManager : Manager<SoundManager>
 
     public AudioClip[] Musics = default;
     public AudioClip[] Sounds = default;
-    public string[] Keys = default;
+    Dictionary<string, AudioClip> soundsDict = new Dictionary<string, AudioClip>();
 
     private void Start()
     {
         for (int i = 0; i < Sounds.Length; i++)
         {
-            Keys[i] = Sounds[i].name;
+            soundsDict[Sounds[i].name] = Sounds[i];
         }
     }
 
@@ -39,7 +40,7 @@ public class SoundManager : Manager<SoundManager>
 
     public void playSound(string key)
     {
-        player.PlayOneShot(Sounds[Array.IndexOf(Keys, key)]);
+        player.PlayOneShot(soundsDict[ key]);
     }
 
 }

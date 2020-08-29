@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using TMPro;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class BootMenu : MonoBehaviour
@@ -10,6 +12,10 @@ public class BootMenu : MonoBehaviour
     [SerializeField] private GameObject mainMenu = default;
     [SerializeField] private Button play = default;
 
+    [Header("Levels")]
+    [SerializeField] private GameObject levelsContainer = default;
+    [SerializeField] private GameObject levelPrefab = default;
+
     void Start()
     {
         play.onClick.AddListener(() => {
@@ -17,6 +23,7 @@ public class BootMenu : MonoBehaviour
             Hide();
             UIManager.Instance.playerInventory.Show();
         });
+        initLevels();
     }
 
     public void Hide()
@@ -29,6 +36,25 @@ public class BootMenu : MonoBehaviour
     {
         mainMenu.SetActive(true);
         dummyCammera.gameObject.SetActive(true);
+    }
+
+    private void initLevels()
+    {
+        for(int i = 0; i < SceneManager.sceneCountInBuildSettings - 3; i++)
+        {
+            var level = Instantiate(levelPrefab).GetComponent<Button>();
+            var text = level.GetComponentInChildren<TextMeshProUGUI>();
+            text.text = (i + 1).ToString();
+            level.transform.SetParent(levelsContainer.transform);
+
+            level.onClick.AddListener(() =>
+            {
+                SoundManager.Instance.PlayMusic(0);
+                UIManager.Instance.bootMenu.Hide();
+                UIManager.Instance.playerInventory.Show();
+                GameManager.Instance.LoadLevel("Level" + text.text);
+            });
+        }
     }
 
 }
