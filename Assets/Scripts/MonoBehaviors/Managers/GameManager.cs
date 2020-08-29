@@ -42,6 +42,10 @@ public class GameManager : Manager<GameManager>
 
     void OnLoadOperationComplete(AsyncOperation ao)
     {
+        if (currentLevelName == "Level1")
+        {
+            SoundManager.Instance.PlayMusic(0);
+        }
     }
 
     public void UpdateState(Enums.GameState state)

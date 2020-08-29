@@ -97,12 +97,14 @@ public class PlayerMove : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && !isGrounded && !doubleJump)
         {
+            SoundManager.Instance.playSound("jump");
             r2d.velocity = new Vector2(r2d.velocity.x, jumpHeight);
             doubleJump = true;
             animator.SetBool("DoubleJump", true);
         }
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
+            SoundManager.Instance.playSound("jump");
             r2d.velocity = new Vector2(r2d.velocity.x, jumpHeight);
             doubleJump = false;
             isGrounded = false;

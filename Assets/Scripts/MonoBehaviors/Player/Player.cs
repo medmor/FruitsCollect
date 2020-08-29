@@ -48,6 +48,7 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemies" && !dead)
         {
+            SoundManager.Instance.playSound("hit");
             Enemy enemy = collision.gameObject.GetComponent<Enemy>();
             inventory.SetHealth(inventory.Health - enemy.enemyDefinition.damagePower);
             UIManager.Instance.playerInventory.SetHealthBar(inventory.Health / inventory.maxHealth);
@@ -65,6 +66,7 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.tag == "Collectables")
         {
+            SoundManager.Instance.playSound("coin");
             InstantiateCollectedPrefab(collision.gameObject.transform.position);
             Destroy(collision.gameObject);
             inventory.CollectItem(collision.gameObject.GetComponent<Collectable>().item.id);
