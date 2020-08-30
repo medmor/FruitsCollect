@@ -25,6 +25,7 @@ public class PlayerInventoryUI : MonoBehaviour
         {
             Hide();
             Reset();
+            SoundManager.Instance.StopMusic();
             UIManager.Instance.bootMenu.Show();
             GameManager.Instance.LoadLevel("Boot");
         });

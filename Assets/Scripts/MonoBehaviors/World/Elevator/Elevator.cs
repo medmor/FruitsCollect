@@ -21,7 +21,7 @@ public class Elevator : MonoBehaviour
             if(elevator.transform.localPosition.y < maxY)
             {
                 elevator.transform.localPosition = new Vector3(elevator.transform.localPosition.x,
-                    elevator.transform.localPosition.y + .005f);
+                    elevator.transform.localPosition.y + 1f * Time.deltaTime);
             }
         }
         else
@@ -29,7 +29,7 @@ public class Elevator : MonoBehaviour
             if(elevator.transform.localPosition.y > minY)
             {
                 elevator.transform.localPosition = new Vector3(elevator.transform.localPosition.x,
-                    elevator.transform.localPosition.y - .005f);
+                    elevator.transform.localPosition.y - 3f * Time.deltaTime);
             }
         }
     }

@@ -38,6 +38,11 @@ public class SoundManager : Manager<SoundManager>
         player.Play();
     }
 
+    public void StopMusic()
+    {
+        player.Stop();
+    }
+
     public void playSound(string key)
     {
         player.PlayOneShot(soundsDict[ key]);
