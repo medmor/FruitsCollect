@@ -7,6 +7,9 @@ public class PlayerInventoryUI : MonoBehaviour
     [Header("Player Inventory Panel")]
     [SerializeField] private GameObject playerInventoryMenu = default;
 
+    [Header("Home Button")]
+    [SerializeField] private Button homeButton = default;
+
     [Header("Health Bar")]
     [SerializeField] private Image forgroundHealthBar = default;
 
@@ -15,6 +18,17 @@ public class PlayerInventoryUI : MonoBehaviour
 
     [Header("Items")]
     [SerializeField] private Image[] itemImages = default;
+
+    private void Start()
+    {
+        homeButton.onClick.AddListener(() =>
+        {
+            Hide();
+            Reset();
+            UIManager.Instance.bootMenu.Show();
+            GameManager.Instance.LoadLevel("Boot");
+        });
+    }
 
     public void Hide()
     {

@@ -52,7 +52,7 @@ public class Player : MonoBehaviour
             inventory.SetHealth(inventory.Health - enemy.enemyDefinition.damagePower);
             r2d.velocity = new Vector2(r2d.velocity.x, 3);
 
-            if (inventory.Health < 0)
+            if (inventory.Health <= 0)
             {
                 dead = true;
                 animator.SetTrigger("Desappear");
