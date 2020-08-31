@@ -23,7 +23,6 @@ public class BootMenu : MonoBehaviour
             Hide();
             UIManager.Instance.playerInventory.Show();
         });
-        initLevels();
     }
 
     public void Hide()
@@ -34,25 +33,42 @@ public class BootMenu : MonoBehaviour
 
     public void Show()
     {
+        initLevels();
         mainMenu.SetActive(true);
         dummyCammera.gameObject.SetActive(true);
     }
 
     private void initLevels()
     {
-        for(int i = 0; i < SceneManager.sceneCountInBuildSettings - 3; i++)
-        {
-            var level = Instantiate(levelPrefab).GetComponent<Button>();
-            var text = level.GetComponentInChildren<TextMeshProUGUI>();
-            text.text = (i + 1).ToString();
-            level.transform.SetParent(levelsContainer.transform);
+        var lastLevel = SaveManager.Instance.GetLevel();
 
-            level.onClick.AddListener(() =>
+        foreach (Transform child in levelsContainer.transform)
+        {
+            Destroy(child.gameObject);
+        }
+
+        for (int i = 0; i < SceneManager.sceneCountInBuildSettings - 3; i++)
+        {
+            var levelButton = Instantiate(levelPrefab).GetComponent<Button>();
+            var text = levelButton.GetComponentInChildren<TextMeshProUGUI>();
+
+            if (i + 1 > lastLevel)
             {
-                SoundManager.Instance.PlayMusic(0);
-                UIManager.Instance.bootMenu.Hide();
-                UIManager.Instance.playerInventory.Show();
-                GameManager.Instance.LoadLevel("Level" + text.text);
+                levelButton.GetComponent<Image>().color = new Color(1, 1, 1, .2f);
+            }
+            text.text = (i + 1).ToString();
+
+            levelButton.transform.SetParent(levelsContainer.transform);
+
+            levelButton.onClick.AddListener(() =>
+            {
+                if(int.Parse(text.text) <= lastLevel)
+                {
+                    SoundManager.Instance.PlayMusic(0);
+                    UIManager.Instance.bootMenu.Hide();
+                    UIManager.Instance.playerInventory.Show();
+                    GameManager.Instance.LoadLevel("Level" + text.text);
+                }
             });
         }
     }

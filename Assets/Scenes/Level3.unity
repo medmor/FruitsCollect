@@ -580,7 +580,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 476852807}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.23, y: 5.43, z: 2.0162842}
+  m_LocalPosition: {x: -13.17, y: 5.43, z: 2.0162842}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1885217368}
@@ -799,7 +799,7 @@ TilemapCollider2D:
   m_GameObject: {fileID: 775368913}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 94ee7c6f6f5b1fd4db636d71492b5758, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -10403,11 +10403,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3602417050324529469, guid: 2f43488e0c431e3498a18a64616f4b40, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 15.06
+      value: -5.16
       objectReference: {fileID: 0}
     - target: {fileID: 3602417050324529469, guid: 2f43488e0c431e3498a18a64616f4b40, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.82
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3602417050324529469, guid: 2f43488e0c431e3498a18a64616f4b40, type: 3}
       propertyPath: m_LocalPosition.z
@@ -10988,11 +10988,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8221760935780176673, guid: 8c2ba45ba237dcb43b2aaa44d4fed152, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 21.860067
+      value: 6.5903554
       objectReference: {fileID: 0}
     - target: {fileID: 8221760935780176673, guid: 8c2ba45ba237dcb43b2aaa44d4fed152, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.0778513
+      value: 5.0778246
       objectReference: {fileID: 0}
     - target: {fileID: 8221760935780176861, guid: 8c2ba45ba237dcb43b2aaa44d4fed152, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -11096,11 +11096,11 @@ PrefabInstance:
       objectReference: {fileID: 665599488}
     - target: {fileID: 8221760936362814141, guid: 8c2ba45ba237dcb43b2aaa44d4fed152, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 21.860067
+      value: 1.6400666
       objectReference: {fileID: 0}
     - target: {fileID: 8221760936362814141, guid: 8c2ba45ba237dcb43b2aaa44d4fed152, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.746749
+      value: 5.926749
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c2ba45ba237dcb43b2aaa44d4fed152, type: 3}

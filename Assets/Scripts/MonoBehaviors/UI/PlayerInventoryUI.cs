@@ -24,7 +24,7 @@ public class PlayerInventoryUI : MonoBehaviour
         homeButton.onClick.AddListener(() =>
         {
             Hide();
-            Reset();
+            Reset(true);
             SoundManager.Instance.StopMusic();
             UIManager.Instance.bootMenu.Show();
             GameManager.Instance.LoadLevel("Boot");
@@ -53,12 +53,22 @@ public class PlayerInventoryUI : MonoBehaviour
         forgroundHealthBar.fillAmount = value;
     }
 
+    public float GetHealth()
+    {
+        return forgroundHealthBar.fillAmount * 10;
+    }
+
     public void SetHeartsText(int value)
     {
         HeartsText.SetText(value.ToString());
     }
 
-    public void Reset()
+    public int GetHeartsInt()
+    {
+        return int.Parse(HeartsText.text);
+    }
+
+    public void Reset(bool all)
     {
         foreach(var image in itemImages)
         {
@@ -66,7 +76,10 @@ public class PlayerInventoryUI : MonoBehaviour
             temp.a = .3f;
             image.color = temp;
         }
-        forgroundHealthBar.fillAmount = 1;
-        HeartsText.text = "3";
+        if (all)
+        {
+            forgroundHealthBar.fillAmount = 1;
+            HeartsText.text = "3";
+        }
     }
 }

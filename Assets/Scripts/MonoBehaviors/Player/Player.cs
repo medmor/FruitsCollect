@@ -19,6 +19,11 @@ public class Player : MonoBehaviour
         r2d = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
 
+        //the inventoryUI is not destroyed and keep track of player hearts
+        //thas a simple not correct to keep the player and the inventory synchronized
+        inventory.SetHearts(UIManager.Instance.playerInventory.GetHeartsInt());
+        inventory.SetHealth(UIManager.Instance.playerInventory.GetHealth());
+
     }
 
 
@@ -31,15 +36,20 @@ public class Player : MonoBehaviour
 
     public void OnDesappearEnd()
     {
-        EventsManager.Instance.playerkilled?.Invoke(this);
+        Die();
+        Reset();
+        if(inventory.Hearts <= 0) 
+            EventsManager.Instance.playerkilled?.Invoke(this);
     }
 
     public void Reset()
     {
-        inventory.SetHearts(inventory.Hearts - 1);
-        UIManager.Instance.playerInventory.SetHeartsText(inventory.Hearts);
         dead = false;
         transform.position = spawnPoint.position;
+    }
+    public void Die()
+    {
+        inventory.SetHearts(inventory.Hearts - 1);
         inventory.SetHealth(inventory.maxHealth);
     }
 

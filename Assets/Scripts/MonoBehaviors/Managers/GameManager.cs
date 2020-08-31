@@ -42,7 +42,8 @@ public class GameManager : Manager<GameManager>
 
     void OnLoadOperationComplete(AsyncOperation ao)
     {
-        SaveManager.Instance.SetLevel(currentLevelName);
+        if(currentLevelName.StartsWith("level"))
+            SaveManager.Instance.SetLevel(int.Parse(currentLevelName.Substring(5)));
         if (currentLevelName == "Level1")
         {
             SoundManager.Instance.PlayMusic(0);
@@ -85,18 +86,10 @@ public class GameManager : Manager<GameManager>
 
     public void OnPlyerKilled(Player player)
     {
-        player.Reset();
-        if(player.inventory.Hearts <= 0)
-        {
-            LoadLevel("GameOver");
-            UIManager.Instance.playerInventory.Reset();
-            UIManager.Instance.playerInventory.Hide();
-            UIManager.Instance.gameOverMenu.Show();
-        }
-        //var newPlayer = Instantiate(PlayerPrefab);
-        //newPlayer.spawnPoint = player.spawnPoint;
-        //newPlayer.transform.position = newPlayer.spawnPoint.transform.position;
-        //Destroy(player.gameObject);
-        
+        LoadLevel("GameOver");
+        SoundManager.Instance.StopMusic();
+        UIManager.Instance.playerInventory.Reset(true);
+        UIManager.Instance.playerInventory.Hide();
+        UIManager.Instance.gameOverMenu.Show();
     }
 }

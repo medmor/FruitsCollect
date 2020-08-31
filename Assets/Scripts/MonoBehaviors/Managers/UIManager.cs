@@ -8,10 +8,10 @@ public class UIManager : Manager<UIManager>
     public BootMenu bootMenu = default;
 
     [Header("Win Menu")] 
-    public WinMenu winMenu = default;
+    public WinGameOverMenu winMenu = default;
 
     [Header("GameOver Menu")]
-    public WinMenu gameOverMenu = default;
+    public WinGameOverMenu gameOverMenu = default;
 
     [Header("Player Invetory UI")]
     public PlayerInventoryUI playerInventory = default;

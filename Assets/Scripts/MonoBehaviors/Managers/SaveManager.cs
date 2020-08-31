@@ -11,11 +11,11 @@ public class SaveManager : Manager<SaveManager>
     public bool IsBestScoreSaved()
         => PlayerPrefs.HasKey(BestScore);
 
-    public void SetLevel(string value)
-        => PlayerPrefs.SetString(Level, value);
+    public void SetLevel(int value)
+        => PlayerPrefs.SetInt(Level, value);
 
-    public string GetLevel()
-        => PlayerPrefs.GetString(Level);
+    public int GetLevel()
+        => PlayerPrefs.GetInt(Level);
 
     public void SetBestScore(int value)
         => PlayerPrefs.SetInt(BestScore, value);
@@ -26,6 +26,6 @@ public class SaveManager : Manager<SaveManager>
     public void ResetSaving()
     {
         SetBestScore(0);
-        SetLevel("Level1");
+        SetLevel(1);
     }
 }

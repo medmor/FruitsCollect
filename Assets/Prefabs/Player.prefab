@@ -119,12 +119,12 @@ CapsuleCollider2D:
   m_GameObject: {fileID: 3602417050324529466}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 350d60b8f81f9c64a85b3411fd7dc663, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.048823833, y: -0.05231166}
-  m_Size: {x: 0.5954609, y: 0.7977295}
+  m_Offset: {x: 0.025258064, y: -0.13227674}
+  m_Size: {x: 0.58260536, y: 0.7356529}
   m_Direction: 0
 --- !u!95 &3602417050324529474
 Animator:
@@ -172,8 +172,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6320b50589a5f4f41bc5e5d5b9686fec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 10
-  Hearts: 3
   items: 0000000000000000000000000000000000000000000000000000000000000000
 --- !u!114 &3602417050324529471
 MonoBehaviour:

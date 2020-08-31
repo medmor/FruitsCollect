@@ -72,7 +72,7 @@ public class PlayerMove : MonoBehaviour
 
     void FixedUpdate()
     {
-        r2d.velocity = new Vector2((moveDirection) * maxSpeed, r2d.velocity.y);
+        r2d.velocity = new Vector2(moveDirection * maxSpeed, r2d.velocity.y);
         animator.SetFloat("Speed", Math.Abs(r2d.velocity.x));
     }
 
@@ -97,15 +97,13 @@ public class PlayerMove : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && !isGrounded && !doubleJump)
         {
-            SoundManager.Instance.playSound("jump");
-            r2d.velocity = new Vector2(r2d.velocity.x, jumpHeight);
+            jump();
             doubleJump = true;
             animator.SetBool("DoubleJump", true);
         }
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
-            SoundManager.Instance.playSound("jump");
-            r2d.velocity = new Vector2(r2d.velocity.x, jumpHeight);
+            jump();
             doubleJump = false;
             isGrounded = false;
         }
@@ -118,6 +116,12 @@ public class PlayerMove : MonoBehaviour
     public void AppearAnimationEnd()
     {
         animator.SetTrigger("IdleBegin");
+    }
+
+    private void jump()
+    {
+        //SoundManager.Instance.playSound("jump");
+        r2d.velocity = new Vector2(r2d.velocity.x, jumpHeight);
     }
 
     //private void OnCollisionEnter2D(Collision2D collision)

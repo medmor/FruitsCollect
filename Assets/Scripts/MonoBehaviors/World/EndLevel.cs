@@ -16,15 +16,16 @@ public class EndLevel : MonoBehaviour
     public void LoadWinScene()
     {
         var name = "Level" + (int.Parse(SceneManager.GetActiveScene().name.Substring(5)) + 1);
-        UIManager.Instance.playerInventory.Reset();
+        UIManager.Instance.playerInventory.Reset(false);
         if(Application.CanStreamedLevelBeLoaded(name))
         {
-           
             GameManager.Instance.LoadLevel(name);
         }
         else
         {
-            GameManager.Instance.LoadLevel("win");
+            UIManager.Instance.playerInventory.Reset(true);
+            SoundManager.Instance.StopMusic();
+            GameManager.Instance.LoadLevel("Win");
             UIManager.Instance.winMenu.Show();
             UIManager.Instance.playerInventory.Hide();
         }
