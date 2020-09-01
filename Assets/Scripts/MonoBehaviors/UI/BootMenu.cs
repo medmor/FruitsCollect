@@ -41,7 +41,7 @@ public class BootMenu : MonoBehaviour
     private void initLevels()
     {
         var lastLevel = SaveManager.Instance.GetLevel();
-
+        Debug.Log(lastLevel);
         foreach (Transform child in levelsContainer.transform)
         {
             Destroy(child.gameObject);
@@ -62,13 +62,13 @@ public class BootMenu : MonoBehaviour
 
             levelButton.onClick.AddListener(() =>
             {
-                if(int.Parse(text.text) <= lastLevel)
-                {
+                //if(int.Parse(text.text) <= lastLevel)
+                //{
                     SoundManager.Instance.PlayMusic(0);
                     UIManager.Instance.bootMenu.Hide();
                     UIManager.Instance.playerInventory.Show();
                     GameManager.Instance.LoadLevel("Level" + text.text);
-                }
+                //}
             });
         }
     }

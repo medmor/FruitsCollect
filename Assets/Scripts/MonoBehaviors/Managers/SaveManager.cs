@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class SaveManager : Manager<SaveManager>
 {
@@ -12,13 +10,19 @@ public class SaveManager : Manager<SaveManager>
         => PlayerPrefs.HasKey(BestScore);
 
     public void SetLevel(int value)
-        => PlayerPrefs.SetInt(Level, value);
+    {
+        PlayerPrefs.SetInt(Level, value);
+        PlayerPrefs.Save();
+    }
 
     public int GetLevel()
         => PlayerPrefs.GetInt(Level);
 
     public void SetBestScore(int value)
-        => PlayerPrefs.SetInt(BestScore, value);
+    {
+        PlayerPrefs.SetInt(BestScore, value);
+        PlayerPrefs.Save();
+    }
 
     public int GetBestScore()
         => PlayerPrefs.GetInt(BestScore);
