@@ -9,7 +9,7 @@ public class PlayerMove : MonoBehaviour
     // Move player in 2D space
     public float maxSpeed = 3.4f;
     public float jumpHeight = 6.5f;
-    public float gravityScale = 1.5f;
+    public float maxJump = 16f;
 
     public LayerMask groundLayer;
     public Transform groundCheck;
@@ -30,11 +30,13 @@ public class PlayerMove : MonoBehaviour
         r2d = GetComponent<Rigidbody2D>();
         r2d.freezeRotation = true;
         r2d.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
-        r2d.gravityScale = gravityScale;
         facingRight = t.localScale.x > 0;
-        gameObject.layer = 8;
+
+        //gameObject.layer = 8;
 
         animator = GetComponent<Animator>();
+
+
 
     }
 
@@ -57,7 +59,7 @@ public class PlayerMove : MonoBehaviour
             if (moveDirection > 0 && !facingRight)
             {
                 facingRight = true;
-                t.localScale = new Vector3(Mathf.Abs(t.localScale.x), t.localScale.y, transform.localScale.z);
+                t.localScale = new Vector3(Mathf.Abs(t.localScale.x), t.localScale.y, t.localScale.z);
             }
             if (moveDirection < 0 && facingRight)
             {
@@ -72,7 +74,7 @@ public class PlayerMove : MonoBehaviour
 
     void FixedUpdate()
     {
-        r2d.velocity = new Vector2(moveDirection * maxSpeed, r2d.velocity.y);
+        r2d.velocity = new Vector2(moveDirection * maxSpeed, r2d.velocity.y > maxJump ? jumpHeight : r2d.velocity.y);
         animator.SetFloat("Speed", Math.Abs(r2d.velocity.x));
     }
 

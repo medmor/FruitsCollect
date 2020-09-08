@@ -41,7 +41,6 @@ public class BootMenu : MonoBehaviour
     private void initLevels()
     {
         var lastLevel = SaveManager.Instance.GetLevel();
-        Debug.Log(lastLevel);
         foreach (Transform child in levelsContainer.transform)
         {
             Destroy(child.gameObject);

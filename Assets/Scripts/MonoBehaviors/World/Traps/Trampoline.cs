@@ -3,6 +3,7 @@
 public class Trampoline : MonoBehaviour
 {
     Animator animator;
+    public float jumpForce = 16;
     private void Start()
     {
         animator = GetComponent<Animator>();
@@ -13,7 +14,7 @@ public class Trampoline : MonoBehaviour
         animator.enabled = true;
         animator.Play("Trampoline");
         var rb = collision.gameObject.GetComponent<Rigidbody2D>();
-        rb.velocity = new Vector2(rb.velocity.x, 16);
+        rb.velocity = new Vector2(rb.velocity.x, jumpForce);
     }
 
     public void AniamtionEnd()
