@@ -11257,6 +11257,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3602417050324529471, guid: 2f43488e0c431e3498a18a64616f4b40, type: 3}
+      propertyPath: maxJump
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 3602417050324529473, guid: 2f43488e0c431e3498a18a64616f4b40, type: 3}
       propertyPath: spawnPoint
       value: 
@@ -11922,7 +11926,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8221760935780176673, guid: 8c2ba45ba237dcb43b2aaa44d4fed152, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.9318657
+      value: 7.9318886
       objectReference: {fileID: 0}
     - target: {fileID: 8221760935780176673, guid: 8c2ba45ba237dcb43b2aaa44d4fed152, type: 3}
       propertyPath: m_LocalPosition.y
