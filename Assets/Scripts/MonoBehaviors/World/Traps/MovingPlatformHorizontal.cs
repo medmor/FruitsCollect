@@ -10,7 +10,7 @@ public class MovingPlatformHorizontal : MonoBehaviour
     {
         transform.localPosition = new Vector3(minX, transform.localPosition.y);
         rb = GetComponent<Rigidbody2D>();
-        rb.velocity = new Vector2(velocity, 0);
+        rb.velocity = new Vector2(velocity, rb.velocity.y);
     }
 
     // Update is called once per frame
