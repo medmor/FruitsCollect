@@ -13,7 +13,6 @@ public class DrawMangager : MonoBehaviour
 	public Line currentLine;
 	public Transform lineParent;
 	public RigidbodyType2D lineRigidBodyType = RigidbodyType2D.Kinematic;
-	public LineEnableMode lineEnableMode = LineEnableMode.ON_CREATE;
 	public Image lineLife;
 	public bool enableLineLife;
 	public bool isRunning;
@@ -63,11 +62,10 @@ public class DrawMangager : MonoBehaviour
 			var mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 			currentLine.AddPoint(mousePosition);
 			UpdateLineLife();
-			if (currentLine.ReachedPointsLimit())
+			if (Physics2D.OverlapBox(mousePosition, new Vector2(.1f, .1f), 0, groundLayer))
 			{
 				RelaseCurrentLine();
-			}
-			if (Physics2D.OverlapBox(mousePosition, new Vector2(.1f, .1f), 0, groundLayer))
+			}else if (currentLine.ReachedPointsLimit())
 			{
 				RelaseCurrentLine();
 			}
@@ -82,11 +80,6 @@ public class DrawMangager : MonoBehaviour
 		currentLine.lineColorMat.color = currColor;
 		currentLine.name = "Line";
 		currentLine.transform.SetParent(lineParent);
-
-		if (lineEnableMode == LineEnableMode.ON_CREATE)
-		{
-			EnableLine();
-		}
 	}
 
 	private void EnableLine()
@@ -98,10 +91,7 @@ public class DrawMangager : MonoBehaviour
 
 	private void RelaseCurrentLine()
 	{
-		if (lineEnableMode == LineEnableMode.ON_RELASE)
-		{
 			EnableLine();
-		}
 
 		currentLine = null;
 	}
