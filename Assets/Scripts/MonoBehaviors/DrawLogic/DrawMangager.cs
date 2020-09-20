@@ -65,7 +65,8 @@ public class DrawMangager : MonoBehaviour
 			if (Physics2D.OverlapBox(mousePosition, new Vector2(.1f, .1f), 0, groundLayer))
 			{
 				RelaseCurrentLine();
-			}else if (currentLine.ReachedPointsLimit())
+			}
+			else if (currentLine.ReachedPointsLimit())
 			{
 				RelaseCurrentLine();
 			}
