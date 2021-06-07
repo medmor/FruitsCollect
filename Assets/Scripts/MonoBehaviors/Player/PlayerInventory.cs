@@ -13,19 +13,19 @@ public class PlayerInventory: MonoBehaviour
     public void SetHealth(float value)
     {
         Health = value;
-        UIManager.Instance.playerInventory.SetHealthBar(Health/maxHealth);
+        UIManager.Instance.PlayerInventory.SetHealthBar(Health/maxHealth);
     }
 
     public void SetHearts(int value)
     {
         Hearts = value;
-        UIManager.Instance.playerInventory.SetHeartsText(Hearts);
+        UIManager.Instance.PlayerInventory.SetHeartsText(Hearts);
     }
 
     public void CollectItem(int itemId)
     {
         items[itemId] = 1;
-        UIManager.Instance.playerInventory.SetImageItem(itemId);
+        UIManager.Instance.PlayerInventory.SetImageItem(itemId);
     }
 
     public bool CheckAllCollected()

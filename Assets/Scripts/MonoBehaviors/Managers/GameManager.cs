@@ -42,7 +42,7 @@ public class GameManager : Manager<GameManager>
 
     void OnLoadOperationComplete(AsyncOperation ao)
     {
-        if(currentLevelName.StartsWith("level"))
+        if (currentLevelName.StartsWith("level"))
             SaveManager.Instance.SetLevel(int.Parse(currentLevelName.Substring(5)));
         if (currentLevelName == "Level1")
         {
@@ -88,8 +88,9 @@ public class GameManager : Manager<GameManager>
     {
         LoadLevel("GameOver");
         SoundManager.Instance.StopMusic();
-        UIManager.Instance.playerInventory.Reset(true);
-        UIManager.Instance.playerInventory.Hide();
-        UIManager.Instance.gameOverMenu.Show();
+        UIManager.Instance.PlayerInventory.Reset(true);
+        UIManager.Instance.PlayerInventory.Hide();
+        UIManager.Instance.Controls.Hide();
+        UIManager.Instance.GameOverMenu.Show();
     }
 }

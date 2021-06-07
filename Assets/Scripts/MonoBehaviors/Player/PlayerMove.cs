@@ -24,6 +24,8 @@ public class PlayerMove : MonoBehaviour
 
     Animator animator = default;
 
+    private Joystick joystick;
+
     void Start()
     {
         t = transform;
@@ -32,12 +34,13 @@ public class PlayerMove : MonoBehaviour
         r2d.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
         facingRight = t.localScale.x > 0;
 
-        //gameObject.layer = 8;
-
         animator = GetComponent<Animator>();
 
-
-
+        joystick = UIManager.Instance.Controls.GetJoystick();
+        EventsManager.Instance.ControlsEvent.AddListener((string e) =>
+        {
+            if (e == "Jump") jump();
+        });
     }
 
     void Update()
@@ -52,6 +55,11 @@ public class PlayerMove : MonoBehaviour
             {
                 moveDirection = 0;
             }
+        }
+
+        if (joystick.Horizontal != 0)
+        {
+            moveDirection = joystick.Horizontal;
         }
 
         if (moveDirection != 0)
@@ -87,27 +95,21 @@ public class PlayerMove : MonoBehaviour
             if (colliders[i].gameObject != gameObject)
             {
                 isGrounded = true;
+                doubleJump = false;
                 animator.SetBool("Jumping", false);
                 break;
             }
         }
 
-        if(colliders.Length == 1)
+        if (colliders.Length == 1)
         {
             animator.SetBool("Jumping", true);
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && !isGrounded && !doubleJump)
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             jump();
-            doubleJump = true;
-            animator.SetBool("DoubleJump", true);
-        }
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
-        {
-            jump();
-            doubleJump = false;
-            isGrounded = false;
+
         }
     }
     public void OnDoubleJumpEnds()
@@ -122,23 +124,18 @@ public class PlayerMove : MonoBehaviour
 
     private void jump()
     {
-        //SoundManager.Instance.playSound("jump");
-        r2d.velocity = new Vector2(r2d.velocity.x, jumpHeight);
+        SoundManager.Instance.playSound("jump");
+        if (isGrounded)
+            r2d.velocity = new Vector2(r2d.velocity.x, jumpHeight);
+        else if (!doubleJump)
+        {
+            r2d.velocity = new Vector2(r2d.velocity.x, jumpHeight * 1.2f);
+            doubleJump = true;
+            animator.SetBool("DoubleJump", true);
+        }
+
     }
 
-    //private void OnCollisionEnter2D(Collision2D collision)
-    //{
-    //    if (collision.gameObject.tag == "Ground")
-    //    {
-    //        if (Physics2D.OverlapCircle(groundCheck.position, groundRadius, groundLayer))
-    //            isGrounded = true;
-    //    }
-    //}
-
-    //void OnDrawGizmos()
-    //{
-    //    Gizmos.DrawSphere(groundCheck.position, groundRadius);
-    //}
 
 
 }

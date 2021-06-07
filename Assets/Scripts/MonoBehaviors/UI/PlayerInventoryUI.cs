@@ -26,7 +26,8 @@ public class PlayerInventoryUI : MonoBehaviour
             Hide();
             Reset(true);
             SoundManager.Instance.StopMusic();
-            UIManager.Instance.bootMenu.Show();
+            UIManager.Instance.BootMenu.Show();
+            UIManager.Instance.Controls.Hide();
             GameManager.Instance.LoadLevel("Boot");
         });
     }
@@ -70,7 +71,7 @@ public class PlayerInventoryUI : MonoBehaviour
 
     public void Reset(bool all)
     {
-        foreach(var image in itemImages)
+        foreach (var image in itemImages)
         {
             var temp = image.color;
             temp.a = .3f;

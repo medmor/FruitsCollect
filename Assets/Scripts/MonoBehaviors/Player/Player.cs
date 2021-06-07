@@ -21,8 +21,8 @@ public class Player : MonoBehaviour
 
         //the inventoryUI is not destroyed and keep track of player hearts
         //thas a simple not correct to keep the player and the inventory synchronized
-        inventory.SetHearts(UIManager.Instance.playerInventory.GetHeartsInt());
-        inventory.SetHealth(UIManager.Instance.playerInventory.GetHealth());
+        inventory.SetHearts(UIManager.Instance.PlayerInventory.GetHeartsInt());
+        inventory.SetHealth(UIManager.Instance.PlayerInventory.GetHealth());
 
     }
 
@@ -39,7 +39,7 @@ public class Player : MonoBehaviour
         Die();
         Reset();
         if(inventory.Hearts <= 0) 
-            EventsManager.Instance.playerkilled?.Invoke(this);
+            EventsManager.Instance.Playerkilled?.Invoke(this);
     }
 
     public void Reset()
@@ -80,7 +80,7 @@ public class Player : MonoBehaviour
             inventory.CollectItem(collision.gameObject.GetComponent<Collectable>().item.id);
             if (inventory.CheckAllCollected())
             {
-                EventsManager.Instance.allItemsCollected.Invoke();
+                EventsManager.Instance.AllItemsCollected.Invoke();
             }
         }
         else if(collision.gameObject.tag == "Heart")

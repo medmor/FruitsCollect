@@ -193,6 +193,7 @@ MonoBehaviour:
     m_Bits: 1280
   groundCheck: {fileID: 3602417050779139932}
   groundCheckRadius: 0.05
+  joystick: {fileID: 3881087803549984439, guid: ec536a7718376554185e4a856d5ae230, type: 3}
 --- !u!1 &3602417050779139931
 GameObject:
   m_ObjectHideFlags: 0

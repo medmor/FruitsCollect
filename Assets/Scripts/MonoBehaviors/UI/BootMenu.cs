@@ -10,7 +10,7 @@ public class BootMenu : MonoBehaviour
 
     [Header("Boot Menu")]
     [SerializeField] private GameObject mainMenu = default;
-    [SerializeField] private Button play = default;
+    //[SerializeField] private Button play = default;
 
     [Header("Levels")]
     [SerializeField] private GameObject levelsContainer = default;
@@ -18,11 +18,12 @@ public class BootMenu : MonoBehaviour
 
     void Start()
     {
-        play.onClick.AddListener(() => {
-            GameManager.Instance.LoadLevel("Level1");
-            Hide();
-            UIManager.Instance.playerInventory.Show();
-        });
+        //play.onClick.AddListener(() =>
+        //{
+        //    GameManager.Instance.LoadLevel("Level1");
+        //    Hide();
+        //    UIManager.Instance.PlayerInventory.Show();
+        //});
     }
 
     public void Hide()
@@ -63,10 +64,11 @@ public class BootMenu : MonoBehaviour
             {
                 //if(int.Parse(text.text) <= lastLevel)
                 //{
-                    SoundManager.Instance.PlayMusic(0);
-                    UIManager.Instance.bootMenu.Hide();
-                    UIManager.Instance.playerInventory.Show();
-                    GameManager.Instance.LoadLevel("Level" + text.text);
+                SoundManager.Instance.PlayMusic(0);
+                UIManager.Instance.BootMenu.Hide();
+                UIManager.Instance.PlayerInventory.Show();
+                UIManager.Instance.Controls.Show();
+                GameManager.Instance.LoadLevel("Level" + text.text);
                 //}
             });
         }

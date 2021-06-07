@@ -15,7 +15,7 @@ public class WinGameOverMenu : MonoBehaviour
         restart.onClick.AddListener(() => {
             GameManager.Instance.LoadLevel("Boot");
             Hide();
-            UIManager.Instance.bootMenu.Show();
+            UIManager.Instance.BootMenu.Show();
         });
     }
 
