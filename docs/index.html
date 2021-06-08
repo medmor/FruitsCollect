@@ -11,6 +11,11 @@
 
 <body>
   <div id="unity-container" class="unity-desktop">
+    <div id="unity-footer">
+      <div id="unity-webgl-logo"></div>
+      <div id="unity-fullscreen-button"></div>
+      <div id="unity-build-title">platform</div>
+    </div>
     <canvas id="unity-canvas" width=960 height=600></canvas>
     <div id="unity-loading-bar">
       <div id="unity-logo"></div>
@@ -20,11 +25,6 @@
     </div>
     <div id="unity-mobile-warning">
       WebGL builds are not supported on mobile devices.
-    </div>
-    <div id="unity-footer">
-      <div id="unity-webgl-logo"></div>
-      <div id="unity-fullscreen-button"></div>
-      <div id="unity-build-title">platform</div>
     </div>
   </div>
   <script>
@@ -54,6 +54,16 @@
     // the canvas DOM size and WebGL render target sizes yourself.
     // config.matchWebGLToCanvasSize = false;
 
+    if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+      //container.className = "unity-mobile";
+      // Avoid draining fillrate performance on mobile devices,
+      // and default/override low DPI mode on mobile browsers.
+      config.devicePixelRatio = 1;
+      // mobileWarning.style.display = "block";
+      // setTimeout(() => {
+      //   mobileWarning.style.display = "none";
+      // }, 5000);
+    }
     canvas.style.width = "960px";
     canvas.style.height = "600px";
 
