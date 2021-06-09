@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class SoundManager : Manager<SoundManager>
@@ -18,6 +17,7 @@ public class SoundManager : Manager<SoundManager>
         {
             soundsDict[Sounds[i].name] = Sounds[i];
         }
+        playSound("intro");
     }
 
     public float SoundVolum {
@@ -45,7 +45,7 @@ public class SoundManager : Manager<SoundManager>
 
     public void playSound(string key)
     {
-        player.PlayOneShot(soundsDict[ key]);
+        player.PlayOneShot(soundsDict[key]);
     }
 
 }

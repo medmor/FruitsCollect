@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameManager : Manager<GameManager>
@@ -9,21 +8,33 @@ public class GameManager : Manager<GameManager>
 
     public Player PlayerPrefab;
     public GameObject[] SystemPrefabs;
-    private List<GameObject> instancedSystemPrefabs;
 
     private void Start()
     {
-        instancedSystemPrefabs = new List<GameObject>();
         InstantiateSystemPrefabs();
+        //if (Platform.IsMobileBrowser())
+        //{
+        //    UIManager.Instance.MoblilHandler.Show();
+        //    if (Application.platform == RuntimePlatform.Android)
+        //    {
+        //        if (Screen.orientation == ScreenOrientation.Portrait)
+        //        {
+        //            print("portrait");
+        //        }
+        //        else if (Screen.orientation == ScreenOrientation.Landscape)
+        //        {
+        //            print("landscape");
+        //        }
+        //    }
+        //}
+
     }
 
     void InstantiateSystemPrefabs()
     {
-        GameObject prefabInstance;
         for (int i = 0; i < SystemPrefabs.Length; ++i)
         {
-            prefabInstance = Instantiate(SystemPrefabs[i]);
-            instancedSystemPrefabs.Add(prefabInstance);
+            Instantiate(SystemPrefabs[i]);
         }
     }
 

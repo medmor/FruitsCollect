@@ -6,6 +6,13 @@ public class SaveManager : Manager<SaveManager>
     public readonly string Level = "level";
     public readonly string BestScore = "bestScore";
 
+    private void Start()
+    {
+        PlayerPrefs.DeleteAll();
+        if (GetLevel() == 0)
+            SetLevel(1);
+    }
+
     public bool IsBestScoreSaved()
         => PlayerPrefs.HasKey(BestScore);
 

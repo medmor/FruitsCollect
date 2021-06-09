@@ -10,7 +10,6 @@ public class BootMenu : MonoBehaviour
 
     [Header("Boot Menu")]
     [SerializeField] private GameObject mainMenu = default;
-    //[SerializeField] private Button play = default;
 
     [Header("Levels")]
     [SerializeField] private GameObject levelsContainer = default;
@@ -18,12 +17,7 @@ public class BootMenu : MonoBehaviour
 
     void Start()
     {
-        //play.onClick.AddListener(() =>
-        //{
-        //    GameManager.Instance.LoadLevel("Level1");
-        //    Hide();
-        //    UIManager.Instance.PlayerInventory.Show();
-        //});
+
     }
 
     public void Hide()
@@ -51,10 +45,11 @@ public class BootMenu : MonoBehaviour
         {
             var levelButton = Instantiate(levelPrefab).GetComponent<Button>();
             var text = levelButton.GetComponentInChildren<TextMeshProUGUI>();
+            var lockImage = levelButton.transform.GetChild(1).gameObject.GetComponent<Image>();
 
-            if (i + 1 > lastLevel)
+            if (i + 1 <= lastLevel)
             {
-                levelButton.GetComponent<Image>().color = new Color(1, 1, 1, .2f);
+                lockImage.gameObject.SetActive(false);
             }
             text.text = (i + 1).ToString();
 
@@ -62,14 +57,14 @@ public class BootMenu : MonoBehaviour
 
             levelButton.onClick.AddListener(() =>
             {
-                //if(int.Parse(text.text) <= lastLevel)
-                //{
-                SoundManager.Instance.PlayMusic(0);
-                UIManager.Instance.BootMenu.Hide();
-                UIManager.Instance.PlayerInventory.Show();
-                UIManager.Instance.Controls.Show();
-                GameManager.Instance.LoadLevel("Level" + text.text);
-                //}
+                if (int.Parse(text.text) <= lastLevel)
+                {
+                    SoundManager.Instance.playSound("click");
+                    UIManager.Instance.BootMenu.Hide();
+                    UIManager.Instance.PlayerInventory.Show();
+                    UIManager.Instance.Controls.Show();
+                    GameManager.Instance.LoadLevel("Level" + text.text);
+                }
             });
         }
     }

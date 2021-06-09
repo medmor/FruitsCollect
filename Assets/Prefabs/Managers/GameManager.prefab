@@ -112,7 +112,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerPrefab: {fileID: 3602417050324529473, guid: 2f43488e0c431e3498a18a64616f4b40, type: 3}
   SystemPrefabs:
-  - {fileID: 7819499278233285378, guid: 06a73866381e3bd429bdf61d591c7760, type: 3}
+  - {fileID: 1129466757228247953, guid: 0bde0c4dd8d0a054889e27c7224caa5b, type: 3}
   - {fileID: 1533280185719358335, guid: a864ae424ebda0545b43fd87143d8154, type: 3}
   - {fileID: 9174531966899927189, guid: 3a44063d1d056e24bb4e9dd9d9ffaafe, type: 3}
-  - {fileID: 1129466757228247953, guid: 0bde0c4dd8d0a054889e27c7224caa5b, type: 3}
+  - {fileID: 7819499278233285378, guid: 06a73866381e3bd429bdf61d591c7760, type: 3}

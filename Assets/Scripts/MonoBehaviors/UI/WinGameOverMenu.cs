@@ -12,7 +12,9 @@ public class WinGameOverMenu : MonoBehaviour
 
     void Start()
     {
-        restart.onClick.AddListener(() => {
+        restart.onClick.AddListener(() =>
+        {
+            SoundManager.Instance.playSound("click");
             GameManager.Instance.LoadLevel("Boot");
             Hide();
             UIManager.Instance.BootMenu.Show();
