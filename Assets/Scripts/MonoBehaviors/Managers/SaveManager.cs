@@ -8,7 +8,7 @@ public class SaveManager : Manager<SaveManager>
 
     private void Start()
     {
-        PlayerPrefs.DeleteAll();
+        //PlayerPrefs.DeleteAll();
         if (GetLevel() == 0)
             SetLevel(1);
     }

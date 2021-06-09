@@ -15,11 +15,6 @@ public class BootMenu : MonoBehaviour
     [SerializeField] private GameObject levelsContainer = default;
     [SerializeField] private GameObject levelPrefab = default;
 
-    void Start()
-    {
-
-    }
-
     public void Hide()
     {
         mainMenu.SetActive(false);

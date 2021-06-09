@@ -53,8 +53,10 @@ public class GameManager : Manager<GameManager>
 
     void OnLoadOperationComplete(AsyncOperation ao)
     {
-        if (currentLevelName.StartsWith("level"))
+        if (currentLevelName.StartsWith("Level"))
+        {
             SaveManager.Instance.SetLevel(int.Parse(currentLevelName.Substring(5)));
+        }
         if (currentLevelName == "Level1")
         {
             SoundManager.Instance.PlayMusic(0);

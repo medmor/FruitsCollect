@@ -12,6 +12,13 @@ public class EndLevel : MonoBehaviour
             GetComponent<SpriteRenderer>().color = temp;
         });
     }
+    //private void Update()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.A))
+    //    {
+    //        LoadWinScene();
+    //    }
+    //}
 
     public void LoadWinScene()
     {
