@@ -18,6 +18,8 @@ public class SaveManager : Manager<SaveManager>
 
     public void SetLevel(int value)
     {
+        if (value <= GetLevel())
+            return;
         PlayerPrefs.SetInt(Level, value);
         PlayerPrefs.Save();
     }
