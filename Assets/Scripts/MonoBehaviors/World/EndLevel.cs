@@ -22,10 +22,11 @@ public class EndLevel : MonoBehaviour
 
     public void LoadWinScene()
     {
-        var name = "Level" + (int.Parse(SceneManager.GetActiveScene().name.Substring(5)) + 1);
+        var nextLevel = int.Parse(SceneManager.GetActiveScene().name.Substring(5)) + 1;
         UIManager.Instance.PlayerInventory.Reset(false);
-        if (Application.CanStreamedLevelBeLoaded(name))
+        if (Application.CanStreamedLevelBeLoaded("Level" + nextLevel))
         {
+            SaveManager.Instance.SetLevel(nextLevel);
             GameManager.Instance.LoadLevel("Boot");
         }
         else
