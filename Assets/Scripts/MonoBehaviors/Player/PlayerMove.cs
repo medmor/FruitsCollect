@@ -124,6 +124,8 @@ public class PlayerMove : MonoBehaviour
 
     private void jump()
     {
+        if (doubleJump && !isGrounded)
+            return;
         SoundManager.Instance.playSound("jump");
         if (isGrounded)
             r2d.velocity = new Vector2(r2d.velocity.x, jumpHeight);
