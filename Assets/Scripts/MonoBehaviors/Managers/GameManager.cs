@@ -58,8 +58,14 @@ public class GameManager : Manager<GameManager>
             SaveManager.Instance.SetLevel(int.Parse(currentLevelName.Substring(5)));
             SoundManager.Instance.PlayMusic(0);
         }
-        if (currentLevelName == "Level1")
+        if (currentLevelName == "Boot")
         {
+            SoundManager.Instance.StopMusic();
+            SoundManager.Instance.playSound("click");
+            UIManager.Instance.PlayerInventory.Hide();
+            UIManager.Instance.PlayerInventory.Reset(true);
+            UIManager.Instance.BootMenu.Show();
+            UIManager.Instance.Controls.Hide();
         }
     }
 

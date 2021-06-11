@@ -23,12 +23,6 @@ public class PlayerInventoryUI : MonoBehaviour
     {
         homeButton.onClick.AddListener(() =>
         {
-            SoundManager.Instance.StopMusic();
-            SoundManager.Instance.playSound("click");
-            Hide();
-            Reset(true);
-            UIManager.Instance.BootMenu.Show();
-            UIManager.Instance.Controls.Hide();
             GameManager.Instance.LoadLevel("Boot");
         });
     }

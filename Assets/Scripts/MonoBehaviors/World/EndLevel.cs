@@ -26,7 +26,7 @@ public class EndLevel : MonoBehaviour
         UIManager.Instance.PlayerInventory.Reset(false);
         if (Application.CanStreamedLevelBeLoaded(name))
         {
-            GameManager.Instance.LoadLevel(name);
+            GameManager.Instance.LoadLevel("Boot");
         }
         else
         {
