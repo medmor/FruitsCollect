@@ -12121,7 +12121,7 @@ MonoBehaviour:
   linePrefab: {fileID: 7974538373971188664, guid: e8992ddbf2febcd469660f5aca37fed8, type: 3}
   groundLayer:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 1056
   currentLine: {fileID: 0}
   lineParent: {fileID: 4028673442440788300}
   lineRigidBodyType: 1
