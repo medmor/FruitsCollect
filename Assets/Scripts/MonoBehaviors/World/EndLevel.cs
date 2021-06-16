@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class EndLevel : MonoBehaviour
 {
@@ -22,7 +21,7 @@ public class EndLevel : MonoBehaviour
 
     public void LoadWinScene()
     {
-        var nextLevel = int.Parse(SceneManager.GetActiveScene().name.Substring(5)) + 1;
+        var nextLevel = int.Parse(GameManager.Instance.currentLevelName.Substring(5)) + 1;
         UIManager.Instance.PlayerInventory.Reset(false);
         if (Application.CanStreamedLevelBeLoaded("Level" + nextLevel))
         {

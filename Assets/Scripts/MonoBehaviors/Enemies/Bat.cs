@@ -21,20 +21,22 @@ public class Bat : Enemy
         rb = GetComponent<Rigidbody2D>();
 
         initialPosition = transform.position;
+
+        target = GameObject.Find("Player").transform;
     }
 
     void Update()
     {
         if (Vector2.Distance(transform.position, target.position) < detectionRadius && inTheGrot())
         {
-            rb.MovePosition( Vector2.MoveTowards(transform.position, target.position, 2*speed*Time.deltaTime));
+            rb.MovePosition(Vector2.MoveTowards(transform.position, target.position, 2 * speed * Time.deltaTime));
             animator.SetBool("Flaying", true);
         }
-        else if(Vector2.Distance(transform.position, initialPosition) > initialPositionRadius)
+        else if (Vector2.Distance(transform.position, initialPosition) > initialPositionRadius)
         {
-           rb.MovePosition(Vector2.MoveTowards(transform.position, initialPosition, speed * Time.deltaTime));         
+            rb.MovePosition(Vector2.MoveTowards(transform.position, initialPosition, speed * Time.deltaTime));
         }
-        else if(Vector2.Distance(transform.position, initialPosition) < initialPositionRadius)
+        else if (Vector2.Distance(transform.position, initialPosition) < initialPositionRadius)
         {
             animator.SetBool("Flaying", false);
         }

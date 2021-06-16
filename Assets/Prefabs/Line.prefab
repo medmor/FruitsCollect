@@ -170,4 +170,4 @@ MonoBehaviour:
   pointZPosition: -3
   autoAddColliderPoint: 1
   lineColorMat: {fileID: 0}
-  maxPoints: 50
+  maxPoints: 200

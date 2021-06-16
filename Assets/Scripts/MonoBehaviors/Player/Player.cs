@@ -38,14 +38,14 @@ public class Player : MonoBehaviour
     {
         Die();
         Reset();
-        if(inventory.Hearts <= 0) 
+        if (inventory.Hearts <= 0)
             EventsManager.Instance.Playerkilled?.Invoke(this);
     }
 
     public void Reset()
     {
         dead = false;
-        transform.position = spawnPoint.position;
+        transform.position = GameObject.Find(GameManager.Instance.currentLevelName + "(Clone)/GamePoints/SpawnPoint").gameObject.transform.position;
     }
     public void Die()
     {
@@ -83,7 +83,7 @@ public class Player : MonoBehaviour
                 EventsManager.Instance.AllItemsCollected.Invoke();
             }
         }
-        else if(collision.gameObject.tag == "Heart")
+        else if (collision.gameObject.tag == "Heart")
         {
             SoundManager.Instance.playSound("coin");
             InstantiateCollectedPrefab(collision.gameObject.transform.position);

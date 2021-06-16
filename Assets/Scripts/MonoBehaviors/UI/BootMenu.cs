@@ -1,6 +1,6 @@
 ﻿using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+//using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class BootMenu : MonoBehaviour
@@ -15,6 +15,7 @@ public class BootMenu : MonoBehaviour
     [SerializeField] private GameObject levelsContainer = default;
     [SerializeField] private GameObject levelPrefab = default;
 
+    public int LevelNumber;
     public void Hide()
     {
         mainMenu.SetActive(false);
@@ -36,7 +37,7 @@ public class BootMenu : MonoBehaviour
             Destroy(child.gameObject);
         }
 
-        for (int i = 0; i < SceneManager.sceneCountInBuildSettings - 3; i++)
+        for (int i = 0; i < LevelNumber; i++)
         {
             var levelButton = Instantiate(levelPrefab).GetComponent<Button>();
             var text = levelButton.GetComponentInChildren<TextMeshProUGUI>();
@@ -58,7 +59,7 @@ public class BootMenu : MonoBehaviour
                     UIManager.Instance.BootMenu.Hide();
                     UIManager.Instance.PlayerInventory.Show();
                     UIManager.Instance.Controls.Show();
-                    GameManager.Instance.LoadLevel("Level" + text.text);
+                    GameManager.Instance.LoadLevel("Level", text.text);
                 }
             });
         }

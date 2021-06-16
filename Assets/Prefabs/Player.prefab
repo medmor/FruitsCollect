@@ -192,8 +192,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1280
   groundCheck: {fileID: 3602417050779139932}
-  groundCheckRadius: 0.05
-  joystick: {fileID: 3881087803549984439, guid: ec536a7718376554185e4a856d5ae230, type: 3}
+  groundCheckRadius: 0.1
 --- !u!1 &3602417050779139931
 GameObject:
   m_ObjectHideFlags: 0
@@ -218,7 +217,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3602417050779139931}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.007, y: -0.487, z: 0}
+  m_LocalPosition: {x: 0, y: -0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3602417050324529469}

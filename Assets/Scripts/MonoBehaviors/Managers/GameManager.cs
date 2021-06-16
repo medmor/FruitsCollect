@@ -1,33 +1,18 @@
-﻿using UnityEngine;
+﻿using Cinemachine;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameManager : Manager<GameManager>
 {
-    public string currentLevelName { get; private set; } = "";
+    public string currentLevelName { get; private set; } = "Boot";
     public Enums.GameState CurrentGameState { get; private set; } = Enums.GameState.PREGAME;
 
-    public Player PlayerPrefab;
+    //public Player PlayerPrefab;
     public GameObject[] SystemPrefabs;
 
     private void Start()
     {
         InstantiateSystemPrefabs();
-        //if (Platform.IsMobileBrowser())
-        //{
-        //    UIManager.Instance.MoblilHandler.Show();
-        //    if (Application.platform == RuntimePlatform.Android)
-        //    {
-        //        if (Screen.orientation == ScreenOrientation.Portrait)
-        //        {
-        //            print("portrait");
-        //        }
-        //        else if (Screen.orientation == ScreenOrientation.Landscape)
-        //        {
-        //            print("landscape");
-        //        }
-        //    }
-        //}
-
     }
 
     void InstantiateSystemPrefabs()
@@ -50,6 +35,11 @@ public class GameManager : Manager<GameManager>
         ao.completed += OnLoadOperationComplete;
         currentLevelName = levelName;
     }
+    public void LoadLevel(string levelName, string levelNumber)
+    {
+        LoadLevel(levelName);
+        currentLevelName += levelNumber;
+    }
 
     void OnLoadOperationComplete(AsyncOperation ao)
     {
@@ -57,7 +47,13 @@ public class GameManager : Manager<GameManager>
         {
             SaveManager.Instance.SetLevel(int.Parse(currentLevelName.Substring(5)));
             SoundManager.Instance.PlayMusic(0);
+            Instantiate(Resources.Load("Levels/" + currentLevelName));
+            GameObject.Find("/Player").transform.position =
+                GameObject.Find(currentLevelName + "(Clone)/GamePoints/SpawnPoint").gameObject.transform.position;
+            GameObject.Find("Cam/Vcam").GetComponent<CinemachineConfiner>().m_BoundingShape2D =
+            GameObject.Find(currentLevelName + "(Clone)/WorldCamBounds").GetComponent<PolygonCollider2D>();
         }
+
         if (currentLevelName == "Boot")
         {
             SoundManager.Instance.StopMusic();

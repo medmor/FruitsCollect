@@ -17,9 +17,6 @@ public class UIManager : Manager<UIManager>
     [Header("Controls")]
     public Controls Controls;
 
-    [Header("MobilHandler")]
-    public MobilHandler MoblilHandler;
-
     public void Start()
     {
         BootMenu.Show();
