@@ -4,7 +4,7 @@
 public class Player : MonoBehaviour
 {
 
-    public Transform spawnPoint = default;
+    //public Transform spawnPoint = default;
     public Collected collectedPrephab = default;
 
     public PlayerInventory inventory = default;
@@ -20,7 +20,7 @@ public class Player : MonoBehaviour
         animator = GetComponent<Animator>();
 
         //the inventoryUI is not destroyed and keep track of player hearts
-        //thas a simple not correct to keep the player and the inventory synchronized
+        //thats a simple not correct to keep the player and the inventory synchronized
         inventory.SetHearts(UIManager.Instance.PlayerInventory.GetHeartsInt());
         inventory.SetHealth(UIManager.Instance.PlayerInventory.GetHealth());
 

@@ -23,7 +23,7 @@ public class EndLevel : MonoBehaviour
     {
         var nextLevel = int.Parse(GameManager.Instance.currentLevelName.Substring(5)) + 1;
         UIManager.Instance.PlayerInventory.Reset(false);
-        if (Application.CanStreamedLevelBeLoaded("Level" + nextLevel))
+        if (nextLevel <= GameManager.Instance.NumberOfLevels)
         {
             SaveManager.Instance.SetLevel(nextLevel);
             GameManager.Instance.LoadLevel("Boot");

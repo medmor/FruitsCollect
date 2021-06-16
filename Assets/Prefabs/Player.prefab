@@ -187,7 +187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxSpeed: 3.4
   jumpHeight: 6.5
-  maxJump: 10
+  maxJump: 16
   groundLayer:
     serializedVersion: 2
     m_Bits: 1280

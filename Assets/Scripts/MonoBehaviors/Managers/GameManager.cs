@@ -4,6 +4,9 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : Manager<GameManager>
 {
+
+    [HideInInspector]
+    public readonly int NumberOfLevels = 9;
     public string currentLevelName { get; private set; } = "Boot";
     public Enums.GameState CurrentGameState { get; private set; } = Enums.GameState.PREGAME;
 

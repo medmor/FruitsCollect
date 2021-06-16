@@ -82,7 +82,7 @@ public class PlayerMove : MonoBehaviour
 
     void FixedUpdate()
     {
-        r2d.velocity = new Vector2(moveDirection * maxSpeed, r2d.velocity.y > maxJump ? jumpHeight : r2d.velocity.y);
+        r2d.velocity = new Vector2(moveDirection * maxSpeed, r2d.velocity.y);
         animator.SetFloat("Speed", Math.Abs(r2d.velocity.x));
     }
 
