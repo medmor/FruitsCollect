@@ -59,8 +59,10 @@ public class DrawMangager : MonoBehaviour
 
         if (currentLine != null)
         {
-            var mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            if (mousePosition.y < -3.8) return;
+            var inputPosition = Input.mousePosition;
+            var mousePosition = Camera.main.ScreenToWorldPoint(inputPosition);
+
+            if (inputPosition.y < 180) return;
             currentLine.AddPoint(mousePosition);
             UpdateLineLife();
             if (Physics2D.OverlapBox(mousePosition, new Vector2(.1f, .1f), 0, groundLayer))
