@@ -69,7 +69,7 @@ public class DrawMangager : MonoBehaviour
             {
                 RelaseCurrentLine();
             }
-            //else if (currentLine.ReachedPointsLimit())
+            //if (currentLine.ReachedPointsLimit())
             //{
             //	RelaseCurrentLine();
             //}
