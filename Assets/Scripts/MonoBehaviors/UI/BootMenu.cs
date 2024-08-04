@@ -15,7 +15,6 @@ public class BootMenu : MonoBehaviour
     [SerializeField] private GameObject levelsContainer = default;
     [SerializeField] private GameObject levelPrefab = default;
 
-    public int LevelNumber;
     public void Hide()
     {
         mainMenu.SetActive(false);
@@ -37,7 +36,7 @@ public class BootMenu : MonoBehaviour
             Destroy(child.gameObject);
         }
 
-        for (int i = 0; i < LevelNumber; i++)
+        for (int i = 0; i < GameManager.Instance.GameSettings.NumberOfLevels; i++)
         {
             var levelButton = Instantiate(levelPrefab).GetComponent<Button>();
             var text = levelButton.GetComponentInChildren<TextMeshProUGUI>();

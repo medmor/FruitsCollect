@@ -5,10 +5,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : Manager<GameManager>
 {
 
-    [HideInInspector]
-    public readonly int NumberOfLevels = 9;
-    public string currentLevelName { get; private set; } = "Boot";
-    public Enums.GameState CurrentGameState { get; private set; } = Enums.GameState.PREGAME;
+    public GameMangerSO GameSettings;
 
     //public Player PlayerPrefab;
     public GameObject[] SystemPrefabs;
@@ -36,28 +33,28 @@ public class GameManager : Manager<GameManager>
         }
 
         ao.completed += OnLoadOperationComplete;
-        currentLevelName = levelName;
+        GameSettings.currentLevelName = levelName;
     }
     public void LoadLevel(string levelName, string levelNumber)
     {
         LoadLevel(levelName);
-        currentLevelName += levelNumber;
+        GameSettings.currentLevelName += levelNumber;
     }
 
     void OnLoadOperationComplete(AsyncOperation ao)
     {
-        if (currentLevelName.StartsWith("Level"))
+        if (GameSettings.currentLevelName.StartsWith("Level"))
         {
-            SaveManager.Instance.SetLevel(int.Parse(currentLevelName.Substring(5)));
+            SaveManager.Instance.SetLevel(int.Parse(GameSettings.currentLevelName.Substring(5)));
             SoundManager.Instance.PlayMusic(0);
-            Instantiate(Resources.Load("Levels/" + currentLevelName));
+            Instantiate(Resources.Load("Levels/" + GameSettings.currentLevelName));
             GameObject.Find("/Player").transform.position =
-                GameObject.Find(currentLevelName + "(Clone)/GamePoints/SpawnPoint").gameObject.transform.position;
+                GameObject.Find(GameSettings.currentLevelName + "(Clone)/GamePoints/SpawnPoint").gameObject.transform.position;
             GameObject.Find("Cam/Vcam").GetComponent<CinemachineConfiner>().m_BoundingShape2D =
-            GameObject.Find(currentLevelName + "(Clone)/WorldCamBounds").GetComponent<PolygonCollider2D>();
+            GameObject.Find(GameSettings.currentLevelName + "(Clone)/WorldCamBounds").GetComponent<PolygonCollider2D>();
         }
 
-        if (currentLevelName == "Boot")
+        if (GameSettings.currentLevelName == "Boot")
         {
             SoundManager.Instance.StopMusic();
             SoundManager.Instance.playSound("click");
@@ -70,9 +67,9 @@ public class GameManager : Manager<GameManager>
 
     public void UpdateState(Enums.GameState state)
     {
-        CurrentGameState = state;
+        GameSettings.CurrentGameState = state;
 
-        switch (CurrentGameState)
+        switch (GameSettings.CurrentGameState)
         {
             case Enums.GameState.PREGAME:
                 Time.timeScale = 1.0f;
@@ -93,7 +90,7 @@ public class GameManager : Manager<GameManager>
 
     public void TogglePause()
     {
-        UpdateState(CurrentGameState == Enums.GameState.RUNNING
+        UpdateState(GameSettings.CurrentGameState == Enums.GameState.RUNNING
             ? Enums.GameState.PAUSED : Enums.GameState.RUNNING);
     }
 

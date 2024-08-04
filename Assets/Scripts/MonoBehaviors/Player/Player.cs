@@ -45,7 +45,7 @@ public class Player : MonoBehaviour
     public void Reset()
     {
         dead = false;
-        transform.position = GameObject.Find(GameManager.Instance.currentLevelName + "(Clone)/GamePoints/SpawnPoint").gameObject.transform.position;
+        transform.position = GameObject.Find(GameManager.Instance.GameSettings.currentLevelName + "(Clone)/GamePoints/SpawnPoint").gameObject.transform.position;
     }
     public void Die()
     {

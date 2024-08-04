@@ -11,19 +11,12 @@ public class EndLevel : MonoBehaviour
             GetComponent<SpriteRenderer>().color = temp;
         });
     }
-    //private void Update()
-    //{
-    //    if (Input.GetKeyDown(KeyCode.A))
-    //    {
-    //        LoadWinScene();
-    //    }
-    //}
 
     public void LoadWinScene()
     {
-        var nextLevel = int.Parse(GameManager.Instance.currentLevelName.Substring(5)) + 1;
+        var nextLevel = int.Parse(GameManager.Instance.GameSettings.currentLevelName.Substring(5)) + 1;
         UIManager.Instance.PlayerInventory.Reset(false);
-        if (nextLevel <= GameManager.Instance.NumberOfLevels)
+        if (nextLevel <= GameManager.Instance.GameSettings.NumberOfLevels)
         {
             SaveManager.Instance.SetLevel(nextLevel);
             GameManager.Instance.LoadLevel("Boot");
