@@ -8,12 +8,27 @@ public class BootMenu : MonoBehaviour
     [Header("Dummy Camera")]
     [SerializeField] private Camera dummyCammera = default;
 
+    [Header("IntroContainer")]
+    [SerializeField] private GameObject introContainer = default;
+    [SerializeField] private Button playButton = default;
+
+
     [Header("Boot Menu")]
     [SerializeField] private GameObject mainMenu = default;
 
     [Header("Levels")]
     [SerializeField] private GameObject levelsContainer = default;
     [SerializeField] private GameObject levelPrefab = default;
+
+
+    private void Start()
+    {
+        playButton.onClick.AddListener(() =>
+        {
+            SoundManager.Instance.playSound("click");
+            introContainer.SetActive(false);
+        });
+    }
 
     public void Hide()
     {
