@@ -37,6 +37,39 @@
                     "isPartOfComposite": false
                 },
                 {
+                    "name": "",
+                    "id": "5b0c652d-6066-418b-8c0a-0fb0d7f416e2",
+                    "path": "<HID::Saitek PLC Cyborg Rumble Pad>/button2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ebdcf4bd-e602-4077-a7d7-743508c94f1f",
+                    "path": "<Joystick>/stick/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9b1a0544-7d89-4682-bc9c-914fcb9415fd",
+                    "path": "/ f51a)/Button 2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
                     "name": "Keyboard",
                     "id": "95534401-20af-4a39-940b-7727a255a899",
                     "path": "2DVector",
@@ -46,28 +79,6 @@
                     "action": "Move",
                     "isComposite": true,
                     "isPartOfComposite": false
-                },
-                {
-                    "name": "up",
-                    "id": "736ac28b-76b5-4d3d-bbee-ec165d3d7562",
-                    "path": "",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Move",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "down",
-                    "id": "49d5640f-4412-44eb-a950-bdba73d06197",
-                    "path": "",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Move",
-                    "isComposite": false,
-                    "isPartOfComposite": true
                 },
                 {
                     "name": "left",
@@ -84,6 +95,72 @@
                     "name": "right",
                     "id": "fcbf0b65-4555-4115-951e-ec8d9d66b02b",
                     "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "GamepadPlus",
+                    "id": "c14e7fa5-c915-4f15-8a3f-a7c6eb99bf67",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "left",
+                    "id": "9cf7cc1a-7184-4844-9d9d-e3d8bc78a60d",
+                    "path": "<HID::Saitek PLC Cyborg Rumble Pad>/hat/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "52c2ea35-1882-4d33-b07b-f9a992f9169a",
+                    "path": "<HID::Saitek PLC Cyborg Rumble Pad>/hat/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "GamepadJoystick",
+                    "id": "b528136c-618c-4deb-b281-06b9658ade09",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "left",
+                    "id": "01e9c7ed-54d2-4c63-9ea4-f83537f8ed75",
+                    "path": "<Joystick>/stick/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "41eafd89-9646-45bf-bfd9-091411261e88",
+                    "path": "<Joystick>/stick/right",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

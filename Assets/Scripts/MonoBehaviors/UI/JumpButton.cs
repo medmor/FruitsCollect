@@ -10,7 +10,6 @@ public class JumpButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     {
         img = GetComponent<Image>();
         originalColor = img.color;
-
     }
     public void OnPointerDown(PointerEventData eventData)
     {

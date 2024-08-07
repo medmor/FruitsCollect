@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class Controls : MonoBehaviour
 {
     public GameObject ControlsObject;
-    public Joystick joystick;
+    public GameObject joystick;
     public GameObject JumpButton;
     public Button ControlsInfoShowButton;
     public Button ControlsInfoHideButton;
@@ -21,14 +21,10 @@ public class Controls : MonoBehaviour
             SetDescktopControls();
         }
     }
-    public Joystick GetJoystick()
-    {
-        return joystick;
-    }
 
     public void SetMobileControls()
     {
-        joystick.gameObject.SetActive(true);
+        joystick.SetActive(true);
         JumpButton.SetActive(true);
     }
 

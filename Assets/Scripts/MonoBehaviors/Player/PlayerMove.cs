@@ -1,7 +1,6 @@
 ﻿using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.UIElements;
 
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -30,9 +29,18 @@ public class PlayerMove : MonoBehaviour
 
     void Start()
     {
+
         inputActions = new InputActions();
         inputActions.Player.Enable();
         inputActions.Player.Jump.performed += jumpLogique;
+
+        // var myAction = new InputAction(binding: "/*/<button>");
+        // myAction.performed += ctx =>
+        // {
+        //     print(ctx.control);
+        // };
+        // myAction.Enable();
+
 
         r2d = GetComponent<Rigidbody2D>();
         r2d.freezeRotation = true;
@@ -41,22 +49,12 @@ public class PlayerMove : MonoBehaviour
 
         animator = GetComponent<Animator>();
 
-        // // joystick = UIManager.Instance.Controls.GetJoystick();
-        // EventsManager.Instance.ControlsEvent.AddListener((string e) =>
-        // {
-        //     if (e == "Jump") jump();
-        // });
     }
 
     void Update()
     {
 
         moveDirection = inputActions.Player.Move.ReadValue<Vector2>().x;
-
-        // if (joystick.Horizontal != 0)
-        // {
-        //     moveDirection = joystick.Horizontal;
-        // }
 
         if (moveDirection != 0)
         {
@@ -92,6 +90,8 @@ public class PlayerMove : MonoBehaviour
 
     private void jumpLogique(InputAction.CallbackContext context)
     {
+        print(context.control);
+
         if (context.performed)
         {
             if (doubleJump && !isGrounded)
