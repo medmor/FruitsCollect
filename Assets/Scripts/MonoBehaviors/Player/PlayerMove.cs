@@ -44,38 +44,14 @@ public class PlayerMove : MonoBehaviour
 
     void Update()
     {
+        moveDirection = inputActions.Player.Move.ReadValue<Vector2>().x;
 
-        Vector2 moveVector = Vector2.zero;
-        var value = inputActions.Player.Move.ReadValueAsObject();
-
-        if (value != null)
+        if (moveDirection == 0)
         {
-
-            // Read the value as Vector2, which works for joystick inputs
-            if (value.GetType() == typeof(Vector2))
-            {
-                moveVector = (Vector2)value;
-            }
-            else if (value.GetType() == typeof(float))
-            {
-                // If it's a single axis, construct a Vector2 from the float value
-                float moveAxis = (float)value;
-                if (moveAxis > 1)
-                {
-                    moveAxis = 0;
-                }
-                else if (moveAxis < 0)
-                {
-                    moveAxis = 1;
-                }
-                else if (moveAxis > 0)
-                {
-                    moveAxis = -1;
-                }
-                moveVector = new Vector2(moveAxis, 0);
-            }
+            moveDirection = inputActions.Player.MoveAxis.ReadValue<float>();
+            moveDirection = moveDirection > 1 ? 0 : moveDirection > 0 ? -1 : moveDirection < 0 ? 1 : 0;
         }
-        moveDirection = moveVector.x;
+
 
         if (moveDirection != 0)
         {
@@ -144,5 +120,9 @@ public class PlayerMove : MonoBehaviour
         animator.SetTrigger("IdleBegin");
     }
 
+    void OnDestroy()
+    {
+        inputActions.Player.Jump.performed -= jumpLogique;
+    }
 
 }

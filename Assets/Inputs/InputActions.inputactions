@@ -18,10 +18,19 @@
                     "name": "Move",
                     "type": "Value",
                     "id": "75da2256-16a9-4aee-835d-05eebd1e1d0a",
-                    "expectedControlType": "",
+                    "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "MoveAxis",
+                    "type": "Button",
+                    "id": "46cd36e9-ca52-427b-8148-e358e952dffd",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -164,7 +173,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Move",
+                    "action": "MoveAxis",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
