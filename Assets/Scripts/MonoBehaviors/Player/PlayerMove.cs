@@ -46,31 +46,35 @@ public class PlayerMove : MonoBehaviour
     {
 
         Vector2 moveVector = Vector2.zero;
+        var value = inputActions.Player.Move.ReadValueAsObject();
 
-        // Read the value as Vector2, which works for joystick inputs
-        if (inputActions.Player.Move.controls[0].valueType == typeof(Vector2))
+        if (value != null)
         {
-            moveVector = inputActions.Player.Move.ReadValue<Vector2>();
-        }
-        else if (inputActions.Player.Move.controls[0].valueType == typeof(float))
-        {
-            // If it's a single axis, construct a Vector2 from the float value
-            float moveAxis = inputActions.Player.Move.ReadValue<float>();
-            if (moveAxis > 1)
-            {
-                moveAxis = 0;
-            }
-            else if (moveAxis < 0)
-            {
-                moveAxis = 1;
-            }
-            else if (moveAxis > 0)
-            {
-                moveAxis = -1;
-            }
-            moveVector = new Vector2(moveAxis, 0);
-        }
 
+            // Read the value as Vector2, which works for joystick inputs
+            if (value.GetType() == typeof(Vector2))
+            {
+                moveVector = (Vector2)value;
+            }
+            else if (value.GetType() == typeof(float))
+            {
+                // If it's a single axis, construct a Vector2 from the float value
+                float moveAxis = (float)value;
+                if (moveAxis > 1)
+                {
+                    moveAxis = 0;
+                }
+                else if (moveAxis < 0)
+                {
+                    moveAxis = 1;
+                }
+                else if (moveAxis > 0)
+                {
+                    moveAxis = -1;
+                }
+                moveVector = new Vector2(moveAxis, 0);
+            }
+        }
         moveDirection = moveVector.x;
 
         if (moveDirection != 0)
