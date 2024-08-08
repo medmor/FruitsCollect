@@ -18,7 +18,7 @@
                     "name": "Move",
                     "type": "Value",
                     "id": "75da2256-16a9-4aee-835d-05eebd1e1d0a",
-                    "expectedControlType": "Vector2",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
@@ -158,37 +158,15 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "GamepadWebgl",
-                    "id": "b54f5da7-58ce-4d34-9b14-146fa3808f4c",
-                    "path": "2DVector",
+                    "name": "",
+                    "id": "2afceb57-6f3f-44f9-a14d-63b22ab24cb7",
+                    "path": "/ f51a)/Axis 8",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Move",
-                    "isComposite": true,
+                    "isComposite": false,
                     "isPartOfComposite": false
-                },
-                {
-                    "name": "left",
-                    "id": "bf4c65e8-489d-4f57-92fd-08c14221e3f2",
-                    "path": "/ f51a)/Axis 4",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Move",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "right",
-                    "id": "caae6169-715f-4db3-b357-9a1eaa9ba3f3",
-                    "path": "/ f51a)/Axis 2",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Move",
-                    "isComposite": false,
-                    "isPartOfComposite": true
                 }
             ]
         }

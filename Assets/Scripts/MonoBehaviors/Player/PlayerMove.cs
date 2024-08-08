@@ -33,16 +33,6 @@ public class PlayerMove : MonoBehaviour
         inputActions.Player.Enable();
         inputActions.Player.Jump.performed += jumpLogique;
 
-        var allInputsAction = new InputAction("AllInputs", binding: " f51a)/<axis>");
-        allInputsAction.AddBinding("/ f51a)/<button>");
-        allInputsAction.AddBinding("/ f51a)/stick");
-        allInputsAction.AddBinding("/ f51a)/<*>");
-        allInputsAction.Enable();
-        allInputsAction.performed += ctx =>
-            {
-                Debug.Log("Input detected: " + ctx.control.valueType);
-            };
-
         r2d = GetComponent<Rigidbody2D>();
         r2d.freezeRotation = true;
         r2d.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
@@ -55,7 +45,33 @@ public class PlayerMove : MonoBehaviour
     void Update()
     {
 
-        moveDirection = inputActions.Player.Move.ReadValue<Vector2>().x;
+        Vector2 moveVector = Vector2.zero;
+
+        // Read the value as Vector2, which works for joystick inputs
+        if (inputActions.Player.Move.controls[0].valueType == typeof(Vector2))
+        {
+            moveVector = inputActions.Player.Move.ReadValue<Vector2>();
+        }
+        else if (inputActions.Player.Move.controls[0].valueType == typeof(float))
+        {
+            // If it's a single axis, construct a Vector2 from the float value
+            float moveAxis = inputActions.Player.Move.ReadValue<float>();
+            if (moveAxis > 1)
+            {
+                moveAxis = 0;
+            }
+            else if (moveAxis < 0)
+            {
+                moveAxis = 1;
+            }
+            else if (moveAxis > 0)
+            {
+                moveAxis = -1;
+            }
+            moveVector = new Vector2(moveAxis, 0);
+        }
+
+        moveDirection = moveVector.x;
 
         if (moveDirection != 0)
         {
