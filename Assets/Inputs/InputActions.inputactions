@@ -49,17 +49,6 @@
                 },
                 {
                     "name": "",
-                    "id": "ebdcf4bd-e602-4077-a7d7-743508c94f1f",
-                    "path": "<Joystick>/stick/up",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Jump",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "9b1a0544-7d89-4682-bc9c-914fcb9415fd",
                     "path": "/ f51a)/Button 2",
                     "interactions": "",
@@ -161,6 +150,39 @@
                     "name": "right",
                     "id": "41eafd89-9646-45bf-bfd9-091411261e88",
                     "path": "<Joystick>/stick/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "GamepadWebgl",
+                    "id": "b54f5da7-58ce-4d34-9b14-146fa3808f4c",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "left",
+                    "id": "bf4c65e8-489d-4f57-92fd-08c14221e3f2",
+                    "path": "/ f51a)/Axis 4",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "caae6169-715f-4db3-b357-9a1eaa9ba3f3",
+                    "path": "/ f51a)/Axis 2",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

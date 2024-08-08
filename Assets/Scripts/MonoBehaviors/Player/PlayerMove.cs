@@ -23,7 +23,6 @@ public class PlayerMove : MonoBehaviour
 
     Animator animator = default;
 
-    // private Joystick joystick;
 
     InputActions inputActions = default;
 
@@ -34,13 +33,15 @@ public class PlayerMove : MonoBehaviour
         inputActions.Player.Enable();
         inputActions.Player.Jump.performed += jumpLogique;
 
-        // var myAction = new InputAction(binding: "/*/<button>");
-        // myAction.performed += ctx =>
-        // {
-        //     print(ctx.control);
-        // };
-        // myAction.Enable();
-
+        var allInputsAction = new InputAction("AllInputs", binding: " f51a)/<axis>");
+        allInputsAction.AddBinding("/ f51a)/<button>");
+        allInputsAction.AddBinding("/ f51a)/stick");
+        allInputsAction.AddBinding("/ f51a)/<*>");
+        allInputsAction.Enable();
+        allInputsAction.performed += ctx =>
+            {
+                Debug.Log("Input detected: " + ctx.control.valueType);
+            };
 
         r2d = GetComponent<Rigidbody2D>();
         r2d.freezeRotation = true;
@@ -90,8 +91,6 @@ public class PlayerMove : MonoBehaviour
 
     private void jumpLogique(InputAction.CallbackContext context)
     {
-        print(context.control);
-
         if (context.performed)
         {
             if (doubleJump && !isGrounded)
