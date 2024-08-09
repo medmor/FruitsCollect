@@ -4,11 +4,12 @@ using UnityEngine;
 public class MovingEnemy : MonoBehaviour
 {
     public float minX, maxX, minY, maxY, vX, vY;
+    Vector2 originalPos;
 
     Rigidbody2D rb;
     void Start()
     {
-        transform.position = new Vector3(minX, minY);
+        originalPos = transform.position;
         rb = GetComponent<Rigidbody2D>();
         rb.velocity = new Vector2(vX, vY);
     }
@@ -16,21 +17,23 @@ public class MovingEnemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(transform.position.x < minX)
+        var x = 0;
+        var y = 0;
+        if (transform.position.x < originalPos.x - minX || transform.position.x > originalPos.x + maxX)
         {
-            rb.velocity = new Vector2(vX, rb.velocity.y);
+            x = -1;
         }
-        if(transform.position.x > maxX)
+
+        if (transform.position.y < originalPos.y - minY || transform.position.y > originalPos.y + maxY)
         {
-            rb.velocity = new Vector2(-vX, rb.velocity.y);
+            y = -1;
         }
-        if(transform.position.y < minY)
+        if (x == 0 && y == 0)
         {
-            rb.velocity = new Vector2(rb.velocity.x, vY);
+            return;
         }
-        if(transform.position.y > maxY)
-        {
-            rb.velocity = new Vector2(rb.velocity.x, -vY);
-        }
+        print("changing ");
+        rb.velocity = new Vector2(x * rb.velocity.x, y * rb.velocity.y);
+
     }
 }
