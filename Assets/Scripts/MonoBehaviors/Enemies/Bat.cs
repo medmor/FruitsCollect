@@ -2,14 +2,11 @@
 
 public class Bat : Enemy
 {
-    public float minX, maxX, minY, maxY;
-    public LayerMask layer;
-    public float detectionRadius = 2;
     public Transform target;
     public float speed;
-
     Animator animator;
     Rigidbody2D rb;
+    bool folowing;
 
     public float initialPositionRadius;
     Vector3 initialPosition;
@@ -27,7 +24,7 @@ public class Bat : Enemy
 
     void Update()
     {
-        if (Vector2.Distance(transform.position, target.position) < detectionRadius && inTheGrot())
+        if (folowing)
         {
             rb.MovePosition(Vector2.MoveTowards(transform.position, target.position, 2 * speed * Time.deltaTime));
             animator.SetBool("Flaying", true);
@@ -42,9 +39,20 @@ public class Bat : Enemy
         }
     }
 
-    bool inTheGrot()
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        return target.position.x > minX && target.position.x < maxX && target.position.y > minY && target.position.y < maxY;
+        if (collision.gameObject.tag == "Player")
+        {
+            folowing = true;
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            folowing = false;
+        }
     }
 
 }
