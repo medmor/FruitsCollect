@@ -67,6 +67,11 @@ public class PlayerMove : MonoBehaviour
             }
         }
 
+        if (r2d.velocity.y > maxJump)
+        {
+            r2d.velocity = new Vector2(r2d.velocity.x, maxJump);
+        }
+
     }
 
     void FixedUpdate()
