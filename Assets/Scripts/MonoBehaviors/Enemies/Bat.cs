@@ -27,11 +27,13 @@ public class Bat : Enemy
         if (folowing)
         {
             rb.MovePosition(Vector2.MoveTowards(transform.position, target.position, 2 * speed * Time.deltaTime));
+            transform.right = new Vector3(transform.position.x - target.position.x, 0).normalized;
             animator.SetBool("Flaying", true);
         }
         else if (Vector2.Distance(transform.position, initialPosition) > initialPositionRadius)
         {
             rb.MovePosition(Vector2.MoveTowards(transform.position, initialPosition, speed * Time.deltaTime));
+            transform.right = new Vector3(transform.position.x - initialPosition.x, 0).normalized;
         }
         else if (Vector2.Distance(transform.position, initialPosition) < initialPositionRadius)
         {
