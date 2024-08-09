@@ -2,8 +2,8 @@
 
 public class Bat : Enemy
 {
-    public Transform target;
     public float speed;
+    Transform target;
     Animator animator;
     Rigidbody2D rb;
     bool folowing;
