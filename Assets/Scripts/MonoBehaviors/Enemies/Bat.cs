@@ -22,7 +22,24 @@ public class Bat : Enemy
         target = GameObject.Find("Player").transform;
     }
 
-    void Update()
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            folowing = true;
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            folowing = false;
+        }
+    }
+
+    void FixedUpdate()
     {
         if (folowing)
         {
@@ -38,22 +55,6 @@ public class Bat : Enemy
         else if (Vector2.Distance(transform.position, initialPosition) < initialPositionRadius)
         {
             animator.SetBool("Flaying", false);
-        }
-    }
-
-    void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Player")
-        {
-            folowing = true;
-        }
-    }
-
-    void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Player")
-        {
-            folowing = false;
         }
     }
 

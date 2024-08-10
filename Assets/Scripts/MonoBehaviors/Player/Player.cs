@@ -45,7 +45,7 @@ public class Player : MonoBehaviour
     public void Reset()
     {
         dead = false;
-        transform.position = GameObject.Find(GameManager.Instance.GameSettings.currentLevelName + "(Clone)/GamePoints/SpawnPoint").gameObject.transform.position;
+        transform.position = GameObject.Find(GameManager.Instance.GameSettings.currentLevelName + "(Clone)/GamePoints/SpawnPoint").transform.position;
     }
     public void Die()
     {
@@ -57,16 +57,15 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemies" && !dead)
         {
-            SoundManager.Instance.playSound("hit");
-            Enemy enemy = collision.gameObject.GetComponent<Enemy>();
-            inventory.SetHealth(inventory.Health - enemy.enemyDefinition.damagePower);
-            r2d.velocity = new Vector2(r2d.velocity.x, 3);
+            OnEnemyHit(collision.gameObject.GetComponent<Enemy>());
+        }
+    }
 
-            if (inventory.Health <= 0)
-            {
-                dead = true;
-                animator.SetTrigger("Desappear");
-            }
+    void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Enemies" && !dead)
+        {
+            OnEnemyHit(collision.gameObject.GetComponent<Enemy>());
         }
     }
 
@@ -89,6 +88,19 @@ public class Player : MonoBehaviour
             InstantiateCollectedPrefab(collision.gameObject.transform.position);
             Destroy(collision.gameObject);
             inventory.SetHearts(inventory.Hearts + 1);
+        }
+    }
+
+    void OnEnemyHit(Enemy enemy)
+    {
+        SoundManager.Instance.playSound("hit");
+        inventory.SetHealth(inventory.Health - enemy.enemyDefinition.damagePower);
+        r2d.velocity = new Vector2(r2d.velocity.x, 3);
+
+        if (inventory.Health <= 0)
+        {
+            dead = true;
+            animator.SetTrigger("Desappear");
         }
     }
 
