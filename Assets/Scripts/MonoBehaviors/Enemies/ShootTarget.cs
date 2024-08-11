@@ -31,7 +31,16 @@ public class ShootTarget : MonoBehaviour
                 Rigidbody2D rigidbody2D = newObject.GetComponent<Rigidbody2D>();
                 if (rigidbody2D != null)
                 {
-                    rigidbody2D.AddForce(actualBulletDirection * shooterDefinition.bulletSpeed, ForceMode2D.Impulse);
+                    print(shooterDefinition.fixedDirection);
+                    if (shooterDefinition.fixedDirection != Vector2.zero)
+                    {
+                        rigidbody2D.AddForce(shooterDefinition.fixedDirection * shooterDefinition.bulletSpeed, ForceMode2D.Impulse);
+
+                    }
+                    else
+                    {
+                        rigidbody2D.AddForce(actualBulletDirection * shooterDefinition.bulletSpeed, ForceMode2D.Impulse);
+                    }
                 }
 
                 timeOfLastSpawn = Time.time;

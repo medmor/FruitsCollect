@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8487192634655647845}
   - component: {fileID: 4472736084443721546}
   - component: {fileID: 5065906865249452296}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BoxMonster
   m_TagString: Enemies
   m_Icon: {fileID: 0}

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1724456963234309365}
   - component: {fileID: 6967291577183798036}
   - component: {fileID: 1374196293852401316}
-  m_Layer: 10
+  m_Layer: 3
   m_Name: Turtle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -195,11 +195,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyDefinition: {fileID: 11400000, guid: bcec3712a5435bb44b8354b0c03ccc4b, type: 2}
-  withSpikes: {fileID: 0}
-  withoutSpikes: {fileID: 0}
-  minX: -2
-  maxX: 3
-  velocity: 1
 --- !u!114 &1374196293852401316
 MonoBehaviour:
   m_ObjectHideFlags: 0
