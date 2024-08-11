@@ -52,5 +52,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "platform-1.sln"
+    "dotnet.defaultSolution": "FruitsCollect.sln"
 }

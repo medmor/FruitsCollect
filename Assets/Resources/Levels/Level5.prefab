@@ -17043,7 +17043,7 @@ MonoBehaviour:
   m_VoxelSize: 0.33333334
   m_BuildHeightMesh: 0
   m_HideEditorLogs: 0
-  m_NavMeshData: {fileID: 23800000, guid: 2a714fcd85c83b9468542dddc46569c1, type: 2}
+  m_NavMeshData: {fileID: 0}
 --- !u!114 &5009753736874566908
 MonoBehaviour:
   m_ObjectHideFlags: 0
