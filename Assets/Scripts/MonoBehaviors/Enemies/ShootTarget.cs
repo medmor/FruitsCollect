@@ -13,6 +13,10 @@ public class ShootTarget : MonoBehaviour
     void Start()
     {
         timeOfLastSpawn = shooterDefinition.shootRate;
+        if (target == null)
+        {
+            target = GameObject.Find("Player").transform;
+        }
     }
 
     void Update()
