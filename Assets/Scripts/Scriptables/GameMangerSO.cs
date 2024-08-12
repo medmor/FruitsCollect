@@ -4,6 +4,6 @@ using UnityEngine;
 public class GameMangerSO : ScriptableObject
 {
     public int NumberOfLevels = 9;
-    public string currentLevelName = "Boot";
+    public string currentLevelName = "Intro";
     public Enums.GameState CurrentGameState = Enums.GameState.PREGAME;
 }

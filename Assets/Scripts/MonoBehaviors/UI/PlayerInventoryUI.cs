@@ -23,7 +23,7 @@ public class PlayerInventoryUI : MonoBehaviour
     {
         homeButton.onClick.AddListener(() =>
         {
-            GameManager.Instance.LoadLevel("Boot");
+            GameManager.Instance.LoadLevel("Intro");
         });
     }
 

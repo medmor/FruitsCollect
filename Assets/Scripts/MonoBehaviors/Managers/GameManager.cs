@@ -54,7 +54,7 @@ public class GameManager : Manager<GameManager>
             GameObject.Find(GameSettings.currentLevelName + "(Clone)/WorldCamBounds").GetComponent<PolygonCollider2D>();
         }
 
-        if (GameSettings.currentLevelName == "Boot")
+        if (GameSettings.currentLevelName == "Intro")
         {
             SoundManager.Instance.StopMusic();
             SoundManager.Instance.playSound("click");

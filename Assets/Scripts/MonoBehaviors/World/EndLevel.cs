@@ -19,7 +19,7 @@ public class EndLevel : MonoBehaviour
         if (nextLevel <= GameManager.Instance.GameSettings.NumberOfLevels)
         {
             SaveManager.Instance.SetLevel(nextLevel);
-            GameManager.Instance.LoadLevel("Boot");
+            GameManager.Instance.LoadLevel("Intro");
         }
         else
         {

@@ -40,11 +40,19 @@ public class MovingPlatformHorizontal : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
+        if (!afterPlayerIn)
+        {
+            return;
+        }
         isPlayerIn = true;
         rb.velocity = new Vector2(velocity, rb.velocity.y);
     }
     void OnCollisionExit2D(Collision2D collision)
     {
+        if (!afterPlayerIn)
+        {
+            return;
+        }
         isPlayerIn = false;
         rb.velocity = Vector2.zero;
         resetPosition();
