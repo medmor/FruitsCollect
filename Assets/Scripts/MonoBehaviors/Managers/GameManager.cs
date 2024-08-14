@@ -7,7 +7,6 @@ public class GameManager : Manager<GameManager>
 
     public GameMangerSO GameSettings;
 
-    //public Player PlayerPrefab;
     public GameObject[] SystemPrefabs;
 
     private void Start()
