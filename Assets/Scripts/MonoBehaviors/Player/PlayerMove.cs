@@ -70,17 +70,26 @@ public class PlayerMove : MonoBehaviour
             }
         }
 
-        if (r2d.velocity.y > maxJump)
-        {
-            r2d.velocity = new Vector2(r2d.velocity.x, maxJump);
-        }
-
     }
 
     void FixedUpdate()
     {
-        r2d.velocity = new Vector2(xInput * maxSpeed, r2d.velocity.y);
+        r2d.AddForce(new Vector2(xInput, 0), ForceMode2D.Impulse);//.velocity = new Vector2(xInput * maxSpeed, r2d.velocity.y);
+        if (xInput == 0 && Mathf.Abs(r2d.velocity.x) > float.Epsilon)
+        {
+            r2d.velocity = new Vector2(r2d.velocity.x / 1.1f, r2d.velocity.y);
+        }
         animator.SetFloat("Speed", Math.Abs(r2d.velocity.x));
+
+        if (Math.Abs(r2d.velocity.x) > maxSpeed)
+        {
+            r2d.velocity = new Vector2(Mathf.Sign(r2d.velocity.x) * maxSpeed, r2d.velocity.y);
+        }
+
+        if (r2d.velocity.y > maxJump)
+        {
+            r2d.velocity = new Vector2(r2d.velocity.x, maxJump);
+        }
 
         if (isLadder && yInput != 0)
         {

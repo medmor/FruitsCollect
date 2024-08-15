@@ -4,10 +4,10 @@
 public class Player : MonoBehaviour
 {
 
-    //public Transform spawnPoint = default;
-    public Collected collectedPrephab = default;
+    [SerializeField] Collected collectedPrephab = default;
+    [SerializeField] PlayerInventory inventory = default;
+    [SerializeField] Vector2 bounceHitForce = default;
 
-    public PlayerInventory inventory = default;
     Rigidbody2D r2d;
 
     bool dead = false;
@@ -95,7 +95,12 @@ public class Player : MonoBehaviour
     {
         SoundManager.Instance.playSound("hit");
         inventory.SetHealth(inventory.Health - enemy.enemyDefinition.damagePower);
-        r2d.velocity = new Vector2(r2d.velocity.x, 3);
+        r2d.AddForce(
+            new Vector2(
+                -transform.localScale.x * bounceHitForce.x
+                , r2d.velocity.y < bounceHitForce.y ? bounceHitForce.y : 0),
+            ForceMode2D.Impulse
+                );
 
         if (inventory.Health <= 0)
         {

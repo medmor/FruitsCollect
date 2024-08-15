@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 7867821435370218690}
   m_Layer: 0
   m_Name: Bee
-  m_TagString: Untagged
+  m_TagString: Enemies
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -240,3 +240,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyDefinition: {fileID: 11400000, guid: 60f43dd5d0ddf7f4d928cf7856d1e074, type: 2}
+  isAttacker: 1

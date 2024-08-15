@@ -816,6 +816,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyDefinition: {fileID: 11400000, guid: fa3e71e4379b5b141b2b8193b3a5a7b2, type: 2}
+  isAttacker: 0
 --- !u!1 &1598203194512957395
 GameObject:
   m_ObjectHideFlags: 0
@@ -5455,6 +5456,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyDefinition: {fileID: 11400000, guid: fa3e71e4379b5b141b2b8193b3a5a7b2, type: 2}
+  isAttacker: 0
 --- !u!1 &6918897220600565344
 GameObject:
   m_ObjectHideFlags: 0
@@ -7080,6 +7082,10 @@ PrefabInstance:
     - target: {fileID: 4935148699620045228, guid: eaa30762a8fd9654c8309841a4f59460, type: 3}
       propertyPath: m_Name
       value: BoxMonster
+      objectReference: {fileID: 0}
+    - target: {fileID: 5062359871978404985, guid: eaa30762a8fd9654c8309841a4f59460, type: 3}
+      propertyPath: m_Material
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5065906865249452296, guid: eaa30762a8fd9654c8309841a4f59460, type: 3}
       propertyPath: patrolDefinition

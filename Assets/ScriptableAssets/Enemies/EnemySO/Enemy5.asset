@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0eb4a3b3db14480479ebb369d4d15ca0, type: 3}
   m_Name: Enemy5
   m_EditorClassIdentifier: 
-  damagePower: 5
+  damagePower: 2

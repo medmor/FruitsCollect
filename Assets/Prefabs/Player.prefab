@@ -188,6 +188,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collectedPrephab: {fileID: 4360907024332266533, guid: 278908ec9ec66f344b22a1e4b60b56a0, type: 3}
   inventory: {fileID: 0}
+  bounceHitForce: {x: 3, y: 3}
 --- !u!114 &3602417050324529467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -213,7 +214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fc41caab1794a143a604ffe49392269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 3.4
+  maxSpeed: 3.5
   climbSpeed: 2.5
   jumpHeight: 6.5
   maxJump: 16
