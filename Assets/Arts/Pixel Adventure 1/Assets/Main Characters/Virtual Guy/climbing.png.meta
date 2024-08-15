@@ -1,25 +1,7 @@
 fileFormatVersion: 2
-guid: 8721cbbfe3ba6a8418cd21a8de3a410c
+guid: 6de7f85c9004c834a9347fb9eab49a9d
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: -7659945631384244969
-    second: Idle (36x34)_0
-  - first:
-      213: 7347755041974798689
-    second: Idle (36x34)_1
-  - first:
-      213: 4767929386791336158
-    second: Idle (36x34)_2
-  - first:
-      213: 7675889929140661789
-    second: Idle (36x34)_3
-  - first:
-      213: 5506800937136195915
-    second: Idle (36x34)_4
-  - first:
-      213: -2851605106106033182
-    second: Idle (36x34)_5
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -52,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -81,16 +63,16 @@ TextureImporter:
   compressionQualitySet: 0
   textureFormatSet: 0
   ignorePngGamma: 0
-  applyGammaDecoding: 1
+  applyGammaDecoding: 0
   swizzle: 50462976
-  cookieLightType: 1
+  cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -103,20 +85,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -129,7 +98,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -141,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Idle (36x34)_0
+      name: Climbing_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 5
         y: 0
-        width: 36
-        height: 34
+        width: 22
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -155,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bdc6e0e3ea276eb4896f1442e1d82e35
-      internalID: -7659945631384244969
+      spriteID: c1921c6de0be5ef4d9bc3242cc700a83
+      internalID: -705015945
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle (36x34)_1
+      name: Climbing_1
       rect:
         serializedVersion: 2
-        x: 36
+        x: 37
         y: 0
-        width: 36
-        height: 34
+        width: 22
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -176,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7ab1e4ef51d62524daa542cd9a646248
-      internalID: 7347755041974798689
+      spriteID: 60f5c0be8bfa75b42a72f076310a21e4
+      internalID: -784462785
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle (36x34)_2
+      name: Climbing_2
       rect:
         serializedVersion: 2
-        x: 72
+        x: 69
         y: 0
-        width: 36
-        height: 34
+        width: 22
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -197,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f779395cee4098f4c818762dac68f77c
-      internalID: 4767929386791336158
+      spriteID: bb651f4ba1d591641821746986fb8e30
+      internalID: 154371144
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle (36x34)_3
+      name: Climbing_3
       rect:
         serializedVersion: 2
-        x: 108
+        x: 101
         y: 0
-        width: 36
-        height: 34
+        width: 22
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -218,20 +187,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d292a1bcdba6e3e4bb6b0a61087f3124
-      internalID: 7675889929140661789
+      spriteID: 7c6cfafe4a8899e499aa43b6efbce642
+      internalID: -1547436580
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle (36x34)_4
+      name: Climbing_4
       rect:
         serializedVersion: 2
-        x: 144
+        x: 133
         y: 0
-        width: 36
-        height: 34
+        width: 22
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -239,20 +208,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 074318370ef9f3943a7309ac60ef648a
-      internalID: 5506800937136195915
+      spriteID: 2097c5286fa81f747a0576b02480502a
+      internalID: 626331741
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle (36x34)_5
+      name: Climbing_5
       rect:
         serializedVersion: 2
-        x: 180
+        x: 165
         y: 0
-        width: 36
-        height: 34
+        width: 22
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -260,8 +229,113 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 670b1e7f72fea2b4bb34ff85450924ed
-      internalID: -2851605106106033182
+      spriteID: e356daef8d7f9174ea9e840f4c5c7b3a
+      internalID: -1454096276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Climbing_6
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 0
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a17debfeea724942b00b525532e6f68
+      internalID: -489497153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Climbing_7
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 0
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00413a019a482a3438f18639a0f12f4b
+      internalID: -1823001964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Climbing_8
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 0
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35b490d80af947c42b571e67430cee91
+      internalID: 773747953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Climbing_9
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 0
+        width: 22
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19bd9bfe6317c404f8047cc0e7976baa
+      internalID: -1582683106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Climbing_10
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 0
+        width: 22
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15c1ef56a554be34ca4d2cac4617dea7
+      internalID: 1774606383
       vertices: []
       indices: 
       edges: []
@@ -277,12 +351,17 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Idle (36x34)_0: -7659945631384244969
-      Idle (36x34)_1: 7347755041974798689
-      Idle (36x34)_2: 4767929386791336158
-      Idle (36x34)_3: 7675889929140661789
-      Idle (36x34)_4: 5506800937136195915
-      Idle (36x34)_5: -2851605106106033182
+      Climbing_0: -705015945
+      Climbing_1: -784462785
+      Climbing_10: 1774606383
+      Climbing_2: 154371144
+      Climbing_3: -1547436580
+      Climbing_4: 626331741
+      Climbing_5: -1454096276
+      Climbing_6: -489497153
+      Climbing_7: -1823001964
+      Climbing_8: 773747953
+      Climbing_9: -1582683106
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

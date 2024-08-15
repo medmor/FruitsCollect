@@ -214,13 +214,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxSpeed: 3.4
+  climbSpeed: 2.5
   jumpHeight: 6.5
   maxJump: 16
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 1280
-  groundCheck: {fileID: 0}
-  groundCheckRadius: 0.1
 --- !u!1 &3806966742532268586
 GameObject:
   m_ObjectHideFlags: 0

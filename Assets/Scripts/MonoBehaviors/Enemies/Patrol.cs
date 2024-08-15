@@ -8,7 +8,6 @@ public class Patrol : MonoBehaviour
     [SerializeField] protected PatrolDefinition patrolDefinition;
 
     [SerializeField] protected Transform target;
-    [SerializeField] private CircleCollider2D detectorCollider;
 
     [SerializeField] private bool follower;
 
@@ -26,6 +25,10 @@ public class Patrol : MonoBehaviour
     {
         rigidbody2 = GetComponent<Rigidbody2D>();
         SetUp();
+        if (target == null)
+        {
+            target = GameObject.Find("Player").transform;
+        }
     }
     public void FixedUpdate()
     {
@@ -58,10 +61,6 @@ public class Patrol : MonoBehaviour
             Utils.SetAxisTowards(lookAxis, transform, new Vector3(waypoints[0].x - transform.position.x, 0).normalized);
         }
 
-        if (detectorCollider != null)
-        {
-            detectorCollider.radius = patrolDefinition.detectionRadius;
-        }
     }
     protected virtual void Move()
     {

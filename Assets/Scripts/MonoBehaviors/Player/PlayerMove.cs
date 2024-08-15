@@ -16,7 +16,7 @@ public class PlayerMove : MonoBehaviour
     bool facingRight = true;
 
     float yInput = 0;
-    bool isLader = false;
+    bool isLadder = false;
 
     bool isGrounded = false;
     bool doubleJump = false;
@@ -47,6 +47,7 @@ public class PlayerMove : MonoBehaviour
     void Update()
     {
         xInput = inputActions.Player.Move.ReadValue<Vector2>().x;
+        yInput = inputActions.Player.Move.ReadValue<Vector2>().y;
 
         if (xInput == 0)
         {
@@ -80,6 +81,12 @@ public class PlayerMove : MonoBehaviour
     {
         r2d.velocity = new Vector2(xInput * maxSpeed, r2d.velocity.y);
         animator.SetFloat("Speed", Math.Abs(r2d.velocity.x));
+
+        if (isLadder && yInput != 0)
+        {
+            r2d.velocity = new Vector2(r2d.velocity.x, yInput * climbSpeed);
+            animator.SetBool("Climbing", true);
+        }
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -89,6 +96,26 @@ public class PlayerMove : MonoBehaviour
             isGrounded = true;
             doubleJump = false;
             animator.SetBool("Jumping", false);
+
+
+            animator.SetBool("Climbing", false);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Ladder"))
+        {
+            isLadder = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Ladder"))
+        {
+            isLadder = false;
+            animator.SetBool("Climbing", false);
         }
     }
 

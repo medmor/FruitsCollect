@@ -12,7 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c21450c4ccb392a4b948547cdf5d919f, type: 3}
   m_Name: PatrolDefinition3
   m_EditorClassIdentifier: 
-  patrolSpeed: 10
-  followSpeed: 15
-  detectionRadius: 3
-  patrolScript: Patrol
+  patrolSpeed: 2
+  followSpeed: 2.2

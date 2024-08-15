@@ -5,6 +5,4 @@ public class PatrolDefinition : ScriptableObject
 {
     public float patrolSpeed = 5;
     public float followSpeed = 5;
-    public float detectionRadius = 1;
-    public string patrolScript = "Patrol";
 }
