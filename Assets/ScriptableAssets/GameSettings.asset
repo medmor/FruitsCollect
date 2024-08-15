@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d93b64a3c7837274c90537910ab4c4e8, type: 3}
   m_Name: GameSettings
   m_EditorClassIdentifier: 
-  NumberOfLevels: 9
-  currentLevelName: Level8
+  NumberOfLevels: 10
+  currentLevelName: Level10
   CurrentGameState: 0

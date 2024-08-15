@@ -7,18 +7,20 @@ using UnityEngine.InputSystem;
 
 public class PlayerMove : MonoBehaviour
 {
-    public float maxSpeed = 3.4f;
-    public float jumpHeight = 6.5f;
-    public float maxJump = 16f;
+    [SerializeField] float maxSpeed = 3.4f;
+    [SerializeField] float climbSpeed = 10f;
+    [SerializeField] float jumpHeight = 6.5f;
+    [SerializeField] float maxJump = 16f;
 
-    public LayerMask groundLayer;
-    public Transform groundCheck;
-    public float groundCheckRadius = .1f;
+    float xInput = 0;
+    bool facingRight = true;
+
+    float yInput = 0;
+    bool isLader = false;
+
     bool isGrounded = false;
     bool doubleJump = false;
 
-    bool facingRight = true;
-    float moveDirection = 0;
     Rigidbody2D r2d;
 
     Animator animator = default;
@@ -44,23 +46,23 @@ public class PlayerMove : MonoBehaviour
 
     void Update()
     {
-        moveDirection = inputActions.Player.Move.ReadValue<Vector2>().x;
+        xInput = inputActions.Player.Move.ReadValue<Vector2>().x;
 
-        if (moveDirection == 0)
+        if (xInput == 0)
         {
-            moveDirection = inputActions.Player.MoveAxis.ReadValue<float>();
-            moveDirection = moveDirection > 1 ? 0 : moveDirection > 0 ? -1 : moveDirection < 0 ? 1 : 0;
+            xInput = inputActions.Player.MoveAxis.ReadValue<float>();
+            xInput = xInput > 1 ? 0 : xInput > 0 ? -1 : xInput < 0 ? 1 : 0;
         }
 
 
-        if (moveDirection != 0)
+        if (xInput != 0)
         {
-            if (moveDirection > 0 && !facingRight)
+            if (xInput > 0 && !facingRight)
             {
                 facingRight = true;
                 transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
             }
-            if (moveDirection < 0 && facingRight)
+            if (xInput < 0 && facingRight)
             {
                 facingRight = false;
                 transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
@@ -76,7 +78,7 @@ public class PlayerMove : MonoBehaviour
 
     void FixedUpdate()
     {
-        r2d.velocity = new Vector2(moveDirection * maxSpeed, r2d.velocity.y);
+        r2d.velocity = new Vector2(xInput * maxSpeed, r2d.velocity.y);
         animator.SetFloat("Speed", Math.Abs(r2d.velocity.x));
     }
 
