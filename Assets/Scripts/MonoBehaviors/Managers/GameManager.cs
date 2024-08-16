@@ -12,6 +12,10 @@ public class GameManager : Manager<GameManager>
     private void Start()
     {
         InstantiateSystemPrefabs();
+
+        EventsManager.Instance.Playerkilled.AddListener(OnPlyerKilled);
+        EventsManager.Instance.TimeOut.AddListener(OnTimeOut);
+        EventsManager.Instance.OnLevelChoosen.AddListener(OnLevelChoosen);
     }
 
     void InstantiateSystemPrefabs()
@@ -22,47 +26,30 @@ public class GameManager : Manager<GameManager>
         }
     }
 
-    public void LoadLevel(string levelName)
-    {
-        AsyncOperation ao = SceneManager.LoadSceneAsync(levelName, LoadSceneMode.Single);
-        if (ao == null)
-        {
-            Debug.LogError("[GameManager] Unable to load level " + levelName);
-            return;
-        }
 
-        ao.completed += OnLoadOperationComplete;
-        GameSettings.currentLevelName = levelName;
-    }
-    public void LoadLevel(string levelName, string levelNumber)
-    {
-        LoadLevel(levelName);
-        GameSettings.currentLevelName += levelNumber;
-    }
+    //void OnLoadOperationComplete(AsyncOperation ao)
+    //{
+    //    if (GameSettings.currentLevelName.StartsWith("Level"))
+    //    {
+    //        SaveManager.Instance.SetLevel(int.Parse(GameSettings.currentLevelName.Substring(5)));
+    //        SoundManager.Instance.PlayMusic(0);
+    //        Instantiate(Resources.Load("Levels/" + GameSettings.currentLevelName));
+    //        GameObject.Find("/Player").transform.position =
+    //        GameObject.Find(GameSettings.currentLevelName + "(Clone)/GamePoints/SpawnPoint").gameObject.transform.position;
+    //        GameObject.Find("Cam/Vcam").GetComponent<CinemachineConfiner>().m_BoundingShape2D =
+    //        GameObject.Find(GameSettings.currentLevelName + "(Clone)/WorldCamBounds").GetComponent<PolygonCollider2D>();
+    //    }
 
-    void OnLoadOperationComplete(AsyncOperation ao)
-    {
-        if (GameSettings.currentLevelName.StartsWith("Level"))
-        {
-            SaveManager.Instance.SetLevel(int.Parse(GameSettings.currentLevelName.Substring(5)));
-            SoundManager.Instance.PlayMusic(0);
-            Instantiate(Resources.Load("Levels/" + GameSettings.currentLevelName));
-            GameObject.Find("/Player").transform.position =
-                GameObject.Find(GameSettings.currentLevelName + "(Clone)/GamePoints/SpawnPoint").gameObject.transform.position;
-            GameObject.Find("Cam/Vcam").GetComponent<CinemachineConfiner>().m_BoundingShape2D =
-            GameObject.Find(GameSettings.currentLevelName + "(Clone)/WorldCamBounds").GetComponent<PolygonCollider2D>();
-        }
-
-        if (GameSettings.currentLevelName == "Intro")
-        {
-            SoundManager.Instance.StopMusic();
-            SoundManager.Instance.playSound("click");
-            UIManager.Instance.PlayerInventory.Hide();
-            UIManager.Instance.PlayerInventory.Reset(true);
-            UIManager.Instance.BootMenu.Show();
-            UIManager.Instance.Controls.Hide();
-        }
-    }
+    //    if (GameSettings.currentLevelName == "Intro")
+    //    {
+    //        SoundManager.Instance.StopMusic();
+    //        SoundManager.Instance.playSound("click");
+    //        UIManager.Instance.PlayerInventory.Hide();
+    //        UIManager.Instance.PlayerInventory.Reset(true);
+    //        UIManager.Instance.BootMenu.Show();
+    //        UIManager.Instance.Controls.Hide();
+    //    }
+    //}
 
     public void UpdateState(Enums.GameState state)
     {
@@ -98,13 +85,60 @@ public class GameManager : Manager<GameManager>
         UpdateState(Enums.GameState.PREGAME);
     }
 
-    public void OnPlyerKilled(Player player)
+    public void LoadIntro()
     {
-        LoadLevel("GameOver");
-        SoundManager.Instance.StopMusic();
+        var operation = SceneManager.LoadSceneAsync("Intro");
+        operation.completed += (AsyncOperation operation) =>
+        {
+            SoundManager.Instance.StopMusic();
+            SoundManager.Instance.playSound("click");
+            UIManager.Instance.PlayerInventory.Hide();
+            UIManager.Instance.PlayerInventory.Reset(true);
+            UIManager.Instance.BootMenu.Show();
+            UIManager.Instance.Controls.Hide();
+        };
+    }
+    public void LoadWin()
+    {
         UIManager.Instance.PlayerInventory.Reset(true);
+        SoundManager.Instance.StopMusic();
+        SceneManager.LoadScene("Win");
+        UIManager.Instance.WinMenu.Show();
         UIManager.Instance.PlayerInventory.Hide();
         UIManager.Instance.Controls.Hide();
-        UIManager.Instance.GameOverMenu.Show();
+    }
+    void OnLevelChoosen(int levelName)
+    {
+        GameSettings.currentLevel = levelName;
+        SaveManager.Instance.SetLevel(levelName);
+
+        var operation = SceneManager.LoadSceneAsync("Level");
+
+        operation.completed += (AsyncOperation operation) =>
+        {
+            SoundManager.Instance.PlayMusic(0);
+            Instantiate(Resources.Load("Levels/Level" + GameSettings.currentLevel));
+            GameObject.Find("/Player").transform.position =
+            GameObject.Find("/Level" + GameSettings.currentLevel + "(Clone)/GamePoints/SpawnPoint").gameObject.transform.position;
+            GameObject.Find("/Cam/Vcam").GetComponent<CinemachineConfiner>().m_BoundingShape2D =
+            GameObject.Find("/Level" + GameSettings.currentLevel + "(Clone)/WorldCamBounds").GetComponent<PolygonCollider2D>();
+            UIManager.Instance.BootMenu.Hide();
+        };
+    }
+    void OnTimeOut()
+    {
+        OnPlyerKilled();
+    }
+    void OnPlyerKilled()
+    {
+        var operation = SceneManager.LoadSceneAsync("GameOver");
+        operation.completed += (AsyncOperation operation) =>
+        {
+            SoundManager.Instance.StopMusic();
+            UIManager.Instance.PlayerInventory.Reset(true);
+            UIManager.Instance.PlayerInventory.Hide();
+            UIManager.Instance.Controls.Hide();
+            UIManager.Instance.GameOverMenu.Show();
+        };
     }
 }

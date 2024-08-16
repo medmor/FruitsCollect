@@ -6,9 +6,12 @@ public class ShootTarget : MonoBehaviour
 
     [SerializeField] private Transform target;
 
+    [SerializeField] private Vector2 bulletOffset = Vector2.zero;
+
     private float timeOfLastSpawn;
 
     private bool targetInRange = false;
+
 
     void Start()
     {
@@ -26,16 +29,15 @@ public class ShootTarget : MonoBehaviour
             if (Time.time >= timeOfLastSpawn + shooterDefinition.shootRate)
             {
                 Vector2 actualBulletDirection = target.position - transform.position;
-                GameObject newObject = Instantiate(shooterDefinition.bullet);
-                newObject.transform.position = transform.position;
-                newObject.transform.eulerAngles = new Vector3(0f, 0f, Utils.Angle(actualBulletDirection));
-                newObject.tag = "Enemies";
-                newObject.GetComponent<Bullet>().SetCountdownSeconds(shooterDefinition.bulletLifetime);
+                GameObject bullet = Instantiate(shooterDefinition.bullet);
+                bullet.transform.position = transform.position + (Vector3)bulletOffset;
+                bullet.transform.eulerAngles = new Vector3(0f, 0f, Utils.Angle(actualBulletDirection));
+                bullet.tag = "Enemies";
+                bullet.GetComponent<Bullet>().SetCountdownSeconds(shooterDefinition.bulletLifetime);
 
-                Rigidbody2D rigidbody2D = newObject.GetComponent<Rigidbody2D>();
+                Rigidbody2D rigidbody2D = bullet.GetComponent<Rigidbody2D>();
                 if (rigidbody2D != null)
                 {
-                    print(shooterDefinition.fixedDirection);
                     if (shooterDefinition.fixedDirection != Vector2.zero)
                     {
                         rigidbody2D.AddForce(shooterDefinition.fixedDirection * shooterDefinition.bulletSpeed, ForceMode2D.Impulse);

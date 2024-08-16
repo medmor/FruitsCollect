@@ -17,9 +17,22 @@ public class UIManager : Manager<UIManager>
     [Header("Controls")]
     public Controls Controls;
 
+    [Header("Timer")]
+    public Timer Timer = default;
+
     public void Start()
     {
         BootMenu.Show();
+
+        EventsManager.Instance.OnLevelChoosen.AddListener(OnLevelChoosen);
+    }
+
+    void OnLevelChoosen(int levelName)
+    {
+        PlayerInventory.Show();
+        Controls.Show();
+        Timer.ResetTimer();
+        Timer.Begin();
     }
 
 

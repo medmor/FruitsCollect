@@ -77,9 +77,9 @@ public class PlayerMove : MonoBehaviour
         r2d.AddForce(new Vector2(xInput, 0), ForceMode2D.Impulse);//.velocity = new Vector2(xInput * maxSpeed, r2d.velocity.y);
         if (xInput == 0 && Mathf.Abs(r2d.velocity.x) > float.Epsilon)
         {
-            r2d.velocity = new Vector2(r2d.velocity.x / 1.1f, r2d.velocity.y);
+            r2d.velocity = new Vector2(r2d.velocity.x / 1.2f, r2d.velocity.y);
         }
-        animator.SetFloat("Speed", Math.Abs(r2d.velocity.x));
+        animator.SetFloat("Speed", Math.Abs(xInput));
 
         if (Math.Abs(r2d.velocity.x) > maxSpeed)
         {

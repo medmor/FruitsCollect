@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: GameSettings
   m_EditorClassIdentifier: 
   NumberOfLevels: 10
-  currentLevelName: Level10
+  currentLevel: 5
   CurrentGameState: 0

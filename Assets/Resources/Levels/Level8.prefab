@@ -100,6 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyDefinition: {fileID: 11400000, guid: 6184ad76d525ba14e87e071002eab858, type: 2}
+  isAttacker: 0
 --- !u!95 &5873366397786508411
 Animator:
   serializedVersion: 5
@@ -315,9 +316,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 301449d4f4ed654469414833496c4d5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patrolDefinition: {fileID: 11400000, guid: e2d4a2bec8e5cad419af6ec647fd2844, type: 2}
+  patrolDefinition: {fileID: 11400000, guid: f92b41fa5f33ebd48a0fddee4b68ed30, type: 2}
   target: {fileID: 0}
-  detectorCollider: {fileID: 0}
   follower: 0
   orientToDirection: 0
   lookAxis: 1
@@ -373,6 +373,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyDefinition: {fileID: 11400000, guid: 6184ad76d525ba14e87e071002eab858, type: 2}
+  isAttacker: 0
 --- !u!1 &290063253111075638
 GameObject:
   m_ObjectHideFlags: 0
@@ -473,6 +474,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyDefinition: {fileID: 11400000, guid: 6184ad76d525ba14e87e071002eab858, type: 2}
+  isAttacker: 0
 --- !u!95 &4374099918015957520
 Animator:
   serializedVersion: 5
@@ -704,6 +706,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyDefinition: {fileID: 11400000, guid: 6184ad76d525ba14e87e071002eab858, type: 2}
+  isAttacker: 0
 --- !u!95 &7294128426267928411
 Animator:
   serializedVersion: 5
@@ -870,6 +873,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyDefinition: {fileID: 11400000, guid: 6184ad76d525ba14e87e071002eab858, type: 2}
+  isAttacker: 0
 --- !u!95 &9077487786935544958
 Animator:
   serializedVersion: 5
@@ -1036,6 +1040,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyDefinition: {fileID: 11400000, guid: 6184ad76d525ba14e87e071002eab858, type: 2}
+  isAttacker: 0
 --- !u!95 &3005008627941142584
 Animator:
   serializedVersion: 5
@@ -1202,6 +1207,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyDefinition: {fileID: 11400000, guid: 6184ad76d525ba14e87e071002eab858, type: 2}
+  isAttacker: 0
 --- !u!95 &1520990218964954889
 Animator:
   serializedVersion: 5
@@ -6537,6 +6543,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyDefinition: {fileID: 11400000, guid: 6184ad76d525ba14e87e071002eab858, type: 2}
+  isAttacker: 0
 --- !u!95 &4656066391135304626
 Animator:
   serializedVersion: 5
@@ -7068,6 +7075,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyDefinition: {fileID: 11400000, guid: fa3e71e4379b5b141b2b8193b3a5a7b2, type: 2}
+  isAttacker: 0
 --- !u!1 &1394095863421141360
 GameObject:
   m_ObjectHideFlags: 0
@@ -7168,6 +7176,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyDefinition: {fileID: 11400000, guid: 6184ad76d525ba14e87e071002eab858, type: 2}
+  isAttacker: 0
 --- !u!95 &6805936748220797333
 Animator:
   serializedVersion: 5
@@ -8088,6 +8097,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyDefinition: {fileID: 11400000, guid: 6184ad76d525ba14e87e071002eab858, type: 2}
+  isAttacker: 0
 --- !u!95 &4970375654762504099
 Animator:
   serializedVersion: 5
@@ -36474,6 +36484,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyDefinition: {fileID: 11400000, guid: 6184ad76d525ba14e87e071002eab858, type: 2}
+  isAttacker: 0
 --- !u!95 &552390912924818272
 Animator:
   serializedVersion: 5
@@ -36673,6 +36684,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyDefinition: {fileID: 11400000, guid: 6184ad76d525ba14e87e071002eab858, type: 2}
+  isAttacker: 0
 --- !u!95 &859536969481212354
 Animator:
   serializedVersion: 5
@@ -36874,6 +36886,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyDefinition: {fileID: 11400000, guid: 6184ad76d525ba14e87e071002eab858, type: 2}
+  isAttacker: 0
 --- !u!95 &6533064557044923670
 Animator:
   serializedVersion: 5
@@ -37040,6 +37053,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyDefinition: {fileID: 11400000, guid: 6184ad76d525ba14e87e071002eab858, type: 2}
+  isAttacker: 0
 --- !u!95 &4553149611677706781
 Animator:
   serializedVersion: 5
@@ -37206,6 +37220,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyDefinition: {fileID: 11400000, guid: 6184ad76d525ba14e87e071002eab858, type: 2}
+  isAttacker: 0
 --- !u!95 &7491979830957972432
 Animator:
   serializedVersion: 5
@@ -37406,6 +37421,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyDefinition: {fileID: 11400000, guid: 6184ad76d525ba14e87e071002eab858, type: 2}
+  isAttacker: 0
 --- !u!95 &2874832353561207189
 Animator:
   serializedVersion: 5
@@ -37931,6 +37947,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyDefinition: {fileID: 11400000, guid: 6184ad76d525ba14e87e071002eab858, type: 2}
+  isAttacker: 0
 --- !u!95 &3875554802015963267
 Animator:
   serializedVersion: 5
@@ -38097,6 +38114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyDefinition: {fileID: 11400000, guid: 6184ad76d525ba14e87e071002eab858, type: 2}
+  isAttacker: 0
 --- !u!95 &1020215701567031184
 Animator:
   serializedVersion: 5
@@ -38263,6 +38281,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyDefinition: {fileID: 11400000, guid: 6184ad76d525ba14e87e071002eab858, type: 2}
+  isAttacker: 0
 --- !u!95 &3133775029272914354
 Animator:
   serializedVersion: 5
@@ -38465,6 +38484,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyDefinition: {fileID: 11400000, guid: 6184ad76d525ba14e87e071002eab858, type: 2}
+  isAttacker: 0
 --- !u!95 &236501022716579
 Animator:
   serializedVersion: 5
@@ -38787,6 +38807,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyDefinition: {fileID: 11400000, guid: 6184ad76d525ba14e87e071002eab858, type: 2}
+  isAttacker: 0
 --- !u!95 &876776238171364861
 Animator:
   serializedVersion: 5
@@ -39273,6 +39294,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyDefinition: {fileID: 11400000, guid: 6184ad76d525ba14e87e071002eab858, type: 2}
+  isAttacker: 0
 --- !u!95 &7066202822112436191
 Animator:
   serializedVersion: 5
@@ -39664,6 +39686,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyDefinition: {fileID: 11400000, guid: 6184ad76d525ba14e87e071002eab858, type: 2}
+  isAttacker: 0
 --- !u!95 &7770121671458335957
 Animator:
   serializedVersion: 5
@@ -39991,9 +40014,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 301449d4f4ed654469414833496c4d5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patrolDefinition: {fileID: 11400000, guid: e2d4a2bec8e5cad419af6ec647fd2844, type: 2}
+  patrolDefinition: {fileID: 11400000, guid: f92b41fa5f33ebd48a0fddee4b68ed30, type: 2}
   target: {fileID: 0}
-  detectorCollider: {fileID: 0}
   follower: 0
   orientToDirection: 0
   lookAxis: 1
@@ -40049,6 +40071,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyDefinition: {fileID: 11400000, guid: 6184ad76d525ba14e87e071002eab858, type: 2}
+  isAttacker: 0
 --- !u!1 &8472638634686669401
 GameObject:
   m_ObjectHideFlags: 0
@@ -40149,6 +40172,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyDefinition: {fileID: 11400000, guid: 6184ad76d525ba14e87e071002eab858, type: 2}
+  isAttacker: 0
 --- !u!95 &1575375158611114188
 Animator:
   serializedVersion: 5
@@ -40471,6 +40495,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyDefinition: {fileID: 11400000, guid: 6184ad76d525ba14e87e071002eab858, type: 2}
+  isAttacker: 0
 --- !u!95 &4524968085698461665
 Animator:
   serializedVersion: 5
@@ -40940,6 +40965,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5065906865249452296, guid: eaa30762a8fd9654c8309841a4f59460, type: 3}
+      propertyPath: patrolDefinition
+      value: 
+      objectReference: {fileID: 11400000, guid: 76916f604ee22cb4d90625024dd0eba8, type: 2}
     - target: {fileID: 5065906865249452296, guid: eaa30762a8fd9654c8309841a4f59460, type: 3}
       propertyPath: waypoints.Array.size
       value: 3
@@ -42377,6 +42406,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5065906865249452296, guid: eaa30762a8fd9654c8309841a4f59460, type: 3}
+      propertyPath: patrolDefinition
+      value: 
+      objectReference: {fileID: 11400000, guid: 76916f604ee22cb4d90625024dd0eba8, type: 2}
+    - target: {fileID: 5065906865249452296, guid: eaa30762a8fd9654c8309841a4f59460, type: 3}
       propertyPath: waypoints.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -42556,6 +42589,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5065906865249452296, guid: eaa30762a8fd9654c8309841a4f59460, type: 3}
+      propertyPath: patrolDefinition
+      value: 
+      objectReference: {fileID: 11400000, guid: 76916f604ee22cb4d90625024dd0eba8, type: 2}
     - target: {fileID: 5065906865249452296, guid: eaa30762a8fd9654c8309841a4f59460, type: 3}
       propertyPath: waypoints.Array.size
       value: 1
@@ -43096,6 +43133,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BoxMonster
       objectReference: {fileID: 0}
+    - target: {fileID: 5065906865249452296, guid: eaa30762a8fd9654c8309841a4f59460, type: 3}
+      propertyPath: patrolDefinition
+      value: 
+      objectReference: {fileID: 11400000, guid: 76916f604ee22cb4d90625024dd0eba8, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -43162,6 +43203,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5065906865249452296, guid: eaa30762a8fd9654c8309841a4f59460, type: 3}
+      propertyPath: patrolDefinition
+      value: 
+      objectReference: {fileID: 11400000, guid: 76916f604ee22cb4d90625024dd0eba8, type: 2}
     - target: {fileID: 5065906865249452296, guid: eaa30762a8fd9654c8309841a4f59460, type: 3}
       propertyPath: waypoints.Array.data[0].x
       value: -76.6
@@ -43314,6 +43359,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5065906865249452296, guid: eaa30762a8fd9654c8309841a4f59460, type: 3}
+      propertyPath: patrolDefinition
+      value: 
+      objectReference: {fileID: 11400000, guid: 76916f604ee22cb4d90625024dd0eba8, type: 2}
     - target: {fileID: 5065906865249452296, guid: eaa30762a8fd9654c8309841a4f59460, type: 3}
       propertyPath: waypoints.Array.size
       value: 1

@@ -56,24 +56,22 @@ public class BootMenu : MonoBehaviour
             var levelButton = Instantiate(levelPrefab).GetComponent<Button>();
             var text = levelButton.GetComponentInChildren<TextMeshProUGUI>();
             var lockImage = levelButton.transform.GetChild(1).gameObject.GetComponent<Image>();
-
-            if (i + 1 <= lastLevel)
+            var level = i + 1;
+            if (level <= lastLevel)
             {
                 lockImage.gameObject.SetActive(false);
             }
-            text.text = (i + 1).ToString();
+            text.text = level.ToString();
 
             levelButton.transform.SetParent(levelsContainer.transform);
 
             levelButton.onClick.AddListener(() =>
             {
-                if (int.Parse(text.text) <= lastLevel)
+                if (level <= lastLevel)
                 {
                     SoundManager.Instance.playSound("click");
-                    UIManager.Instance.BootMenu.Hide();
-                    UIManager.Instance.PlayerInventory.Show();
-                    UIManager.Instance.Controls.Show();
-                    GameManager.Instance.LoadLevel("Level", text.text);
+
+                    EventsManager.Instance.OnLevelChoosen.Invoke(level);
                 }
             });
         }

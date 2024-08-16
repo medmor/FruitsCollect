@@ -12,23 +12,19 @@ public class EndLevel : MonoBehaviour
         });
     }
 
-    public void LoadWinScene()
+    public void LoadWinScene()//Called on animation end
+
     {
-        var nextLevel = int.Parse(GameManager.Instance.GameSettings.currentLevelName.Substring(5)) + 1;
+        var nextLevel = GameManager.Instance.GameSettings.currentLevel + 1;
         UIManager.Instance.PlayerInventory.Reset(false);
         if (nextLevel <= GameManager.Instance.GameSettings.NumberOfLevels)
         {
             SaveManager.Instance.SetLevel(nextLevel);
-            GameManager.Instance.LoadLevel("Intro");
+            GameManager.Instance.LoadIntro();
         }
         else
         {
-            UIManager.Instance.PlayerInventory.Reset(true);
-            SoundManager.Instance.StopMusic();
-            GameManager.Instance.LoadLevel("Win");
-            UIManager.Instance.WinMenu.Show();
-            UIManager.Instance.PlayerInventory.Hide();
-            UIManager.Instance.Controls.Hide();
+            GameManager.Instance.LoadWin();
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)

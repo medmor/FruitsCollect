@@ -39,13 +39,13 @@ public class Player : MonoBehaviour
         Die();
         Reset();
         if (inventory.Hearts <= 0)
-            EventsManager.Instance.Playerkilled?.Invoke(this);
+            EventsManager.Instance.Playerkilled?.Invoke();
     }
 
     public void Reset()
     {
         dead = false;
-        transform.position = GameObject.Find(GameManager.Instance.GameSettings.currentLevelName + "(Clone)/GamePoints/SpawnPoint").transform.position;
+        transform.position = GameObject.Find("/Level" + GameManager.Instance.GameSettings.currentLevel + "(Clone)/GamePoints/SpawnPoint").transform.position;
     }
     public void Die()
     {
@@ -98,7 +98,7 @@ public class Player : MonoBehaviour
         r2d.AddForce(
             new Vector2(
                 -transform.localScale.x * bounceHitForce.x
-                , r2d.velocity.y < bounceHitForce.y ? bounceHitForce.y : 0),
+                , r2d.velocity.y < bounceHitForce.y ? Mathf.Sign(r2d.velocity.y) * bounceHitForce.y : 0),
             ForceMode2D.Impulse
                 );
 

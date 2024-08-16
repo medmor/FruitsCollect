@@ -24,8 +24,30 @@ public class MovingPlatformHorizontal : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (afterPlayerIn && !isPlayerIn)
+        if (afterPlayerIn)
         {
+            if (isPlayerIn)
+            {
+                if (startOnMax && transform.localPosition.x < minX)
+                {
+                    rb.velocity = Vector2.zero;
+                }
+                if (!startOnMax && transform.localPosition.x > maxX)
+                {
+                    rb.velocity = Vector2.zero;
+                }
+            }
+            else
+            {
+                if (startOnMax && transform.localPosition.x > maxX)
+                {
+                    rb.velocity = Vector2.zero;
+                }
+                if (!startOnMax && transform.localPosition.x < minX)
+                {
+                    rb.velocity = Vector2.zero;
+                }
+            }
             return;
         }
         if (transform.localPosition.x > maxX)
@@ -54,8 +76,7 @@ public class MovingPlatformHorizontal : MonoBehaviour
             return;
         }
         isPlayerIn = false;
-        rb.velocity = Vector2.zero;
-        resetPosition();
+        rb.velocity = new Vector2(-velocity, rb.velocity.y);
     }
 
     void resetPosition()

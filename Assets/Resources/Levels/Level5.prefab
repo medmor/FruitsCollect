@@ -2767,6 +2767,16 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+  - first: {x: 14, y: 2, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 17
+      m_TileSpriteIndex: 17
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
   - first: {x: 50, y: 2, z: 0}
     second:
       serializedVersion: 2
@@ -4273,6 +4283,8 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 9c93c02e45bb41b4fb1485ef7d39d587, type: 2}
   - m_RefCount: 119
     m_Data: {fileID: 11400000, guid: d19200a1c00799c43b115b0c19be3ee8, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: e1da6c521a4872c4fb154efc55f5a77f, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 1
     m_Data: {fileID: -39983623799505075, guid: fc584d329b77b9545b9c9c8bb829e553, type: 3}
@@ -4308,8 +4320,10 @@ Tilemap:
     m_Data: {fileID: 2460501278191033764, guid: fc584d329b77b9545b9c9c8bb829e553, type: 3}
   - m_RefCount: 119
     m_Data: {fileID: -4293226751833479062, guid: fc584d329b77b9545b9c9c8bb829e553, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: -3581127029532586042, guid: fc584d329b77b9545b9c9c8bb829e553, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 416
+  - m_RefCount: 417
     m_Data:
       e00: 1
       e01: 0
@@ -4328,7 +4342,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 416
+  - m_RefCount: 417
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -4748,6 +4762,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyDefinition: {fileID: 11400000, guid: fa3e71e4379b5b141b2b8193b3a5a7b2, type: 2}
+  isAttacker: 0
 --- !u!114 &3474583540182414906
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16981,6 +16996,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyDefinition: {fileID: 11400000, guid: bcec3712a5435bb44b8354b0c03ccc4b, type: 2}
+  isAttacker: 0
 --- !u!1 &8253349010560336359
 GameObject:
   m_ObjectHideFlags: 0
@@ -17043,7 +17059,7 @@ MonoBehaviour:
   m_VoxelSize: 0.33333334
   m_BuildHeightMesh: 0
   m_HideEditorLogs: 0
-  m_NavMeshData: {fileID: 23800000, guid: ee0c0ef076ab9c94d92acd39f9e858b1, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 51b3df28c3b8eed4385e41908b706d9e, type: 2}
 --- !u!114 &5009753736874566908
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17068,6 +17084,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2843948210317743455}
     m_Modifications:
+    - target: {fileID: 6029650583219764856, guid: f188fdd2fc05c1149b081d74f5c51713, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6029650583219764857, guid: f188fdd2fc05c1149b081d74f5c51713, type: 3}
       propertyPath: maxY
       value: 5.35
@@ -18880,6 +18900,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BoxMonster (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5065906865249452296, guid: eaa30762a8fd9654c8309841a4f59460, type: 3}
+      propertyPath: patrolDefinition
+      value: 
+      objectReference: {fileID: 11400000, guid: e2d4a2bec8e5cad419af6ec647fd2844, type: 2}
     - target: {fileID: 5065906865249452296, guid: eaa30762a8fd9654c8309841a4f59460, type: 3}
       propertyPath: waypoints.Array.size
       value: 1
