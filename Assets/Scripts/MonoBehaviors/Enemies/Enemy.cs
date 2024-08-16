@@ -4,7 +4,7 @@ public class Enemy : MonoBehaviour
 {
     public EnemySO enemyDefinition = default;
     [SerializeField] bool isAttacker = false;
-    Animator animator = default;
+    protected Animator animator = default;
 
     private void Start()
     {

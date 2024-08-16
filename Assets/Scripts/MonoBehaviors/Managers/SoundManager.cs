@@ -20,12 +20,14 @@ public class SoundManager : Manager<SoundManager>
         playSound("intro");
     }
 
-    public float SoundVolum {
+    public float SoundVolum
+    {
         get { return AudioListener.volume; }
         set { AudioListener.volume = value; }
     }
 
-    public bool soundMute {
+    public bool soundMute
+    {
         get { return AudioListener.pause; }
         set { AudioListener.pause = value; }
     }

@@ -125,6 +125,7 @@ MonoBehaviour:
   shooterDefinition: {fileID: 0}
   target: {fileID: 0}
   bulletOffset: {x: 0, y: 0.1}
+  attackAnimation: PlantAttack
 --- !u!114 &8242530213032164723
 MonoBehaviour:
   m_ObjectHideFlags: 0

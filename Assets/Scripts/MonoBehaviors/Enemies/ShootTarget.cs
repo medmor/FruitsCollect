@@ -8,9 +8,13 @@ public class ShootTarget : MonoBehaviour
 
     [SerializeField] private Vector2 bulletOffset = Vector2.zero;
 
+    [SerializeField] private string attackAnimation = "";
+
     private float timeOfLastSpawn;
 
     private bool targetInRange = false;
+
+    Animator animator;
 
 
     void Start()
@@ -20,6 +24,7 @@ public class ShootTarget : MonoBehaviour
         {
             target = GameObject.Find("Player").transform;
         }
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -28,6 +33,10 @@ public class ShootTarget : MonoBehaviour
         {
             if (Time.time >= timeOfLastSpawn + shooterDefinition.shootRate)
             {
+                if (!string.IsNullOrEmpty(attackAnimation))
+                {
+                    animator.Play(attackAnimation);
+                }
                 Vector2 actualBulletDirection = target.position - transform.position;
                 GameObject bullet = Instantiate(shooterDefinition.bullet);
                 bullet.transform.position = transform.position + (Vector3)bulletOffset;
