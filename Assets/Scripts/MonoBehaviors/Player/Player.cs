@@ -55,7 +55,7 @@ public class Player : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Enemies" && !dead)
+        if (collision.GetContact(0).collider.tag == "Enemies" && !dead)
         {
             OnEnemyHit(collision.gameObject.GetComponent<Enemy>());
         }

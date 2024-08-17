@@ -195,6 +195,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyDefinition: {fileID: 11400000, guid: 2185e46ecf81c174d972087136f957d4, type: 2}
+  isAttacker: 0
 --- !u!114 &5065906865249452296
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -209,8 +210,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   patrolDefinition: {fileID: 11400000, guid: ae4924118af8e464ca8971b70a6e3743, type: 2}
   target: {fileID: 0}
-  detectorCollider: {fileID: 0}
-  follower: 1
+  follower: 0
   orientToDirection: 0
   lookAxis: 0
   waypoints:
