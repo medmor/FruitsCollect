@@ -16,6 +16,10 @@ public class PlayerInventoryUI : MonoBehaviour
     [Header("Hearts")]
     [SerializeField] private TextMeshProUGUI HeartsText = default;
 
+    [Header("Bullets Text")]
+    [SerializeField] private TextMeshProUGUI BulletsText = default;
+    [SerializeField] private InventoryItemSO BulletsItem = default;
+
     [Header("Items")]
     [SerializeField] private Image[] itemImages = default;
 
@@ -25,6 +29,13 @@ public class PlayerInventoryUI : MonoBehaviour
         {
             GameManager.Instance.LoadIntro();
         });
+        SetBulletsText();
+        EventsManager.Instance.OnBulletsAmountChanged.AddListener(SetBulletsText);
+    }
+
+    private void SetBulletsText()
+    {
+        BulletsText.text = BulletsItem.GetAmount().ToString();
     }
 
     public void Hide()
@@ -64,7 +75,7 @@ public class PlayerInventoryUI : MonoBehaviour
         return int.Parse(HeartsText.text);
     }
 
-    public void Reset(bool all)
+    public void ResetInventory(bool all)
     {
         foreach (var image in itemImages)
         {

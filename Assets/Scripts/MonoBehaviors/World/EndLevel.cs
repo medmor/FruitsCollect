@@ -16,7 +16,7 @@ public class EndLevel : MonoBehaviour
 
     {
         var nextLevel = GameManager.Instance.GameSettings.currentLevel + 1;
-        UIManager.Instance.PlayerInventory.Reset(false);
+        UIManager.Instance.PlayerInventory.ResetInventory(false);
         if (nextLevel <= GameManager.Instance.GameSettings.NumberOfLevels)
         {
             SaveManager.Instance.SetLevel(nextLevel);

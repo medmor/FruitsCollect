@@ -14,7 +14,6 @@ public class GameManager : Manager<GameManager>
         InstantiateSystemPrefabs();
 
         EventsManager.Instance.Playerkilled.AddListener(OnPlyerKilled);
-        EventsManager.Instance.TimeOut.AddListener(OnTimeOut);
         EventsManager.Instance.OnLevelChoosen.AddListener(OnLevelChoosen);
     }
 
@@ -26,30 +25,6 @@ public class GameManager : Manager<GameManager>
         }
     }
 
-
-    //void OnLoadOperationComplete(AsyncOperation ao)
-    //{
-    //    if (GameSettings.currentLevelName.StartsWith("Level"))
-    //    {
-    //        SaveManager.Instance.SetLevel(int.Parse(GameSettings.currentLevelName.Substring(5)));
-    //        SoundManager.Instance.PlayMusic(0);
-    //        Instantiate(Resources.Load("Levels/" + GameSettings.currentLevelName));
-    //        GameObject.Find("/Player").transform.position =
-    //        GameObject.Find(GameSettings.currentLevelName + "(Clone)/GamePoints/SpawnPoint").gameObject.transform.position;
-    //        GameObject.Find("Cam/Vcam").GetComponent<CinemachineConfiner>().m_BoundingShape2D =
-    //        GameObject.Find(GameSettings.currentLevelName + "(Clone)/WorldCamBounds").GetComponent<PolygonCollider2D>();
-    //    }
-
-    //    if (GameSettings.currentLevelName == "Intro")
-    //    {
-    //        SoundManager.Instance.StopMusic();
-    //        SoundManager.Instance.playSound("click");
-    //        UIManager.Instance.PlayerInventory.Hide();
-    //        UIManager.Instance.PlayerInventory.Reset(true);
-    //        UIManager.Instance.BootMenu.Show();
-    //        UIManager.Instance.Controls.Hide();
-    //    }
-    //}
 
     public void UpdateState(Enums.GameState state)
     {
@@ -93,14 +68,14 @@ public class GameManager : Manager<GameManager>
             SoundManager.Instance.StopMusic();
             SoundManager.Instance.playSound("click");
             UIManager.Instance.PlayerInventory.Hide();
-            UIManager.Instance.PlayerInventory.Reset(true);
+            UIManager.Instance.PlayerInventory.ResetInventory(true);
             UIManager.Instance.BootMenu.Show();
             UIManager.Instance.Controls.Hide();
         };
     }
     public void LoadWin()
     {
-        UIManager.Instance.PlayerInventory.Reset(true);
+        UIManager.Instance.PlayerInventory.ResetInventory(true);
         SoundManager.Instance.StopMusic();
         SceneManager.LoadScene("Win");
         UIManager.Instance.WinMenu.Show();
@@ -125,17 +100,14 @@ public class GameManager : Manager<GameManager>
             UIManager.Instance.BootMenu.Hide();
         };
     }
-    void OnTimeOut()
-    {
-        OnPlyerKilled();
-    }
+
     void OnPlyerKilled()
     {
         var operation = SceneManager.LoadSceneAsync("GameOver");
         operation.completed += (AsyncOperation operation) =>
         {
             SoundManager.Instance.StopMusic();
-            UIManager.Instance.PlayerInventory.Reset(true);
+            UIManager.Instance.PlayerInventory.ResetInventory(true);
             UIManager.Instance.PlayerInventory.Hide();
             UIManager.Instance.Controls.Hide();
             UIManager.Instance.GameOverMenu.Show();

@@ -22,8 +22,10 @@ public class Player : MonoBehaviour
         inventory.SetHearts(UIManager.Instance.PlayerInventory.GetHeartsInt());
         inventory.SetHealth(UIManager.Instance.PlayerInventory.GetHealth());
 
-    }
+        EventsManager.Instance.TimeOut.AddListener(OnTimeOut);
 
+
+    }
 
     private void InstantiateCollectedPrefab(Vector3 position)
     {
@@ -36,8 +38,13 @@ public class Player : MonoBehaviour
     {
         Die();
         Reset();
-        if (inventory.Hearts <= 0)
+        if (inventory.GetHearts() <= 0)
             EventsManager.Instance.Playerkilled?.Invoke();
+    }
+
+    void OnTimeOut()
+    {
+        animator.SetTrigger("Desappear");
     }
 
     public void Reset()
@@ -45,9 +52,9 @@ public class Player : MonoBehaviour
         dead = false;
         transform.position = GameObject.Find("/Level" + GameManager.Instance.GameSettings.currentLevel + "(Clone)/GamePoints/SpawnPoint").transform.position;
     }
-    public void Die()
+    void Die()
     {
-        inventory.SetHearts(inventory.Hearts - 1);
+        inventory.SetHearts(inventory.GetHearts() - 1);
         inventory.SetHealth(inventory.maxHealth);
     }
 
@@ -85,14 +92,22 @@ public class Player : MonoBehaviour
             SoundManager.Instance.playSound("coin");
             InstantiateCollectedPrefab(collision.gameObject.transform.position);
             Destroy(collision.gameObject);
-            inventory.SetHearts(inventory.Hearts + 1);
+            inventory.SetHearts(inventory.GetHearts() + 1);
+        }
+        else if (collision.gameObject.CompareTag("Bullet"))
+        {
+            SoundManager.Instance.playSound("coin");
+            InstantiateCollectedPrefab(collision.gameObject.transform.position);
+            Destroy(collision.gameObject);
+            inventory.UpdateBullets(10);
+            EventsManager.Instance.OnBulletsAmountChanged.Invoke();
         }
     }
 
     void OnEnemyHit(Enemy enemy)
     {
         SoundManager.Instance.playSound("hit");
-        inventory.SetHealth(inventory.Health - enemy.GetDamagePower());
+        inventory.SetHealth(inventory.GetHealth() - enemy.GetDamagePower());
         r2d.AddForce(
             new Vector2(
                 -transform.localScale.x * bounceHitForce.x
@@ -100,7 +115,7 @@ public class Player : MonoBehaviour
             ForceMode2D.Impulse
                 );
 
-        if (inventory.Health <= 0)
+        if (inventory.GetHealth() <= 0)
         {
             dead = true;
             animator.SetTrigger("Desappear");
