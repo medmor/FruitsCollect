@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6c43a1d7c2bb5847aa2cfe04dd5509b, type: 3}
+  m_Name: PlayerShooterDefinition
+  m_EditorClassIdentifier: 
+  shootRate: 0.5
+  bulletSpeed: 2
+  bulletLifetime: 2
+  bullet: {fileID: 4537147663478565984, guid: 6f08f6fd4aa17e346aa518b07660ee07, type: 3}
+  fixedDirection: {x: 0, y: 0}

@@ -6,6 +6,7 @@ public class EventsManager : Manager<EventsManager>
     public VoidEvent AllItemsCollected { get; private set; }
     public VoidEvent TimeOut { get; private set; }
     public IntEvent OnLevelChoosen { get; private set; }
+    public VoidEvent OnBulletsAmountChanged { get; private set; }
 
     public override void Awake()
     {
@@ -14,6 +15,7 @@ public class EventsManager : Manager<EventsManager>
         AllItemsCollected = new VoidEvent();
         TimeOut = new VoidEvent();
         OnLevelChoosen = new IntEvent();
+        OnBulletsAmountChanged = new VoidEvent();
     }
 
 }

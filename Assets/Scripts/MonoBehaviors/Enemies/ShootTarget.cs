@@ -37,14 +37,12 @@ public class ShootTarget : MonoBehaviour
                 {
                     animator.Play(attackAnimation);
                 }
-                Vector2 actualBulletDirection = target.position - transform.position;
-                GameObject bullet = Instantiate(shooterDefinition.bullet);
-                bullet.transform.position = transform.position + (Vector3)bulletOffset;
-                bullet.transform.eulerAngles = new Vector3(0f, 0f, Utils.Angle(actualBulletDirection));
-                bullet.tag = "Enemies";
-                bullet.GetComponent<Bullet>().SetCountdownSeconds(shooterDefinition.bulletLifetime);
 
-                Rigidbody2D rigidbody2D = bullet.GetComponent<Rigidbody2D>();
+                Vector2 actualBulletDirection = target.position - transform.position;
+
+
+                Rigidbody2D rigidbody2D = SpawnBullet(actualBulletDirection).GetComponent<Rigidbody2D>();
+
                 if (rigidbody2D != null)
                 {
                     if (shooterDefinition.fixedDirection != Vector2.zero)
@@ -63,6 +61,15 @@ public class ShootTarget : MonoBehaviour
                 SoundManager.Instance.playSound("fire");
             }
         }
+    }
+    GameObject SpawnBullet(Vector2 dir)
+    {
+        GameObject bullet = Instantiate(shooterDefinition.bullet);
+        bullet.transform.position = transform.position + (Vector3)bulletOffset;
+        bullet.transform.eulerAngles = new Vector3(0f, 0f, Utils.Angle(dir));
+        bullet.tag = "Enemies";
+        bullet.GetComponent<Bullet>().SetCountdownSeconds(shooterDefinition.bulletLifetime);
+        return bullet;
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

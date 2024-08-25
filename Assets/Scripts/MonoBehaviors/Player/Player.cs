@@ -1,6 +1,4 @@
 ﻿using UnityEngine;
-
-
 public class Player : MonoBehaviour
 {
 
@@ -94,7 +92,7 @@ public class Player : MonoBehaviour
     void OnEnemyHit(Enemy enemy)
     {
         SoundManager.Instance.playSound("hit");
-        inventory.SetHealth(inventory.Health - enemy.enemyDefinition.damagePower);
+        inventory.SetHealth(inventory.Health - enemy.GetDamagePower());
         r2d.AddForce(
             new Vector2(
                 -transform.localScale.x * bounceHitForce.x

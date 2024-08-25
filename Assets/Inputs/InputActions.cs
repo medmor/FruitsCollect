@@ -53,6 +53,15 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Fire"",
+                    ""type"": ""Button"",
+                    ""id"": ""91b7171a-5291-4608-bb17-1cf7043376fa"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -220,6 +229,17 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""action"": ""MoveAxis"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""488878ca-4718-4b6b-b4c6-009a3a319073"",
+                    ""path"": ""<Keyboard>/x"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Fire"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -231,6 +251,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         m_Player_Jump = m_Player.FindAction("Jump", throwIfNotFound: true);
         m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
         m_Player_MoveAxis = m_Player.FindAction("MoveAxis", throwIfNotFound: true);
+        m_Player_Fire = m_Player.FindAction("Fire", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -295,6 +316,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Jump;
     private readonly InputAction m_Player_Move;
     private readonly InputAction m_Player_MoveAxis;
+    private readonly InputAction m_Player_Fire;
     public struct PlayerActions
     {
         private @InputActions m_Wrapper;
@@ -302,6 +324,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         public InputAction @Jump => m_Wrapper.m_Player_Jump;
         public InputAction @Move => m_Wrapper.m_Player_Move;
         public InputAction @MoveAxis => m_Wrapper.m_Player_MoveAxis;
+        public InputAction @Fire => m_Wrapper.m_Player_Fire;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -320,6 +343,9 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
             @MoveAxis.started += instance.OnMoveAxis;
             @MoveAxis.performed += instance.OnMoveAxis;
             @MoveAxis.canceled += instance.OnMoveAxis;
+            @Fire.started += instance.OnFire;
+            @Fire.performed += instance.OnFire;
+            @Fire.canceled += instance.OnFire;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -333,6 +359,9 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
             @MoveAxis.started -= instance.OnMoveAxis;
             @MoveAxis.performed -= instance.OnMoveAxis;
             @MoveAxis.canceled -= instance.OnMoveAxis;
+            @Fire.started -= instance.OnFire;
+            @Fire.performed -= instance.OnFire;
+            @Fire.canceled -= instance.OnFire;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -355,5 +384,6 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         void OnJump(InputAction.CallbackContext context);
         void OnMove(InputAction.CallbackContext context);
         void OnMoveAxis(InputAction.CallbackContext context);
+        void OnFire(InputAction.CallbackContext context);
     }
 }

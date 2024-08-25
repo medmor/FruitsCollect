@@ -5,14 +5,13 @@ public class Turtle : Enemy
 {
 
 
-    Animator animator;
+    Animator anim;
 
     bool firstHit = false;
 
     void Start()
     {
-        animator = GetComponent<Animator>();
-
+        anim = GetComponent<Animator>();
 
     }
 
@@ -22,15 +21,14 @@ public class Turtle : Enemy
         {
             if (!firstHit)
             {
-                animator.Play("HitTurtle");
-                animator.SetBool("Spikes", true);
+                anim.Play("HitTurtle");
+                anim.SetBool("Spikes", true);
                 firstHit = true;
             }
             else
             {
                 SoundManager.Instance.playSound("hit");
             }
-
         }
     }
 
@@ -49,6 +47,6 @@ public class Turtle : Enemy
     private IEnumerator HideSpikesCoroutine()
     {
         yield return new WaitForSeconds(5);
-        animator.SetBool("Spikes", false);
+        anim.SetBool("Spikes", false);
     }
 }
