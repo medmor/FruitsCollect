@@ -175,5 +175,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10b369d6a6539bd4aa3f88d016ce4968, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyDefinition: {fileID: 11400000, guid: 2185e46ecf81c174d972087136f957d4, type: 2}
-  isAttacker: 0
+  enemyDefinition: {fileID: 11400000, guid: cfe4ce722af5fff4892c16b639460914, type: 2}
+  healthBar: {fileID: 0}

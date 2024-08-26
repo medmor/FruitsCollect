@@ -140,7 +140,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyDefinition: {fileID: 11400000, guid: 60f43dd5d0ddf7f4d928cf7856d1e074, type: 2}
-  isAttacker: 0
   healthBar: {fileID: 0}
 --- !u!61 &3951078378970689968
 BoxCollider2D:
@@ -219,7 +218,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -2.9362097, y: -0.12835908}
+  m_Offset: {x: -2.9362097, y: -0.31076914}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -230,7 +229,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 7.110798, y: 0.54336977}
+  m_Size: {x: 7.110798, y: 0.41610765}
   m_EdgeRadius: 0
 --- !u!1001 &294061681253420408
 PrefabInstance:
