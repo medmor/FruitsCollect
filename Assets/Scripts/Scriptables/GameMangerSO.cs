@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "GameMangerSO", menuName = "GameManger")]
+[CreateAssetMenu(fileName = "GameMangerSO", menuName = "SO/GameManger")]
 public class GameMangerSO : ScriptableObject
 {
     public int NumberOfLevels = 9;

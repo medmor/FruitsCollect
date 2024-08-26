@@ -9,8 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c21450c4ccb392a4b948547cdf5d919f, type: 3}
-  m_Name: PatrolDefinition2
+  m_Script: {fileID: 11500000, guid: 0eb4a3b3db14480479ebb369d4d15ca0, type: 3}
+  m_Name: BoxEnemyDefinition1
   m_EditorClassIdentifier: 
-  patrolSpeed: 1.5
-  followSpeed: 1.7
+  damagePower: 1
+  health: 1
+  isDestoryable: 0
+  hasAttackAnimation: 0

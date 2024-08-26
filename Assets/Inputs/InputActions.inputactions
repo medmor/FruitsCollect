@@ -218,6 +218,28 @@
                     "action": "Fire",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "32439e3a-ee06-4158-8df0-24ef99a7d94b",
+                    "path": "<HID::Saitek PLC Cyborg Rumble Pad>/button6",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Fire",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8bbe3183-ea20-4c25-9f5f-77b4a9ca7c9b",
+                    "path": "/ f51a)/Button 6",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Fire",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }

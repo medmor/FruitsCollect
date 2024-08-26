@@ -1394,8 +1394,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10b369d6a6539bd4aa3f88d016ce4968, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyDefinition: {fileID: 11400000, guid: fa3e71e4379b5b141b2b8193b3a5a7b2, type: 2}
-  isAttacker: 0
+  enemyDefinition: {fileID: 11400000, guid: ec75441635754794cb9a1d0c701bc216, type: 2}
   healthBar: {fileID: 0}
 --- !u!1 &6097458341680283456
 GameObject:

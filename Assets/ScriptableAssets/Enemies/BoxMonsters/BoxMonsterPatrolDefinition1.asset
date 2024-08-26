@@ -9,11 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6c43a1d7c2bb5847aa2cfe04dd5509b, type: 3}
-  m_Name: PlantShootDefinition2
+  m_Script: {fileID: 11500000, guid: c21450c4ccb392a4b948547cdf5d919f, type: 3}
+  m_Name: BoxMonsterPatrolDefinition1
   m_EditorClassIdentifier: 
-  shootRate: 0.5
-  bulletSpeed: 8
-  bulletLifetime: 10
-  bullet: {fileID: 8373989678461278131, guid: 06bfa44ca0a804c4b96ee364719bcfd7, type: 3}
-  fixedDirection: {x: -1, y: 0}
+  patrolSpeed: 5
+  followSpeed: 5

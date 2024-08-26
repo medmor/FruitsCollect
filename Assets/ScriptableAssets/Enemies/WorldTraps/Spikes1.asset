@@ -10,6 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0eb4a3b3db14480479ebb369d4d15ca0, type: 3}
-  m_Name: Enemy1
+  m_Name: Spikes1
   m_EditorClassIdentifier: 
-  damagePower: 0.1
+  damagePower: 3
+  health: 0
+  isDestoryable: 0
+  hasAttackAnimation: 0

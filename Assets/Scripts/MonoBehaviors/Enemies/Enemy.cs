@@ -2,8 +2,7 @@
 using UnityEngine.UI;
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] EnemySO enemyDefinition = default;
-    [SerializeField] bool isAttacker = false;
+    [SerializeField] EnemyDefinitionSO enemyDefinition = default;
     [SerializeField] Image healthBar;
     protected Animator animator = default;
     float health;
@@ -12,7 +11,10 @@ public class Enemy : MonoBehaviour
     private void Start()
     {
         animator = GetComponent<Animator>();
-        health = enemyDefinition.health;
+        if (enemyDefinition.isDestoryable)
+        {
+            health = enemyDefinition.health;
+        }
     }
 
     public float GetDamagePower()
@@ -38,12 +40,12 @@ public class Enemy : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            if (isAttacker)
+            if (enemyDefinition.hasAttackAnimation)
             {
                 animator.SetBool("Attack", true);
             }
         }
-        else if (collision.gameObject.CompareTag("Bullet"))
+        else if (enemyDefinition.isDestoryable && collision.gameObject.CompareTag("Bullet"))
         {
             TakeDamage(.1f);
         }
@@ -52,7 +54,7 @@ public class Enemy : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            if (isAttacker)
+            if (enemyDefinition.hasAttackAnimation)
             {
                 animator.SetBool("Attack", false);
             }

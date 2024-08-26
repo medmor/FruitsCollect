@@ -2,6 +2,6 @@
 
 public class Collectable : MonoBehaviour
 {
-    public Item item = default;
+    public FruitItem item = default;
 
 }

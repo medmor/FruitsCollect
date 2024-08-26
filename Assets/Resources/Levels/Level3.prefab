@@ -8808,8 +8808,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10b369d6a6539bd4aa3f88d016ce4968, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyDefinition: {fileID: 11400000, guid: 60f43dd5d0ddf7f4d928cf7856d1e074, type: 2}
-  isAttacker: 0
+  enemyDefinition: {fileID: 11400000, guid: ec75441635754794cb9a1d0c701bc216, type: 2}
+  healthBar: {fileID: 0}
 --- !u!1 &4806879949763513561
 GameObject:
   m_ObjectHideFlags: 0
@@ -8863,7 +8863,7 @@ GameObject:
   - component: {fileID: 4806879949767390748}
   - component: {fileID: 4806879949767390747}
   - component: {fileID: 4806879949767390746}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: FallingPlatform (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9089,7 +9089,7 @@ GameObject:
   - component: {fileID: 4806879949875685123}
   - component: {fileID: 4806879949875685122}
   - component: {fileID: 4806879949875685121}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: FallingPlatform (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11316,6 +11316,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3095201186161975907, guid: 46d63a411c0efdf429d5da8956870ba8, type: 3}
+      propertyPath: enemyDefinition
+      value: 
+      objectReference: {fileID: 11400000, guid: ec75441635754794cb9a1d0c701bc216, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11850,6 +11854,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3095201186161975907, guid: 46d63a411c0efdf429d5da8956870ba8, type: 3}
+      propertyPath: enemyDefinition
+      value: 
+      objectReference: {fileID: 11400000, guid: ec75441635754794cb9a1d0c701bc216, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11916,6 +11924,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3095201186161975907, guid: 46d63a411c0efdf429d5da8956870ba8, type: 3}
+      propertyPath: enemyDefinition
+      value: 
+      objectReference: {fileID: 11400000, guid: ec75441635754794cb9a1d0c701bc216, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12048,6 +12060,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3095201186161975907, guid: 46d63a411c0efdf429d5da8956870ba8, type: 3}
+      propertyPath: enemyDefinition
+      value: 
+      objectReference: {fileID: 11400000, guid: ec75441635754794cb9a1d0c701bc216, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12188,6 +12204,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3095201186161975907, guid: 46d63a411c0efdf429d5da8956870ba8, type: 3}
+      propertyPath: enemyDefinition
+      value: 
+      objectReference: {fileID: 11400000, guid: ec75441635754794cb9a1d0c701bc216, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12254,6 +12274,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3095201186161975907, guid: 46d63a411c0efdf429d5da8956870ba8, type: 3}
+      propertyPath: enemyDefinition
+      value: 
+      objectReference: {fileID: 11400000, guid: ec75441635754794cb9a1d0c701bc216, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
