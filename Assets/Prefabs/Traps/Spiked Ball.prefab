@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 2627324573223605845}
   - component: {fileID: 5501355491024041846}
   - component: {fileID: 1462738155769476385}
-  - component: {fileID: 3976912290159391078}
   - component: {fileID: 8863641211881188112}
+  - component: {fileID: 6199339479741548010}
+  - component: {fileID: 3976912290159391078}
   m_Layer: 3
   m_Name: Spiked Ball
   m_TagString: Enemies
@@ -136,28 +137,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &3976912290159391078
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3807249287469784970}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 301449d4f4ed654469414833496c4d5c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  patrolDefinition: {fileID: 11400000, guid: e2d4a2bec8e5cad419af6ec647fd2844, type: 2}
-  target: {fileID: 0}
-  detectorCollider: {fileID: 0}
-  follower: 0
-  orientToDirection: 0
-  lookAxis: 1
-  waypoints:
-  - {x: 45, y: 1}
-  - {x: 45, y: -6}
-  - {x: 20, y: -6}
 --- !u!58 &8863641211881188112
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -193,3 +172,38 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.67
+--- !u!114 &6199339479741548010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3807249287469784970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10b369d6a6539bd4aa3f88d016ce4968, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyDefinition: {fileID: 0}
+  healthBar: {fileID: 0}
+--- !u!114 &3976912290159391078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3807249287469784970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 301449d4f4ed654469414833496c4d5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  patrolDefinition: {fileID: 11400000, guid: e2d4a2bec8e5cad419af6ec647fd2844, type: 2}
+  target: {fileID: 0}
+  follower: 0
+  orientToDirection: 0
+  lookAxis: 1
+  waypoints:
+  - {x: 45, y: 1}
+  - {x: 45, y: -6}
+  - {x: 20, y: -6}

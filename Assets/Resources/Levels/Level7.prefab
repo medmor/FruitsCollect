@@ -10526,7 +10526,7 @@ PrefabInstance:
     - target: {fileID: 6894805838904574850, guid: febe133eb8d53814da0b8d25e623b075, type: 3}
       propertyPath: patrolDefinition
       value: 
-      objectReference: {fileID: 11400000, guid: 76916f604ee22cb4d90625024dd0eba8, type: 2}
+      objectReference: {fileID: 11400000, guid: 56dc59700177fd04f86ea2e837de3ca2, type: 2}
     - target: {fileID: 6894805838904574850, guid: febe133eb8d53814da0b8d25e623b075, type: 3}
       propertyPath: waypoints.Array.size
       value: 3
@@ -10555,6 +10555,10 @@ PrefabInstance:
       propertyPath: waypoints.Array.data[2].y
       value: 12.8
       objectReference: {fileID: 0}
+    - target: {fileID: 7603089839521248027, guid: febe133eb8d53814da0b8d25e623b075, type: 3}
+      propertyPath: enemyDefinition
+      value: 
+      objectReference: {fileID: 11400000, guid: a2dee6346eaf1a040a41b0144d2c9df4, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10577,6 +10581,10 @@ PrefabInstance:
       propertyPath: lookAxis
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 1374196293852401316, guid: 8bbb69e0f875c7245b5089bff60ab12f, type: 3}
+      propertyPath: patrolDefinition
+      value: 
+      objectReference: {fileID: 11400000, guid: 9df86c4873db2f14c96f311a0144827b, type: 2}
     - target: {fileID: 1374196293852401316, guid: 8bbb69e0f875c7245b5089bff60ab12f, type: 3}
       propertyPath: waypoints.Array.data[0].x
       value: 0.6
@@ -10629,6 +10637,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6967291577183798036, guid: 8bbb69e0f875c7245b5089bff60ab12f, type: 3}
+      propertyPath: enemyDefinition
+      value: 
+      objectReference: {fileID: 11400000, guid: 42303722bb7ec09408b5903f1d981d43, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10730,6 +10742,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1374196293852401316, guid: 8bbb69e0f875c7245b5089bff60ab12f, type: 3}
+      propertyPath: patrolDefinition
+      value: 
+      objectReference: {fileID: 11400000, guid: 9df86c4873db2f14c96f311a0144827b, type: 2}
+    - target: {fileID: 1374196293852401316, guid: 8bbb69e0f875c7245b5089bff60ab12f, type: 3}
       propertyPath: waypoints.Array.data[0].x
       value: -10.3
       objectReference: {fileID: 0}
@@ -10781,6 +10797,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6967291577183798036, guid: 8bbb69e0f875c7245b5089bff60ab12f, type: 3}
+      propertyPath: enemyDefinition
+      value: 
+      objectReference: {fileID: 11400000, guid: 42303722bb7ec09408b5903f1d981d43, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10839,6 +10859,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4472736084443721546, guid: eaa30762a8fd9654c8309841a4f59460, type: 3}
+      propertyPath: enemyDefinition
+      value: 
+      objectReference: {fileID: 11400000, guid: 08aca696ba43bc14e86ff4762f78ecda, type: 2}
     - target: {fileID: 4935148699620045228, guid: eaa30762a8fd9654c8309841a4f59460, type: 3}
       propertyPath: m_Name
       value: BoxMonster (1)
@@ -10846,7 +10870,7 @@ PrefabInstance:
     - target: {fileID: 5065906865249452296, guid: eaa30762a8fd9654c8309841a4f59460, type: 3}
       propertyPath: patrolDefinition
       value: 
-      objectReference: {fileID: 11400000, guid: f92b41fa5f33ebd48a0fddee4b68ed30, type: 2}
+      objectReference: {fileID: 11400000, guid: 9c10683678032d447a3a39a8df066bd5, type: 2}
     - target: {fileID: 5065906865249452296, guid: eaa30762a8fd9654c8309841a4f59460, type: 3}
       propertyPath: waypoints.Array.size
       value: 2
@@ -10944,7 +10968,7 @@ PrefabInstance:
     - target: {fileID: 6894805838904574850, guid: febe133eb8d53814da0b8d25e623b075, type: 3}
       propertyPath: patrolDefinition
       value: 
-      objectReference: {fileID: 11400000, guid: 76916f604ee22cb4d90625024dd0eba8, type: 2}
+      objectReference: {fileID: 11400000, guid: 56dc59700177fd04f86ea2e837de3ca2, type: 2}
     - target: {fileID: 6894805838904574850, guid: febe133eb8d53814da0b8d25e623b075, type: 3}
       propertyPath: waypoints.Array.size
       value: 1
@@ -10973,6 +10997,10 @@ PrefabInstance:
       propertyPath: waypoints.Array.data[2].y
       value: 12.8
       objectReference: {fileID: 0}
+    - target: {fileID: 7603089839521248027, guid: febe133eb8d53814da0b8d25e623b075, type: 3}
+      propertyPath: enemyDefinition
+      value: 
+      objectReference: {fileID: 11400000, guid: a2dee6346eaf1a040a41b0144d2c9df4, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11031,6 +11059,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4472736084443721546, guid: eaa30762a8fd9654c8309841a4f59460, type: 3}
+      propertyPath: enemyDefinition
+      value: 
+      objectReference: {fileID: 11400000, guid: 08aca696ba43bc14e86ff4762f78ecda, type: 2}
     - target: {fileID: 4935148699620045228, guid: eaa30762a8fd9654c8309841a4f59460, type: 3}
       propertyPath: m_Name
       value: BoxMonster
@@ -11038,7 +11070,7 @@ PrefabInstance:
     - target: {fileID: 5065906865249452296, guid: eaa30762a8fd9654c8309841a4f59460, type: 3}
       propertyPath: patrolDefinition
       value: 
-      objectReference: {fileID: 11400000, guid: f92b41fa5f33ebd48a0fddee4b68ed30, type: 2}
+      objectReference: {fileID: 11400000, guid: 9c10683678032d447a3a39a8df066bd5, type: 2}
     - target: {fileID: 5065906865249452296, guid: eaa30762a8fd9654c8309841a4f59460, type: 3}
       propertyPath: waypoints.Array.size
       value: 2
@@ -11160,6 +11192,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1374196293852401316, guid: 8bbb69e0f875c7245b5089bff60ab12f, type: 3}
+      propertyPath: patrolDefinition
+      value: 
+      objectReference: {fileID: 11400000, guid: 9df86c4873db2f14c96f311a0144827b, type: 2}
+    - target: {fileID: 1374196293852401316, guid: 8bbb69e0f875c7245b5089bff60ab12f, type: 3}
       propertyPath: waypoints.Array.data[0].x
       value: -9.58
       objectReference: {fileID: 0}
@@ -11211,6 +11247,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6967291577183798036, guid: 8bbb69e0f875c7245b5089bff60ab12f, type: 3}
+      propertyPath: enemyDefinition
+      value: 
+      objectReference: {fileID: 11400000, guid: 42303722bb7ec09408b5903f1d981d43, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11343,6 +11383,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3095201186161975907, guid: 46d63a411c0efdf429d5da8956870ba8, type: 3}
+      propertyPath: enemyDefinition
+      value: 
+      objectReference: {fileID: 11400000, guid: ec75441635754794cb9a1d0c701bc216, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11487,6 +11531,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3095201186161975907, guid: 46d63a411c0efdf429d5da8956870ba8, type: 3}
+      propertyPath: enemyDefinition
+      value: 
+      objectReference: {fileID: 11400000, guid: ec75441635754794cb9a1d0c701bc216, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11557,6 +11605,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3095201186161975907, guid: 46d63a411c0efdf429d5da8956870ba8, type: 3}
+      propertyPath: enemyDefinition
+      value: 
+      objectReference: {fileID: 11400000, guid: ec75441635754794cb9a1d0c701bc216, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11627,6 +11679,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3095201186161975907, guid: 46d63a411c0efdf429d5da8956870ba8, type: 3}
+      propertyPath: enemyDefinition
+      value: 
+      objectReference: {fileID: 11400000, guid: ec75441635754794cb9a1d0c701bc216, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11697,6 +11753,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3095201186161975907, guid: 46d63a411c0efdf429d5da8956870ba8, type: 3}
+      propertyPath: enemyDefinition
+      value: 
+      objectReference: {fileID: 11400000, guid: ec75441635754794cb9a1d0c701bc216, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11767,6 +11827,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3095201186161975907, guid: 46d63a411c0efdf429d5da8956870ba8, type: 3}
+      propertyPath: enemyDefinition
+      value: 
+      objectReference: {fileID: 11400000, guid: ec75441635754794cb9a1d0c701bc216, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11837,6 +11901,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3095201186161975907, guid: 46d63a411c0efdf429d5da8956870ba8, type: 3}
+      propertyPath: enemyDefinition
+      value: 
+      objectReference: {fileID: 11400000, guid: ec75441635754794cb9a1d0c701bc216, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11977,6 +12045,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3095201186161975907, guid: 46d63a411c0efdf429d5da8956870ba8, type: 3}
+      propertyPath: enemyDefinition
+      value: 
+      objectReference: {fileID: 11400000, guid: ec75441635754794cb9a1d0c701bc216, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12047,6 +12119,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3095201186161975907, guid: 46d63a411c0efdf429d5da8956870ba8, type: 3}
+      propertyPath: enemyDefinition
+      value: 
+      objectReference: {fileID: 11400000, guid: ec75441635754794cb9a1d0c701bc216, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12117,6 +12193,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3095201186161975907, guid: 46d63a411c0efdf429d5da8956870ba8, type: 3}
+      propertyPath: enemyDefinition
+      value: 
+      objectReference: {fileID: 11400000, guid: ec75441635754794cb9a1d0c701bc216, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

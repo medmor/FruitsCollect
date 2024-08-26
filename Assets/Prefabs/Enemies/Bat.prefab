@@ -221,10 +221,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyDefinition: {fileID: 11400000, guid: fa3e71e4379b5b141b2b8193b3a5a7b2, type: 2}
-  isAttacker: 0
   healthBar: {fileID: 4121217519110414037}
   speed: 1
-  initialPositionRadius: 0.1
+  initialPositionRadius: 0.05
 --- !u!1001 &8121831860347917853
 PrefabInstance:
   m_ObjectHideFlags: 0

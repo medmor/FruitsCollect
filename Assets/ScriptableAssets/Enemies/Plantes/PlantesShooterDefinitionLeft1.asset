@@ -9,10 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0eb4a3b3db14480479ebb369d4d15ca0, type: 3}
-  m_Name: BoxEnemyDefinition1
+  m_Script: {fileID: 11500000, guid: c6c43a1d7c2bb5847aa2cfe04dd5509b, type: 3}
+  m_Name: PlantesShooterDefinitionLeft1
   m_EditorClassIdentifier: 
-  damagePower: 2
-  health: 1
-  isDestoryable: 1
-  hasAttackAnimation: 0
+  shootRate: 0.5
+  bulletSpeed: 2
+  bulletLifetime: 2
+  bullet: {fileID: 0}
+  fixedDirection: {x: 1, y: 0}

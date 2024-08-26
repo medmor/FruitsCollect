@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Boss1
   m_EditorClassIdentifier: 
   damagePower: 2
-  health: 2
-  isDestoryable: 0
+  health: 5
+  isDestoryable: 1
   hasAttackAnimation: 0

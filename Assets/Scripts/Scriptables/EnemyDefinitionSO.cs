@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-[CreateAssetMenu(fileName = "EnemySo", menuName = "SO/Enemies/EnemySo")]
+[CreateAssetMenu(fileName = "EnemyDefinition", menuName = "SO/Enemies/EnemyDefinitionSo")]
 public class EnemyDefinitionSO : ScriptableObject
 {
     public float damagePower = 1;

@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: BoxMonsterPatrolDefinition1
   m_EditorClassIdentifier: 
   patrolSpeed: 5
-  followSpeed: 5
+  followSpeed: 0

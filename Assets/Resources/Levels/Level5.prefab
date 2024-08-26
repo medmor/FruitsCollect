@@ -19304,6 +19304,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4472736084443721546, guid: eaa30762a8fd9654c8309841a4f59460, type: 3}
+      propertyPath: enemyDefinition
+      value: 
+      objectReference: {fileID: 11400000, guid: 08aca696ba43bc14e86ff4762f78ecda, type: 2}
     - target: {fileID: 4935148699620045228, guid: eaa30762a8fd9654c8309841a4f59460, type: 3}
       propertyPath: m_Name
       value: BoxMonster (1)
@@ -19311,7 +19315,7 @@ PrefabInstance:
     - target: {fileID: 5065906865249452296, guid: eaa30762a8fd9654c8309841a4f59460, type: 3}
       propertyPath: patrolDefinition
       value: 
-      objectReference: {fileID: 11400000, guid: e2d4a2bec8e5cad419af6ec647fd2844, type: 2}
+      objectReference: {fileID: 11400000, guid: 9c10683678032d447a3a39a8df066bd5, type: 2}
     - target: {fileID: 5065906865249452296, guid: eaa30762a8fd9654c8309841a4f59460, type: 3}
       propertyPath: waypoints.Array.size
       value: 1
@@ -19574,6 +19578,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4472736084443721546, guid: eaa30762a8fd9654c8309841a4f59460, type: 3}
+      propertyPath: enemyDefinition
+      value: 
+      objectReference: {fileID: 11400000, guid: 08aca696ba43bc14e86ff4762f78ecda, type: 2}
     - target: {fileID: 4935148699620045228, guid: eaa30762a8fd9654c8309841a4f59460, type: 3}
       propertyPath: m_Name
       value: BoxMonster
@@ -19581,7 +19589,7 @@ PrefabInstance:
     - target: {fileID: 5065906865249452296, guid: eaa30762a8fd9654c8309841a4f59460, type: 3}
       propertyPath: patrolDefinition
       value: 
-      objectReference: {fileID: 11400000, guid: 8a9da282e69873a4b8ff5a0ca2306d43, type: 2}
+      objectReference: {fileID: 11400000, guid: 9c10683678032d447a3a39a8df066bd5, type: 2}
     - target: {fileID: 5065906865249452296, guid: eaa30762a8fd9654c8309841a4f59460, type: 3}
       propertyPath: waypoints.Array.size
       value: 3

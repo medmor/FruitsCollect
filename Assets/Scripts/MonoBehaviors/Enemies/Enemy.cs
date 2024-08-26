@@ -8,7 +8,7 @@ public class Enemy : MonoBehaviour
     float health;
 
 
-    private void Start()
+    protected virtual void Start()
     {
         animator = GetComponent<Animator>();
         if (enemyDefinition.isDestoryable)
@@ -25,7 +25,7 @@ public class Enemy : MonoBehaviour
     void TakeDamage(float amount)
     {
         health -= amount;
-        if (health <= 0)
+        if (health < amount)
         {
             Destroy(gameObject);
         }
@@ -36,7 +36,7 @@ public class Enemy : MonoBehaviour
         float fillPercentage = health / enemyDefinition.health;
         healthBar.fillAmount = fillPercentage;
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+    protected virtual void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {

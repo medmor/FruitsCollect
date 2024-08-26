@@ -9,9 +9,9 @@ public class Bat : Enemy
     public float initialPositionRadius;
     Vector3 initialPosition;
 
-    void Start()
+    protected override void Start()
     {
-        animator = GetComponent<Animator>();
+        base.Start();
 
         rb = GetComponent<Rigidbody2D>();
 
@@ -20,6 +20,10 @@ public class Bat : Enemy
         target = GameObject.Find("Player").transform;
     }
 
+    protected override void OnCollisionEnter2D(Collision2D collision)
+    {
+        base.OnCollisionEnter2D(collision);
+    }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -45,15 +49,21 @@ public class Bat : Enemy
             transform.right = new Vector3(transform.position.x - target.position.x, 0).normalized;
             animator.SetBool("Flaying", true);
         }
-        else if (Vector2.Distance(transform.position, initialPosition) > initialPositionRadius)
+        else
         {
-            rb.MovePosition(Vector2.MoveTowards(transform.position, initialPosition, speed * Time.deltaTime));
-            transform.right = new Vector3(transform.position.x - initialPosition.x, 0).normalized;
+            if (Vector2.Distance(transform.position, initialPosition) > initialPositionRadius)
+            {
+                rb.MovePosition(Vector2.MoveTowards(transform.position, initialPosition, speed * Time.deltaTime));
+                transform.right = new Vector3(transform.position.x - initialPosition.x, 0).normalized;
+            }
+            else if (transform.position != initialPosition)
+            {
+                animator.SetBool("Flaying", false);
+                //transform.position = initialPosition;
+                rb.velocity = Vector2.zero;
+            }
         }
-        else if (Vector2.Distance(transform.position, initialPosition) < initialPositionRadius)
-        {
-            animator.SetBool("Flaying", false);
-        }
+
     }
 
 }

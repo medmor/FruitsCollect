@@ -9,14 +9,15 @@ public class Turtle : Enemy
 
     bool firstHit = false;
 
-    void Start()
+    protected override void Start()
     {
+        base.Start();
         anim = GetComponent<Animator>();
-
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    protected override void OnCollisionEnter2D(Collision2D collision)
     {
+        base.OnCollisionEnter2D(collision);
         if (collision.gameObject.tag == "Player")
         {
             if (!firstHit)

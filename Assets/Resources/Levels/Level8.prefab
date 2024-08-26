@@ -99,8 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10b369d6a6539bd4aa3f88d016ce4968, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyDefinition: {fileID: 11400000, guid: 6184ad76d525ba14e87e071002eab858, type: 2}
-  isAttacker: 0
+  enemyDefinition: {fileID: 11400000, guid: ec75441635754794cb9a1d0c701bc216, type: 2}
   healthBar: {fileID: 0}
 --- !u!95 &5873366397786508411
 Animator:
@@ -317,7 +316,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 301449d4f4ed654469414833496c4d5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patrolDefinition: {fileID: 11400000, guid: f92b41fa5f33ebd48a0fddee4b68ed30, type: 2}
+  patrolDefinition: {fileID: 11400000, guid: e0d815e85e2368242a9c436a3a2eb7ae, type: 2}
   target: {fileID: 0}
   follower: 0
   orientToDirection: 0
@@ -373,8 +372,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10b369d6a6539bd4aa3f88d016ce4968, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyDefinition: {fileID: 11400000, guid: 6184ad76d525ba14e87e071002eab858, type: 2}
-  isAttacker: 0
+  enemyDefinition: {fileID: 11400000, guid: 52155ce8ea58f8c469aceada83a4ebfa, type: 2}
   healthBar: {fileID: 0}
 --- !u!1 &290063253111075638
 GameObject:
@@ -475,8 +473,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10b369d6a6539bd4aa3f88d016ce4968, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyDefinition: {fileID: 11400000, guid: 6184ad76d525ba14e87e071002eab858, type: 2}
-  isAttacker: 0
+  enemyDefinition: {fileID: 11400000, guid: ec75441635754794cb9a1d0c701bc216, type: 2}
   healthBar: {fileID: 0}
 --- !u!95 &4374099918015957520
 Animator:
@@ -708,8 +705,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10b369d6a6539bd4aa3f88d016ce4968, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyDefinition: {fileID: 11400000, guid: 6184ad76d525ba14e87e071002eab858, type: 2}
-  isAttacker: 0
+  enemyDefinition: {fileID: 11400000, guid: ec75441635754794cb9a1d0c701bc216, type: 2}
   healthBar: {fileID: 0}
 --- !u!95 &7294128426267928411
 Animator:
@@ -876,8 +872,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10b369d6a6539bd4aa3f88d016ce4968, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyDefinition: {fileID: 11400000, guid: 6184ad76d525ba14e87e071002eab858, type: 2}
-  isAttacker: 0
+  enemyDefinition: {fileID: 11400000, guid: ec75441635754794cb9a1d0c701bc216, type: 2}
   healthBar: {fileID: 0}
 --- !u!95 &9077487786935544958
 Animator:
@@ -1044,8 +1039,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10b369d6a6539bd4aa3f88d016ce4968, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyDefinition: {fileID: 11400000, guid: 6184ad76d525ba14e87e071002eab858, type: 2}
-  isAttacker: 0
+  enemyDefinition: {fileID: 11400000, guid: ec75441635754794cb9a1d0c701bc216, type: 2}
   healthBar: {fileID: 0}
 --- !u!95 &3005008627941142584
 Animator:
@@ -1212,8 +1206,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10b369d6a6539bd4aa3f88d016ce4968, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyDefinition: {fileID: 11400000, guid: 6184ad76d525ba14e87e071002eab858, type: 2}
-  isAttacker: 0
+  enemyDefinition: {fileID: 11400000, guid: ec75441635754794cb9a1d0c701bc216, type: 2}
   healthBar: {fileID: 0}
 --- !u!95 &1520990218964954889
 Animator:
@@ -6549,8 +6542,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10b369d6a6539bd4aa3f88d016ce4968, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyDefinition: {fileID: 11400000, guid: 6184ad76d525ba14e87e071002eab858, type: 2}
-  isAttacker: 0
+  enemyDefinition: {fileID: 11400000, guid: ec75441635754794cb9a1d0c701bc216, type: 2}
   healthBar: {fileID: 0}
 --- !u!95 &4656066391135304626
 Animator:
@@ -7083,7 +7075,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyDefinition: {fileID: 11400000, guid: fa3e71e4379b5b141b2b8193b3a5a7b2, type: 2}
-  isAttacker: 0
   healthBar: {fileID: 0}
 --- !u!1 &1394095863421141360
 GameObject:
@@ -7184,8 +7175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10b369d6a6539bd4aa3f88d016ce4968, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyDefinition: {fileID: 11400000, guid: 6184ad76d525ba14e87e071002eab858, type: 2}
-  isAttacker: 0
+  enemyDefinition: {fileID: 11400000, guid: ec75441635754794cb9a1d0c701bc216, type: 2}
   healthBar: {fileID: 0}
 --- !u!95 &6805936748220797333
 Animator:
@@ -8106,8 +8096,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10b369d6a6539bd4aa3f88d016ce4968, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyDefinition: {fileID: 11400000, guid: 6184ad76d525ba14e87e071002eab858, type: 2}
-  isAttacker: 0
+  enemyDefinition: {fileID: 11400000, guid: ec75441635754794cb9a1d0c701bc216, type: 2}
   healthBar: {fileID: 0}
 --- !u!95 &4970375654762504099
 Animator:
@@ -36494,8 +36483,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10b369d6a6539bd4aa3f88d016ce4968, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyDefinition: {fileID: 11400000, guid: 6184ad76d525ba14e87e071002eab858, type: 2}
-  isAttacker: 0
+  enemyDefinition: {fileID: 11400000, guid: ec75441635754794cb9a1d0c701bc216, type: 2}
   healthBar: {fileID: 0}
 --- !u!95 &552390912924818272
 Animator:
@@ -36695,8 +36683,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10b369d6a6539bd4aa3f88d016ce4968, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyDefinition: {fileID: 11400000, guid: 6184ad76d525ba14e87e071002eab858, type: 2}
-  isAttacker: 0
+  enemyDefinition: {fileID: 11400000, guid: ec75441635754794cb9a1d0c701bc216, type: 2}
   healthBar: {fileID: 0}
 --- !u!95 &859536969481212354
 Animator:
@@ -36898,8 +36885,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10b369d6a6539bd4aa3f88d016ce4968, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyDefinition: {fileID: 11400000, guid: 6184ad76d525ba14e87e071002eab858, type: 2}
-  isAttacker: 0
+  enemyDefinition: {fileID: 11400000, guid: ec75441635754794cb9a1d0c701bc216, type: 2}
   healthBar: {fileID: 0}
 --- !u!95 &6533064557044923670
 Animator:
@@ -37066,8 +37052,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10b369d6a6539bd4aa3f88d016ce4968, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyDefinition: {fileID: 11400000, guid: 6184ad76d525ba14e87e071002eab858, type: 2}
-  isAttacker: 0
+  enemyDefinition: {fileID: 11400000, guid: ec75441635754794cb9a1d0c701bc216, type: 2}
   healthBar: {fileID: 0}
 --- !u!95 &4553149611677706781
 Animator:
@@ -37234,8 +37219,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10b369d6a6539bd4aa3f88d016ce4968, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyDefinition: {fileID: 11400000, guid: 6184ad76d525ba14e87e071002eab858, type: 2}
-  isAttacker: 0
+  enemyDefinition: {fileID: 11400000, guid: ec75441635754794cb9a1d0c701bc216, type: 2}
   healthBar: {fileID: 0}
 --- !u!95 &7491979830957972432
 Animator:
@@ -37436,8 +37420,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10b369d6a6539bd4aa3f88d016ce4968, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyDefinition: {fileID: 11400000, guid: 6184ad76d525ba14e87e071002eab858, type: 2}
-  isAttacker: 0
+  enemyDefinition: {fileID: 11400000, guid: ec75441635754794cb9a1d0c701bc216, type: 2}
   healthBar: {fileID: 0}
 --- !u!95 &2874832353561207189
 Animator:
@@ -37963,8 +37946,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10b369d6a6539bd4aa3f88d016ce4968, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyDefinition: {fileID: 11400000, guid: 6184ad76d525ba14e87e071002eab858, type: 2}
-  isAttacker: 0
+  enemyDefinition: {fileID: 11400000, guid: ec75441635754794cb9a1d0c701bc216, type: 2}
   healthBar: {fileID: 0}
 --- !u!95 &3875554802015963267
 Animator:
@@ -38131,8 +38113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10b369d6a6539bd4aa3f88d016ce4968, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyDefinition: {fileID: 11400000, guid: 6184ad76d525ba14e87e071002eab858, type: 2}
-  isAttacker: 0
+  enemyDefinition: {fileID: 11400000, guid: ec75441635754794cb9a1d0c701bc216, type: 2}
   healthBar: {fileID: 0}
 --- !u!95 &1020215701567031184
 Animator:
@@ -38299,8 +38280,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10b369d6a6539bd4aa3f88d016ce4968, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyDefinition: {fileID: 11400000, guid: 6184ad76d525ba14e87e071002eab858, type: 2}
-  isAttacker: 0
+  enemyDefinition: {fileID: 11400000, guid: ec75441635754794cb9a1d0c701bc216, type: 2}
   healthBar: {fileID: 0}
 --- !u!95 &3133775029272914354
 Animator:
@@ -38503,8 +38483,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10b369d6a6539bd4aa3f88d016ce4968, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyDefinition: {fileID: 11400000, guid: 6184ad76d525ba14e87e071002eab858, type: 2}
-  isAttacker: 0
+  enemyDefinition: {fileID: 11400000, guid: ec75441635754794cb9a1d0c701bc216, type: 2}
   healthBar: {fileID: 0}
 --- !u!95 &236501022716579
 Animator:
@@ -38827,8 +38806,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10b369d6a6539bd4aa3f88d016ce4968, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyDefinition: {fileID: 11400000, guid: 6184ad76d525ba14e87e071002eab858, type: 2}
-  isAttacker: 0
+  enemyDefinition: {fileID: 11400000, guid: ec75441635754794cb9a1d0c701bc216, type: 2}
   healthBar: {fileID: 0}
 --- !u!95 &876776238171364861
 Animator:
@@ -39315,8 +39293,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10b369d6a6539bd4aa3f88d016ce4968, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyDefinition: {fileID: 11400000, guid: 6184ad76d525ba14e87e071002eab858, type: 2}
-  isAttacker: 0
+  enemyDefinition: {fileID: 11400000, guid: ec75441635754794cb9a1d0c701bc216, type: 2}
   healthBar: {fileID: 0}
 --- !u!95 &7066202822112436191
 Animator:
@@ -39708,8 +39685,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10b369d6a6539bd4aa3f88d016ce4968, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyDefinition: {fileID: 11400000, guid: 6184ad76d525ba14e87e071002eab858, type: 2}
-  isAttacker: 0
+  enemyDefinition: {fileID: 11400000, guid: ec75441635754794cb9a1d0c701bc216, type: 2}
   healthBar: {fileID: 0}
 --- !u!95 &7770121671458335957
 Animator:
@@ -40040,7 +40016,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 301449d4f4ed654469414833496c4d5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patrolDefinition: {fileID: 11400000, guid: f92b41fa5f33ebd48a0fddee4b68ed30, type: 2}
+  patrolDefinition: {fileID: 11400000, guid: e0d815e85e2368242a9c436a3a2eb7ae, type: 2}
   target: {fileID: 0}
   follower: 0
   orientToDirection: 0
@@ -40096,8 +40072,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10b369d6a6539bd4aa3f88d016ce4968, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyDefinition: {fileID: 11400000, guid: 6184ad76d525ba14e87e071002eab858, type: 2}
-  isAttacker: 0
+  enemyDefinition: {fileID: 11400000, guid: 52155ce8ea58f8c469aceada83a4ebfa, type: 2}
   healthBar: {fileID: 0}
 --- !u!1 &8472638634686669401
 GameObject:
@@ -40198,8 +40173,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10b369d6a6539bd4aa3f88d016ce4968, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyDefinition: {fileID: 11400000, guid: 6184ad76d525ba14e87e071002eab858, type: 2}
-  isAttacker: 0
+  enemyDefinition: {fileID: 11400000, guid: ec75441635754794cb9a1d0c701bc216, type: 2}
   healthBar: {fileID: 0}
 --- !u!95 &1575375158611114188
 Animator:
@@ -40522,8 +40496,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10b369d6a6539bd4aa3f88d016ce4968, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyDefinition: {fileID: 11400000, guid: 6184ad76d525ba14e87e071002eab858, type: 2}
-  isAttacker: 0
+  enemyDefinition: {fileID: 11400000, guid: ec75441635754794cb9a1d0c701bc216, type: 2}
   healthBar: {fileID: 0}
 --- !u!95 &4524968085698461665
 Animator:
@@ -40676,6 +40649,10 @@ PrefabInstance:
       propertyPath: speed
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2039629007101229061, guid: 073ce9f13f99b8e44ade3d1bb5fa2ec0, type: 3}
+      propertyPath: enemyDefinition
+      value: 
+      objectReference: {fileID: 11400000, guid: cfb4621ec6c7e20489f97caa38efe2a3, type: 2}
     - target: {fileID: 7608829112172602709, guid: 073ce9f13f99b8e44ade3d1bb5fa2ec0, type: 3}
       propertyPath: m_Name
       value: Bat (3)
@@ -40757,7 +40734,7 @@ PrefabInstance:
     - target: {fileID: 6894805838904574850, guid: febe133eb8d53814da0b8d25e623b075, type: 3}
       propertyPath: patrolDefinition
       value: 
-      objectReference: {fileID: 11400000, guid: 76916f604ee22cb4d90625024dd0eba8, type: 2}
+      objectReference: {fileID: 11400000, guid: e0d815e85e2368242a9c436a3a2eb7ae, type: 2}
     - target: {fileID: 6894805838904574850, guid: febe133eb8d53814da0b8d25e623b075, type: 3}
       propertyPath: orientToDirection
       value: 0
@@ -40854,6 +40831,10 @@ PrefabInstance:
       propertyPath: waypoints.Array.data[10].y
       value: -1.14
       objectReference: {fileID: 0}
+    - target: {fileID: 7603089839521248027, guid: febe133eb8d53814da0b8d25e623b075, type: 3}
+      propertyPath: enemyDefinition
+      value: 
+      objectReference: {fileID: 11400000, guid: 52155ce8ea58f8c469aceada83a4ebfa, type: 2}
     - target: {fileID: 7609131878317233874, guid: febe133eb8d53814da0b8d25e623b075, type: 3}
       propertyPath: m_BodyType
       value: 1
@@ -40880,6 +40861,10 @@ PrefabInstance:
       propertyPath: lookAxis
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 1374196293852401316, guid: 8bbb69e0f875c7245b5089bff60ab12f, type: 3}
+      propertyPath: patrolDefinition
+      value: 
+      objectReference: {fileID: 11400000, guid: 9df86c4873db2f14c96f311a0144827b, type: 2}
     - target: {fileID: 1374196293852401316, guid: 8bbb69e0f875c7245b5089bff60ab12f, type: 3}
       propertyPath: waypoints.Array.data[0].x
       value: -51.8
@@ -40928,6 +40913,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6967291577183798036, guid: 8bbb69e0f875c7245b5089bff60ab12f, type: 3}
+      propertyPath: enemyDefinition
+      value: 
+      objectReference: {fileID: 11400000, guid: 42303722bb7ec09408b5903f1d981d43, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -40986,6 +40975,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4472736084443721546, guid: eaa30762a8fd9654c8309841a4f59460, type: 3}
+      propertyPath: enemyDefinition
+      value: 
+      objectReference: {fileID: 11400000, guid: 001253b695f656f458d4276856225084, type: 2}
     - target: {fileID: 4935148699620045228, guid: eaa30762a8fd9654c8309841a4f59460, type: 3}
       propertyPath: m_Name
       value: BoxMonster (4)
@@ -40997,7 +40990,7 @@ PrefabInstance:
     - target: {fileID: 5065906865249452296, guid: eaa30762a8fd9654c8309841a4f59460, type: 3}
       propertyPath: patrolDefinition
       value: 
-      objectReference: {fileID: 11400000, guid: 76916f604ee22cb4d90625024dd0eba8, type: 2}
+      objectReference: {fileID: 11400000, guid: 120428ee90867ef45a577e7a105b3b02, type: 2}
     - target: {fileID: 5065906865249452296, guid: eaa30762a8fd9654c8309841a4f59460, type: 3}
       propertyPath: waypoints.Array.size
       value: 3
@@ -41309,7 +41302,7 @@ PrefabInstance:
     - target: {fileID: 6894805838904574850, guid: febe133eb8d53814da0b8d25e623b075, type: 3}
       propertyPath: patrolDefinition
       value: 
-      objectReference: {fileID: 11400000, guid: 76916f604ee22cb4d90625024dd0eba8, type: 2}
+      objectReference: {fileID: 11400000, guid: e0d815e85e2368242a9c436a3a2eb7ae, type: 2}
     - target: {fileID: 6894805838904574850, guid: febe133eb8d53814da0b8d25e623b075, type: 3}
       propertyPath: orientToDirection
       value: 0
@@ -41406,6 +41399,10 @@ PrefabInstance:
       propertyPath: waypoints.Array.data[10].y
       value: -1.14
       objectReference: {fileID: 0}
+    - target: {fileID: 7603089839521248027, guid: febe133eb8d53814da0b8d25e623b075, type: 3}
+      propertyPath: enemyDefinition
+      value: 
+      objectReference: {fileID: 11400000, guid: 52155ce8ea58f8c469aceada83a4ebfa, type: 2}
     - target: {fileID: 7609131878317233874, guid: febe133eb8d53814da0b8d25e623b075, type: 3}
       propertyPath: m_BodyType
       value: 1
@@ -41472,6 +41469,10 @@ PrefabInstance:
       propertyPath: speed
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2039629007101229061, guid: 073ce9f13f99b8e44ade3d1bb5fa2ec0, type: 3}
+      propertyPath: enemyDefinition
+      value: 
+      objectReference: {fileID: 11400000, guid: cfb4621ec6c7e20489f97caa38efe2a3, type: 2}
     - target: {fileID: 7608829112172602709, guid: 073ce9f13f99b8e44ade3d1bb5fa2ec0, type: 3}
       propertyPath: m_Name
       value: Bat (2)
@@ -41502,6 +41503,10 @@ PrefabInstance:
       propertyPath: lookAxis
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 1374196293852401316, guid: 8bbb69e0f875c7245b5089bff60ab12f, type: 3}
+      propertyPath: patrolDefinition
+      value: 
+      objectReference: {fileID: 11400000, guid: 9df86c4873db2f14c96f311a0144827b, type: 2}
     - target: {fileID: 1374196293852401316, guid: 8bbb69e0f875c7245b5089bff60ab12f, type: 3}
       propertyPath: waypoints.Array.data[0].x
       value: -51
@@ -41550,6 +41555,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6967291577183798036, guid: 8bbb69e0f875c7245b5089bff60ab12f, type: 3}
+      propertyPath: enemyDefinition
+      value: 
+      objectReference: {fileID: 11400000, guid: 42303722bb7ec09408b5903f1d981d43, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -41860,6 +41869,10 @@ PrefabInstance:
       propertyPath: speed
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2039629007101229061, guid: 073ce9f13f99b8e44ade3d1bb5fa2ec0, type: 3}
+      propertyPath: enemyDefinition
+      value: 
+      objectReference: {fileID: 11400000, guid: cfb4621ec6c7e20489f97caa38efe2a3, type: 2}
     - target: {fileID: 7608829112172602709, guid: 073ce9f13f99b8e44ade3d1bb5fa2ec0, type: 3}
       propertyPath: m_Name
       value: Bat (1)
@@ -41941,7 +41954,7 @@ PrefabInstance:
     - target: {fileID: 6894805838904574850, guid: febe133eb8d53814da0b8d25e623b075, type: 3}
       propertyPath: patrolDefinition
       value: 
-      objectReference: {fileID: 11400000, guid: 76916f604ee22cb4d90625024dd0eba8, type: 2}
+      objectReference: {fileID: 11400000, guid: e0d815e85e2368242a9c436a3a2eb7ae, type: 2}
     - target: {fileID: 6894805838904574850, guid: febe133eb8d53814da0b8d25e623b075, type: 3}
       propertyPath: orientToDirection
       value: 0
@@ -42038,6 +42051,10 @@ PrefabInstance:
       propertyPath: waypoints.Array.data[10].y
       value: -1.14
       objectReference: {fileID: 0}
+    - target: {fileID: 7603089839521248027, guid: febe133eb8d53814da0b8d25e623b075, type: 3}
+      propertyPath: enemyDefinition
+      value: 
+      objectReference: {fileID: 11400000, guid: 52155ce8ea58f8c469aceada83a4ebfa, type: 2}
     - target: {fileID: 7609131878317233874, guid: febe133eb8d53814da0b8d25e623b075, type: 3}
       propertyPath: m_BodyType
       value: 1
@@ -42104,6 +42121,10 @@ PrefabInstance:
       propertyPath: speed
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2039629007101229061, guid: 073ce9f13f99b8e44ade3d1bb5fa2ec0, type: 3}
+      propertyPath: enemyDefinition
+      value: 
+      objectReference: {fileID: 11400000, guid: cfb4621ec6c7e20489f97caa38efe2a3, type: 2}
     - target: {fileID: 7608829112172602709, guid: 073ce9f13f99b8e44ade3d1bb5fa2ec0, type: 3}
       propertyPath: m_Name
       value: Bat
@@ -42174,6 +42195,10 @@ PrefabInstance:
       propertyPath: speed
       value: 0.25
       objectReference: {fileID: 0}
+    - target: {fileID: 2039629007101229061, guid: 073ce9f13f99b8e44ade3d1bb5fa2ec0, type: 3}
+      propertyPath: enemyDefinition
+      value: 
+      objectReference: {fileID: 11400000, guid: cfb4621ec6c7e20489f97caa38efe2a3, type: 2}
     - target: {fileID: 7608829112172602709, guid: 073ce9f13f99b8e44ade3d1bb5fa2ec0, type: 3}
       propertyPath: m_Name
       value: Bat (5)
@@ -42488,6 +42513,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4472736084443721546, guid: eaa30762a8fd9654c8309841a4f59460, type: 3}
+      propertyPath: enemyDefinition
+      value: 
+      objectReference: {fileID: 11400000, guid: 001253b695f656f458d4276856225084, type: 2}
     - target: {fileID: 4935148699620045228, guid: eaa30762a8fd9654c8309841a4f59460, type: 3}
       propertyPath: m_Name
       value: BoxMonster (6)
@@ -42499,7 +42528,7 @@ PrefabInstance:
     - target: {fileID: 5065906865249452296, guid: eaa30762a8fd9654c8309841a4f59460, type: 3}
       propertyPath: patrolDefinition
       value: 
-      objectReference: {fileID: 11400000, guid: 76916f604ee22cb4d90625024dd0eba8, type: 2}
+      objectReference: {fileID: 11400000, guid: 120428ee90867ef45a577e7a105b3b02, type: 2}
     - target: {fileID: 5065906865249452296, guid: eaa30762a8fd9654c8309841a4f59460, type: 3}
       propertyPath: waypoints.Array.size
       value: 1
@@ -42672,6 +42701,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4472736084443721546, guid: eaa30762a8fd9654c8309841a4f59460, type: 3}
+      propertyPath: enemyDefinition
+      value: 
+      objectReference: {fileID: 11400000, guid: 001253b695f656f458d4276856225084, type: 2}
     - target: {fileID: 4935148699620045228, guid: eaa30762a8fd9654c8309841a4f59460, type: 3}
       propertyPath: m_Name
       value: BoxMonster (5)
@@ -42683,7 +42716,7 @@ PrefabInstance:
     - target: {fileID: 5065906865249452296, guid: eaa30762a8fd9654c8309841a4f59460, type: 3}
       propertyPath: patrolDefinition
       value: 
-      objectReference: {fileID: 11400000, guid: 76916f604ee22cb4d90625024dd0eba8, type: 2}
+      objectReference: {fileID: 11400000, guid: 120428ee90867ef45a577e7a105b3b02, type: 2}
     - target: {fileID: 5065906865249452296, guid: eaa30762a8fd9654c8309841a4f59460, type: 3}
       propertyPath: waypoints.Array.size
       value: 1
@@ -42995,7 +43028,7 @@ PrefabInstance:
     - target: {fileID: 6894805838904574850, guid: febe133eb8d53814da0b8d25e623b075, type: 3}
       propertyPath: patrolDefinition
       value: 
-      objectReference: {fileID: 11400000, guid: 76916f604ee22cb4d90625024dd0eba8, type: 2}
+      objectReference: {fileID: 11400000, guid: e0d815e85e2368242a9c436a3a2eb7ae, type: 2}
     - target: {fileID: 6894805838904574850, guid: febe133eb8d53814da0b8d25e623b075, type: 3}
       propertyPath: orientToDirection
       value: 0
@@ -43092,6 +43125,10 @@ PrefabInstance:
       propertyPath: waypoints.Array.data[10].y
       value: -1.14
       objectReference: {fileID: 0}
+    - target: {fileID: 7603089839521248027, guid: febe133eb8d53814da0b8d25e623b075, type: 3}
+      propertyPath: enemyDefinition
+      value: 
+      objectReference: {fileID: 11400000, guid: 52155ce8ea58f8c469aceada83a4ebfa, type: 2}
     - target: {fileID: 7609131878317233874, guid: febe133eb8d53814da0b8d25e623b075, type: 3}
       propertyPath: m_BodyType
       value: 1
@@ -43118,6 +43155,10 @@ PrefabInstance:
       propertyPath: lookAxis
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 1374196293852401316, guid: 8bbb69e0f875c7245b5089bff60ab12f, type: 3}
+      propertyPath: patrolDefinition
+      value: 
+      objectReference: {fileID: 11400000, guid: 9df86c4873db2f14c96f311a0144827b, type: 2}
     - target: {fileID: 3207155727709708709, guid: 8bbb69e0f875c7245b5089bff60ab12f, type: 3}
       propertyPath: m_Name
       value: Turtle
@@ -43162,6 +43203,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6967291577183798036, guid: 8bbb69e0f875c7245b5089bff60ab12f, type: 3}
+      propertyPath: enemyDefinition
+      value: 
+      objectReference: {fileID: 11400000, guid: 42303722bb7ec09408b5903f1d981d43, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -43282,6 +43327,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4472736084443721546, guid: eaa30762a8fd9654c8309841a4f59460, type: 3}
+      propertyPath: enemyDefinition
+      value: 
+      objectReference: {fileID: 11400000, guid: 001253b695f656f458d4276856225084, type: 2}
     - target: {fileID: 4935148699620045228, guid: eaa30762a8fd9654c8309841a4f59460, type: 3}
       propertyPath: m_Name
       value: BoxMonster
@@ -43289,7 +43338,7 @@ PrefabInstance:
     - target: {fileID: 5065906865249452296, guid: eaa30762a8fd9654c8309841a4f59460, type: 3}
       propertyPath: patrolDefinition
       value: 
-      objectReference: {fileID: 11400000, guid: 76916f604ee22cb4d90625024dd0eba8, type: 2}
+      objectReference: {fileID: 11400000, guid: 120428ee90867ef45a577e7a105b3b02, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -43348,6 +43397,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4472736084443721546, guid: eaa30762a8fd9654c8309841a4f59460, type: 3}
+      propertyPath: enemyDefinition
+      value: 
+      objectReference: {fileID: 11400000, guid: 001253b695f656f458d4276856225084, type: 2}
     - target: {fileID: 4935148699620045228, guid: eaa30762a8fd9654c8309841a4f59460, type: 3}
       propertyPath: m_Name
       value: BoxMonster (3)
@@ -43359,7 +43412,7 @@ PrefabInstance:
     - target: {fileID: 5065906865249452296, guid: eaa30762a8fd9654c8309841a4f59460, type: 3}
       propertyPath: patrolDefinition
       value: 
-      objectReference: {fileID: 11400000, guid: 76916f604ee22cb4d90625024dd0eba8, type: 2}
+      objectReference: {fileID: 11400000, guid: 120428ee90867ef45a577e7a105b3b02, type: 2}
     - target: {fileID: 5065906865249452296, guid: eaa30762a8fd9654c8309841a4f59460, type: 3}
       propertyPath: waypoints.Array.data[0].x
       value: -76.6
@@ -43438,6 +43491,10 @@ PrefabInstance:
       propertyPath: speed
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2039629007101229061, guid: 073ce9f13f99b8e44ade3d1bb5fa2ec0, type: 3}
+      propertyPath: enemyDefinition
+      value: 
+      objectReference: {fileID: 11400000, guid: cfb4621ec6c7e20489f97caa38efe2a3, type: 2}
     - target: {fileID: 7608829112172602709, guid: 073ce9f13f99b8e44ade3d1bb5fa2ec0, type: 3}
       propertyPath: m_Name
       value: Bat (4)
@@ -43504,6 +43561,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4472736084443721546, guid: eaa30762a8fd9654c8309841a4f59460, type: 3}
+      propertyPath: enemyDefinition
+      value: 
+      objectReference: {fileID: 11400000, guid: 001253b695f656f458d4276856225084, type: 2}
     - target: {fileID: 4935148699620045228, guid: eaa30762a8fd9654c8309841a4f59460, type: 3}
       propertyPath: m_Name
       value: BoxMonster (7)
@@ -43515,7 +43576,7 @@ PrefabInstance:
     - target: {fileID: 5065906865249452296, guid: eaa30762a8fd9654c8309841a4f59460, type: 3}
       propertyPath: patrolDefinition
       value: 
-      objectReference: {fileID: 11400000, guid: 76916f604ee22cb4d90625024dd0eba8, type: 2}
+      objectReference: {fileID: 11400000, guid: 120428ee90867ef45a577e7a105b3b02, type: 2}
     - target: {fileID: 5065906865249452296, guid: eaa30762a8fd9654c8309841a4f59460, type: 3}
       propertyPath: waypoints.Array.size
       value: 1
