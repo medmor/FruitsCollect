@@ -37346,14 +37346,14 @@ PrefabInstance:
     - target: {fileID: 5829080828522051167, guid: 7cdbd789cd963204f9668244e3ff6f56, type: 3}
       propertyPath: patrolDefinition
       value: 
-      objectReference: {fileID: 11400000, guid: 9c10683678032d447a3a39a8df066bd5, type: 2}
+      objectReference: {fileID: 11400000, guid: d534dbb384fd37a4abf4cc4989d89df2, type: 2}
     - target: {fileID: 5829080828522051167, guid: 7cdbd789cd963204f9668244e3ff6f56, type: 3}
       propertyPath: orientToDirection
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5829080828522051167, guid: 7cdbd789cd963204f9668244e3ff6f56, type: 3}
       propertyPath: waypoints.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5829080828522051167, guid: 7cdbd789cd963204f9668244e3ff6f56, type: 3}
       propertyPath: waypoints.Array.data[0].x
@@ -37371,10 +37371,18 @@ PrefabInstance:
       propertyPath: waypoints.Array.data[1].y
       value: -5.55
       objectReference: {fileID: 0}
+    - target: {fileID: 5829080828522051167, guid: 7cdbd789cd963204f9668244e3ff6f56, type: 3}
+      propertyPath: waypoints.Array.data[2].x
+      value: -16.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5829080828522051167, guid: 7cdbd789cd963204f9668244e3ff6f56, type: 3}
+      propertyPath: waypoints.Array.data[2].y
+      value: -3.52
+      objectReference: {fileID: 0}
     - target: {fileID: 7867821435370218690, guid: 7cdbd789cd963204f9668244e3ff6f56, type: 3}
       propertyPath: enemyDefinition
       value: 
-      objectReference: {fileID: 11400000, guid: 08aca696ba43bc14e86ff4762f78ecda, type: 2}
+      objectReference: {fileID: 11400000, guid: 5020b4d371f76d743801771673494049, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -37514,7 +37522,7 @@ PrefabInstance:
     - target: {fileID: 5829080828522051167, guid: 7cdbd789cd963204f9668244e3ff6f56, type: 3}
       propertyPath: patrolDefinition
       value: 
-      objectReference: {fileID: 11400000, guid: 9c10683678032d447a3a39a8df066bd5, type: 2}
+      objectReference: {fileID: 11400000, guid: d534dbb384fd37a4abf4cc4989d89df2, type: 2}
     - target: {fileID: 5829080828522051167, guid: 7cdbd789cd963204f9668244e3ff6f56, type: 3}
       propertyPath: orientToDirection
       value: 1
@@ -37542,7 +37550,7 @@ PrefabInstance:
     - target: {fileID: 7867821435370218690, guid: 7cdbd789cd963204f9668244e3ff6f56, type: 3}
       propertyPath: enemyDefinition
       value: 
-      objectReference: {fileID: 11400000, guid: 08aca696ba43bc14e86ff4762f78ecda, type: 2}
+      objectReference: {fileID: 11400000, guid: 5020b4d371f76d743801771673494049, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -38236,7 +38244,7 @@ PrefabInstance:
     - target: {fileID: 5829080828522051167, guid: 7cdbd789cd963204f9668244e3ff6f56, type: 3}
       propertyPath: patrolDefinition
       value: 
-      objectReference: {fileID: 11400000, guid: 9c10683678032d447a3a39a8df066bd5, type: 2}
+      objectReference: {fileID: 11400000, guid: d534dbb384fd37a4abf4cc4989d89df2, type: 2}
     - target: {fileID: 5829080828522051167, guid: 7cdbd789cd963204f9668244e3ff6f56, type: 3}
       propertyPath: orientToDirection
       value: 1
@@ -38272,7 +38280,7 @@ PrefabInstance:
     - target: {fileID: 7867821435370218690, guid: 7cdbd789cd963204f9668244e3ff6f56, type: 3}
       propertyPath: enemyDefinition
       value: 
-      objectReference: {fileID: 11400000, guid: 08aca696ba43bc14e86ff4762f78ecda, type: 2}
+      objectReference: {fileID: 11400000, guid: 5020b4d371f76d743801771673494049, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -38584,7 +38592,7 @@ PrefabInstance:
     - target: {fileID: 5829080828522051167, guid: 7cdbd789cd963204f9668244e3ff6f56, type: 3}
       propertyPath: patrolDefinition
       value: 
-      objectReference: {fileID: 11400000, guid: 9c10683678032d447a3a39a8df066bd5, type: 2}
+      objectReference: {fileID: 11400000, guid: d534dbb384fd37a4abf4cc4989d89df2, type: 2}
     - target: {fileID: 5829080828522051167, guid: 7cdbd789cd963204f9668244e3ff6f56, type: 3}
       propertyPath: orientToDirection
       value: 1
@@ -38600,7 +38608,7 @@ PrefabInstance:
     - target: {fileID: 7867821435370218690, guid: 7cdbd789cd963204f9668244e3ff6f56, type: 3}
       propertyPath: enemyDefinition
       value: 
-      objectReference: {fileID: 11400000, guid: 08aca696ba43bc14e86ff4762f78ecda, type: 2}
+      objectReference: {fileID: 11400000, guid: 5020b4d371f76d743801771673494049, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -38850,7 +38858,7 @@ PrefabInstance:
     - target: {fileID: 5829080828522051167, guid: 7cdbd789cd963204f9668244e3ff6f56, type: 3}
       propertyPath: patrolDefinition
       value: 
-      objectReference: {fileID: 11400000, guid: 9c10683678032d447a3a39a8df066bd5, type: 2}
+      objectReference: {fileID: 11400000, guid: d534dbb384fd37a4abf4cc4989d89df2, type: 2}
     - target: {fileID: 5829080828522051167, guid: 7cdbd789cd963204f9668244e3ff6f56, type: 3}
       propertyPath: orientToDirection
       value: 1
@@ -38894,7 +38902,7 @@ PrefabInstance:
     - target: {fileID: 7867821435370218690, guid: 7cdbd789cd963204f9668244e3ff6f56, type: 3}
       propertyPath: enemyDefinition
       value: 
-      objectReference: {fileID: 11400000, guid: 08aca696ba43bc14e86ff4762f78ecda, type: 2}
+      objectReference: {fileID: 11400000, guid: 5020b4d371f76d743801771673494049, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
