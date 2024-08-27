@@ -9,8 +9,9 @@ public class Mushroom : Enemy
     Vector2 moveForce;
 
 
-    void Start()
+    protected override void Start()
     {
+        base.Start();
         animator = GetComponent<Animator>();
 
         rb = GetComponent<Rigidbody2D>();

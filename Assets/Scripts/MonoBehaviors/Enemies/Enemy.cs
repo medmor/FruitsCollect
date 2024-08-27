@@ -33,6 +33,10 @@ public class Enemy : MonoBehaviour
     }
     void UpdateHealthBar()
     {
+        if (healthBar == null)
+        {
+            return;
+        }
         float fillPercentage = health / enemyDefinition.health;
         healthBar.fillAmount = fillPercentage;
     }

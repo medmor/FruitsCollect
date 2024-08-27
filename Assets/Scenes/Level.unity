@@ -212,6 +212,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -7.23
       objectReference: {fileID: 0}
+    - target: {fileID: 8221760935780176862, guid: 8c2ba45ba237dcb43b2aaa44d4fed152, type: 3}
+      propertyPath: orthographic size
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 8221760935869860252, guid: 8c2ba45ba237dcb43b2aaa44d4fed152, type: 3}
       propertyPath: m_Name
       value: Cam
