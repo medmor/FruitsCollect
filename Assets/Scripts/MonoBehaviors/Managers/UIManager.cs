@@ -35,6 +35,12 @@ public class UIManager : Manager<UIManager>
         Timer.Begin();
     }
 
+    public void OnLevelReset()
+    {
+        Timer.ResetTimer();
+        Timer.Begin();
+    }
+
 
 
 }

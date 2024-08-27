@@ -39,14 +39,14 @@ public class MovingPlatformHorizontal : MonoBehaviour
             }
             else
             {
-                if (startOnMax && transform.localPosition.x > maxX)
-                {
-                    rb.velocity = Vector2.zero;
-                }
-                if (!startOnMax && transform.localPosition.x < minX)
-                {
-                    rb.velocity = Vector2.zero;
-                }
+                //if (startOnMax && transform.localPosition.x > maxX)
+                //{
+                rb.velocity = Vector2.zero;
+                //}
+                //if (!startOnMax && transform.localPosition.x < minX)
+                //{
+                //    rb.velocity = Vector2.zero;
+                //}
             }
             return;
         }

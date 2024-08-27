@@ -80,8 +80,8 @@ public class Timer : MonoBehaviour
 
     public void End()
     {
-        EventsManager.Instance.TimeOut.Invoke();
         ResetTimer();
+        EventsManager.Instance.TimeOut.Invoke();
     }
 
     private void OnDestroy()

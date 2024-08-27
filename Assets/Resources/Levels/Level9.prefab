@@ -58990,6 +58990,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spiked Ball (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3807249287469784970, guid: 0b8535e0ca257d54ca4efaf1c7504198, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3976912290159391078, guid: 0b8535e0ca257d54ca4efaf1c7504198, type: 3}
       propertyPath: patrolDefinition
       value: 
@@ -59149,6 +59153,10 @@ PrefabInstance:
     - target: {fileID: 3807249287469784970, guid: 0b8535e0ca257d54ca4efaf1c7504198, type: 3}
       propertyPath: m_Name
       value: Spiked Ball (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3807249287469784970, guid: 0b8535e0ca257d54ca4efaf1c7504198, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3976912290159391078, guid: 0b8535e0ca257d54ca4efaf1c7504198, type: 3}
       propertyPath: patrolDefinition
@@ -59785,9 +59793,17 @@ PrefabInstance:
       value: Spiked Ball
       objectReference: {fileID: 0}
     - target: {fileID: 3976912290159391078, guid: 0b8535e0ca257d54ca4efaf1c7504198, type: 3}
+      propertyPath: follower
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3976912290159391078, guid: 0b8535e0ca257d54ca4efaf1c7504198, type: 3}
       propertyPath: patrolDefinition
       value: 
       objectReference: {fileID: 11400000, guid: 56dc59700177fd04f86ea2e837de3ca2, type: 2}
+    - target: {fileID: 5501355491024041846, guid: 0b8535e0ca257d54ca4efaf1c7504198, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6199339479741548010, guid: 0b8535e0ca257d54ca4efaf1c7504198, type: 3}
       propertyPath: enemyDefinition
       value: 
@@ -60391,6 +60407,10 @@ PrefabInstance:
     - target: {fileID: 3807249287469784970, guid: 0b8535e0ca257d54ca4efaf1c7504198, type: 3}
       propertyPath: m_Name
       value: Spiked Ball (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3807249287469784970, guid: 0b8535e0ca257d54ca4efaf1c7504198, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3976912290159391078, guid: 0b8535e0ca257d54ca4efaf1c7504198, type: 3}
       propertyPath: patrolDefinition

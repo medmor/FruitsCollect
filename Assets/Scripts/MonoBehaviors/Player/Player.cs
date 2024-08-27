@@ -36,10 +36,13 @@ public class Player : MonoBehaviour
 
     public void OnDesappearEnd()
     {
+        UIManager.Instance.OnLevelReset();
         Die();
         Reset();
         if (inventory.GetHearts() <= 0)
+        {
             EventsManager.Instance.Playerkilled?.Invoke();
+        }
     }
 
     void OnTimeOut()
