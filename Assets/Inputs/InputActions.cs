@@ -187,6 +187,28 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": true
                 },
                 {
+                    ""name"": ""up"",
+                    ""id"": ""d396b5a6-c42d-4abf-8aaa-9e75f26939cc"",
+                    ""path"": ""<HID::Saitek PLC Cyborg Rumble Pad>/hat/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""f0d709c5-6bb8-4a51-85f6-ee0242fa9586"",
+                    ""path"": ""<HID::Saitek PLC Cyborg Rumble Pad>/hat/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
                     ""name"": ""GamepadJoystick"",
                     ""id"": ""b528136c-618c-4deb-b281-06b9658ade09"",
                     ""path"": ""2DVector"",
@@ -212,6 +234,28 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""name"": ""right"",
                     ""id"": ""41eafd89-9646-45bf-bfd9-091411261e88"",
                     ""path"": ""<Joystick>/stick/right"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""11d74a5a-c527-46fa-ae89-195e1f532910"",
+                    ""path"": ""<Joystick>/stick/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""fffb5775-0f84-4616-8a13-6469ba602798"",
+                    ""path"": ""<Joystick>/stick/down"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
